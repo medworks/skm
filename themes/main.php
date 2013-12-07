@@ -51,8 +51,8 @@
 	h4 { font-family: 'Lato', arial, serif; }
 	h5 { font-family: 'Lato', arial, serif; }
 	h6 { font-family: 'Lato', arial, serif; }
-	.sf-menu li { font-family: 'Lato', arial, serif; }
-	.sf-menu li li { font-family: 'Lato', arial, serif; }
+	.sf-menu li { font-family: 'bmitra',tahoma,'Lato', arial, serif; }
+	.sf-menu li li { font-family: 'bmitra',tahoma,'Lato', arial, serif; }
 </style>
 <style type="text/css">
 	.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
@@ -130,64 +130,28 @@
 </div>
 <div id="navigation">
 	<ul id="menu-top-menu" class="sf-menu">
-		<li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-427"><a href="http://e404themes.com/cold/">Home</a></li>
-		<li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="http://e404themes.com/cold/features/">Features</a>
+		<li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-427"><a href="./">صفحه اصلی</a></li>
+		<li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="#">درباره ما</a>
 			<ul class="sub-menu">
-				<li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-433"><a href="http://e404themes.com/cold/features/powerful-admin-panel/">Powerful Admin Panel</a></li>
-				<li id="menu-item-448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-448"><a href="http://e404themes.com/cold/features/unlimited-colors-customization/">Unlimited Colors Customization</a></li>
-				<li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449"><a href="http://e404themes.com/cold/features/color-variations/">Color Variations</a></li>
-				<li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-432"><a href="http://e404themes.com/cold/features/40-shortcodes/">40+ Shortcodes</a></li>
-				<li id="menu-item-827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-827"><a href="http://e404themes.com/cold/features/shortcode-generator/">Shortcode Generator</a></li>
-				<li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-441"><a href="http://e404themes.com/cold/features/custom-widgets/">Custom Widgets</a></li>
-			</ul>
-		</li>
-		<li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="http://e404themes.com/cold/shortcodes/">Shortcodes</a>
-			<ul class="sub-menu">
-				<li id="menu-item-439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-439"><a href="http://e404themes.com/cold/shortcodes/columns/">Columns</a></li>
-				<li id="menu-item-437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-437"><a href="http://e404themes.com/cold/shortcodes/typography/">Typography</a></li>
-				<li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-438"><a href="http://e404themes.com/cold/shortcodes/buttons/">Buttons</a></li>
-				<li id="menu-item-436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-436"><a href="http://e404themes.com/cold/shortcodes/dropcaps-boxes-icon-boxes/">Dropcaps, Boxes &amp; Icon Boxes</a></li>
-				<li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-440"><a href="http://e404themes.com/cold/shortcodes/images/">Images</a></li>
-				<li id="menu-item-533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-533"><a href="http://e404themes.com/cold/shortcodes/nivo-slider/">Nivo Slider</a></li>
-				<li id="menu-item-435" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-435"><a href="http://e404themes.com/cold/shortcodes/prettyphoto-lightbox-clone/">PrettyPhoto (Lightbox clone)</a></li>
-				<li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-434"><a href="http://e404themes.com/cold/shortcodes/video/">Video</a></li>
-				<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="http://e404themes.com/cold/shortcodes/lists/">Lists</a></li>
-				<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-443"><a href="http://e404themes.com/cold/shortcodes/toggle-accordion-tabs/">Toggle, Accordion &amp; Tabs</a></li>
-				<li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-444"><a href="http://e404themes.com/cold/shortcodes/tables-pricebox/">Tables &amp; Pricebox</a></li>
-				<li id="menu-item-446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-446"><a href="http://e404themes.com/cold/shortcodes/blog-content/">Blog content</a></li>
-				<li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="http://e404themes.com/cold/shortcodes/other/">Other</a>
+				<li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-433"><a href="#">درباره ما</a></li>
+				<li id="menu-item-448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-448"><a href="#">درباره ما</a></li>
+				<li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449"><a href="#">درباره ما</a></li>
+				<li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-432"><a href="#">درباره ما</a></li>
+				<li id="menu-item-827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-827"><a href="#">درباره ما</a></li>
+				<li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-441"><a href="#">درباره ما</a>
 					<ul class="sub-menu">
-						<li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="http://e404themes.com/cold/shortcodes/other/subpage-1/">Subpage 1</a></li>
-						<li id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-515"><a href="http://e404themes.com/cold/shortcodes/other/subpage-2/">Subpage 2</a></li>
-						<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="http://e404themes.com/cold/shortcodes/other/subpage-3/">Subpage 3</a></li>
+						<li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="#">درباره ما 1</a></li>
+						<li id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-515"><a href="#">درباره ما 2</a></li>
+						<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514"><a href="#">درباره ما 3</a></li>
 					</ul>
 				</li>
 			</ul>
 		</li>
-		<li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-426"><a href="http://e404themes.com/cold/blog/">Blog</a></li>
-		<li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="http://e404themes.com/cold/portfolio/">Portfolio</a>
-			<ul class="sub-menu">
-				<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="http://e404themes.com/cold/portfolio/1-column-with-sidebar/">1 column with sidebar</a></li>
-				<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457"><a href="http://e404themes.com/cold/portfolio/2-columns-with-sidebar/">2 columns with sidebar</a></li>
-				<li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-456"><a href="http://e404themes.com/cold/portfolio/2-columns-without-sidebar/">2 columns without sidebar</a></li>
-				<li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-455"><a href="http://e404themes.com/cold/portfolio/3-columns-withour-sidebar/">3 columns withour sidebar</a></li>
-				<li id="menu-item-454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-454"><a href="http://e404themes.com/cold/portfolio/4-columns-without-sidebar/">4 columns without sidebar</a></li>
-				<li id="menu-item-453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-453"><a href="http://e404themes.com/cold/portfolio/big-images-withour-sidebar/">Big images withour sidebar</a></li>
-				<li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-452"><a href="http://e404themes.com/cold/portfolio/medium-images-without-sidebar/">Medium images without sidebar</a></li>
-				<li id="menu-item-451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-451"><a href="http://e404themes.com/cold/portfolio/small-images-with-sidebar/">Small images with sidebar</a></li>
-				<li id="menu-item-450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-450"><a href="http://e404themes.com/cold/portfolio/small-images-without-sidebar/">Small images without sidebar</a></li>
-				<li id="menu-item-858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-858"><a href="http://e404themes.com/cold/portfolio/3-columns-sortable/">3 columns sortable</a></li>
-				<li id="menu-item-859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859"><a href="http://e404themes.com/cold/portfolio/4-columns-sortable/">4 columns sortable</a></li>
-			</ul>
-		</li>
-		<li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-429"><a href="http://e404themes.com/cold/gallery/">Gallery</a>
-			<ul class="sub-menu">
-				<li id="menu-item-423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-423"><a href="http://e404themes.com/cold/gallery/">Standard WP Gallery</a></li>
-				<li id="menu-item-447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-447"><a href="http://e404themes.com/cold/gallery/gallery-with-galleria/">Gallery with Galleria</a></li>
-				<li id="menu-item-663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="http://e404themes.com/cold/gallery/scrollable-gallery-full-width-only/">Scrollable Gallery</a></li>
-			</ul>
-		</li>
-		<li id="menu-item-459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459"><a href="http://e404themes.com/cold/contact/">Contact</a></li>
+		<li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="#">اخبار</a></li>
+		<li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-426"><a href="#">رزومه</a></li>
+		<li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="#">فضای سبز</a></li>
+		<li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-429"><a href="#">گالری تصاویر</a></li>
+		<li id="menu-item-459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459"><a href="#">تماس با ما</a></li>
 	</ul>
 	<br class="clear">
 </div>

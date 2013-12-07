@@ -30,7 +30,7 @@
 }
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-	left:			0;
+	right:			0;
 	top:			51px; /* match top ul list item height */
 }
 ul.sf-menu li:hover li ul,
@@ -39,7 +39,7 @@ ul.sf-menu li.sfHover li ul {
 }
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-	left:			180px; /* match ul width */
+	right:			180px; /* match ul width */
 	top:			0;
 }
 ul.sf-menu li li:hover li ul,
@@ -48,7 +48,7 @@ ul.sf-menu li li.sfHover li ul {
 }
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
-	left:			180px; /* match ul width */
+	right:			180px; /* match ul width */
 	top:			0;
 }
 
@@ -67,13 +67,13 @@ ul.sf-menu li li li.sfHover ul {
 	border-top: none;
 }
 .sf-menu li {
-	float: left;
+	float: right;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 20px;
 	line-height: 18px;
 }
 .sf-menu li li {
-	font-size: 12px;
+	font-size: 18px;
 	text-transform: none;
 }
 .sf-menu li:hover, .sf-menu li.sfHover,
