@@ -110,8 +110,8 @@
 <body>
 <div id="header_wrapper">
 	<div id="header">
-		<div class="leftside" id="logo"><a href="http://e404themes.com/cold"><img src="http://e404themes.com/cold/wp-content/themes/cold/images/logo.png" alt="Cold Theme"></a></div>
-		<div id="header_nav" class="rightside">
+		<div class="rightside" id="logo"><a href="./"><img src="themes/images/demo/logo.png" alt="Saman Kesht Mihan"></a></div>
+		<div id="header_nav" class="leftside">
 			<div id="social_icons" class="leftside">
 				<a href="#" target="_blank" title="Contact"><img src="themes/images/contact.png" alt="Contact"></a>
 				<a href="#" target="_blank" title="RSS"><img src="themes/images/rss.png" alt="RSS"></a>
@@ -120,9 +120,9 @@
 				<a href="#" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
-				<form action="http://e404themes.com/cold" method="get">
-					<input type="text" name="s" value="Search..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}">
-					<input type="submit" value="Go">
+				<form action="search.html" method="get">
+					<input type="submit" value="جستجو">
+					<input type="text" class="rtl" name="s" value="جستجو..." onfocus="if (this.value == 'جستجو...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو...';}">
 				</form>
 			</div>
 		</div>

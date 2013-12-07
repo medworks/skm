@@ -19,6 +19,12 @@ body {
 	border: 0;
 	outline: 0;
 }
+.rtl{
+	direction: rtl;
+}
+.ltr{
+	direction: ltr;
+}
 
 /* forms */
 input,
@@ -26,7 +32,7 @@ textarea,
 button,
 select,
 option {
-	font: 12px/18px "lucida grande","lucida sans unicode",tahoma,verdana,arial,sans-serif;
+	font: 12px/18px "bmitra",tahoma,"lucida grande","lucida sans unicode",verdana,arial,sans-serif;
 }
 
 /* links */
@@ -159,7 +165,7 @@ img {
 	width: 150px;
 	padding: 4px 8px 5px;
 	border: none;
-	font-size: 11px;
+	font-size: 1۴px;
 	line-height: 14px;
 	border-radius: 20px;
 	-moz-border-radius: 20px;
@@ -180,9 +186,9 @@ img {
 	padding: 4px 8px 5px;
 	height: 24px;
 	vertical-align: middle;
-	border-radius: 0 20px 20px 0;
-	-moz-border-radius: 0 20px 20px 0;
-	-webkit-border-radius: 0 20px 20px 0;
+	border-radius: 20px 0px 0px 20px;
+	-moz-border-radius: 20px 0px 0px 20px;
+	-webkit-border-radius: 20px 0px 0px 20px;
 }
 
 /* content search */
