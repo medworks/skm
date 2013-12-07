@@ -2,5 +2,14 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+  src: local('Lato Regular'), local('Lato-Regular'), url("../fonts/9k-RPmcnxYEPm8CNFsH2gg.woff") format('woff');
+}
+@font-face{
+	font-family:'bmitra';
+	src:url('../fonts/BMitra.eot');
+	src:url('../fonts/BMitra.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BMitra.woff') format('woff'),
+	url('../fonts/BMitra.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
 }

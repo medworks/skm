@@ -43,7 +43,7 @@
 
 <link href="themes/css/style_13.css" rel="stylesheet" type="text/css">
 
-<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
 
 <style type="text/css">h1 { font-family: 'Lato', arial, serif; }
 	h2 { font-family: 'Lato', arial, serif; }
