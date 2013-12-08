@@ -107,17 +107,25 @@ $html.=<<<cd
 				<h3>رزومه</h3>
 				<p><a href="#">مشاهده تمام موارد</a></p>
 			</div>
+cd;
+for($i=0;$i<=3;$i++)
+{
+$html.=<<<cd
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="#">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
-					</a>
+				<a href="#">
+					<img src="{$works[$i][image]}" alt="{$works[$i][subject]}" 
+                                          title="{$works[$i][subject]}" class="border-img">
+				</a>
 				</div>
 				<h4>
-					<a href="#">هدر اول</a>
+					<a href="work-fullpage{$works[$i][id]}.html">{$works[$i][subject]}</a>
 				</h4>
 			</div>
-			<div class="one_fifth fancy_list_item">
+cd;
+}
+$html.=<<<cd
+        <div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
 					<a href="#">
 						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
@@ -199,6 +207,7 @@ $html.=<<<cd
 	</div>
 </div>
 cd;
-    }
+    
 echo $html;
+    }
 ?>
