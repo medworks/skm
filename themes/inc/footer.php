@@ -3,7 +3,8 @@
 	include_once("./lib/persiandate.php");
 	$db = Database::GetDatabase(); 
 	$About_System = GetSettingValue('About_System',0);
-	$news = $db->SelectAll('news',NULL,NULL," ndate DESC","0","3");	
+	$news = $db->SelectAll('news',NULL,NULL," ndate DESC","0","3");
+        $gallery = $db->SelectAll('gallery',NULL,NULL,NULL,"0","13");	
 	$About_System = mb_substr(html_entity_decode(strip_tags($About_System), ENT_QUOTES, "UTF-8"), 0, 500,"UTF-8")."  ...";
 	$address = GetSettingValue('Address',0);
 	$tel = GetSettingValue('Tell_Number',0);
@@ -14,42 +15,18 @@
 		<div id="e404_flickr-3" class="one_fourth widgets widget_flickr">
 			<h3>گالری تصاویر</h3>
 			<ul class="flickr">
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0159"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0103"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0103"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0126"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0126"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0090"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0090"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0135"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0135"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0119"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0119"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0109"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0109"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0154"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0154"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0142"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0142"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0120"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0120"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0138"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0138"></a>
-				</li>
-				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0131"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0131"></a>
-				</li>
+                           <?php
+                                for ($i = 0;$i<=12;$i++)
+                                {
+                                    if (!empty($gallery[$i][image]))
+                                    {
+                                    echo " <li> ".                                
+                                         "    <a href='' rel='prettyphoto' title='{$gallery[$i][subject]}'>".
+                                         "    <img src='{$gallery[$i][image]}' width='50' height='50' alt='{$gallery[$i][subject]}'></a> ".
+                                         " </li>";
+                                    }    
+                                }
+                           ?>			
 			</ul>
 		</div>
 		<div id="linkcat-2" class="one_fourth widgets widget_links">
