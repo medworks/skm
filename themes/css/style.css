@@ -47,7 +47,7 @@ a:hover {
 div {
 	border: 0;
 	position: relative;
-	text-align: left;
+	text-align: right;
 	overflow: visible;
 	background-color: transparent;
 }
@@ -426,9 +426,9 @@ hr {
 .five_sixth,
 .five_eighth,
 .seven_eighth {
-	float: left;
+	float: right;
 	position: relative;
-	margin: 0 30px 40px 0;
+	margin: 0 0 40px 20px;
 }
 .full_page {
 	position: relative;
@@ -890,8 +890,8 @@ blockquote cite {
 /* ---------------------------------------- */
 /* text */
 .icon {
-	float: left;
-	margin: 0 10px 10px 0;
+	float: right;
+	margin: 0 0 10px 10px;
 }
 h2 span {
 	display: block;

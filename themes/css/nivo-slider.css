@@ -111,6 +111,7 @@
 	border:0;
 	margin-right:3px;
 	float:right;
+	text-align: left;
 }
 .nivo-controlNav a.active {
 	background-position:0 -22px;
@@ -128,10 +129,12 @@
 }
 a.nivo-nextNav {
 	background-position: -43px 0;
+	text-align: left;
 	right:15px;
 }
 a.nivo-prevNav {
 	left:15px;
+	text-align: left;
 }
 a.nivo-nextNav:hover {
 	background-position: -43px -43px;
