@@ -125,38 +125,7 @@ $html.=<<<cd
 cd;
 }
 $html.=<<<cd
-        <div class="one_fifth fancy_list_item">
-				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="#">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
-					</a>
-				</div>
-				<h4>
-					<a href="#">هدر دوم</a>
-				</h4>
-			</div>
-			<div class="one_fifth fancy_list_item">
-				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
-					</a>
-				</div>
-				<h4>
-					<a href="">هدر سوم</a>
-				</h4>
-			</div>
-			<div class="one_fifth last fancy_list_item">
-				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
-					</a>
-				</div>
-				<h4>
-					<a href="">هدر چهارم</a>
-				</h4>
-			</div>
-			<br class="clear">
-		</div>
+        
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
 				<h3>اخبار</h3>
