@@ -101,6 +101,16 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu li li.current-menu-item a {
 	border: none;
 }
-.sf-sub-indicator {
+li .sf-sub-indicator {
 	font-weight: normal;
+	position: absolute;
+	left: 10px;
+	top: 20px;
+}
+
+li li .sf-sub-indicator {
+	font-weight: normal;
+	position: absolute;
+	left: 10px;
+	top: 10px;
 }
