@@ -113,7 +113,7 @@ for($i=0;$i<=3;$i++)
 $html.=<<<cd
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
-				<a href="#">
+				<a href="work-fullpage{$works[$i][id]}.html">
 					<img src="{$works[$i][image]}" alt="{$works[$i][subject]}" 
                                           title="{$works[$i][subject]}" class="border-img">
 				</a>
@@ -137,12 +137,12 @@ foreach($news as $key=>$val)
 $html.=<<<cd
         <div class="one_fifth fancy_list_item">
 		<div class="shadow shadow_vsmall">
-			<a href="">
+			<a href="news-fullpage{$val[id]}.html">
 				<img src="{$val[image]}" alt="{$val[subject]}" title="{$val[subject]}" class="border-img aligncenter">
 			</a>
 		</div>
 		<h4>
-			<a href="">{$val["subject"]}</a>
+			<a href="news-fullpage{$val[id]}.html">{$val["subject"]}</a>
 		</h4>
 	</div>
 cd;
