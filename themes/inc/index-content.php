@@ -12,10 +12,11 @@
 //------------------------------- header slides part -------------------------
 	$slides = $db->SelectAll("slides","*");	
 //------------------------------- news part -------------------------	
-        $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");		
+        $news = $db->SelectAll("news","*",null,"ndate DESC","0","4");		
 	$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
 	$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
 	$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
+        $news[3]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
 //------------------------------- works part -------------------------
 	$works = $db->SelectAll("works","*",null,"fdate DESC","0","4");
 //------------------------------- works part -------------------------
@@ -110,6 +111,8 @@ $html.=<<<cd
 cd;
 for($i=0;$i<=3;$i++)
 {
+    if (!empty($works[$i]["subject"]))
+    {
 $html.=<<<cd
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
@@ -123,6 +126,7 @@ $html.=<<<cd
 				</h4>
 			</div>
 cd;
+    }
 }
 $html.=<<<cd
                </div>
@@ -134,6 +138,8 @@ $html.=<<<cd
 cd;
 foreach($news as $key=>$val)
 {    
+    if (!empty($val["subject"]))
+    {
 $html.=<<<cd
         <div class="one_fifth fancy_list_item">
 		<div class="shadow shadow_vsmall">
@@ -146,6 +152,7 @@ $html.=<<<cd
 		</h4>
 	</div>
 cd;
+    }
 }
 $html.=<<<cd
 			<br class="clear">
