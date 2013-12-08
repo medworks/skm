@@ -1,11 +1,11 @@
 <?php
   error_reporting (E_ALL ^ E_NOTICE);
   
-  define("_DB_NAME","mediatec");
+  define("_DB_NAME","skm");
   define("_DB_USER", "root");
   define("_DB_PASS", "");
   define("_DB_SERVER", "localhost");
-  define("_DOMAIN", "http://localhost/mediatec");
+  define("_DOMAIN", "http://localhost/skm");
   
 
   /*
@@ -25,8 +25,8 @@
   define ('OS_ROOT', $_SERVER['DOCUMENT_ROOT']);
 */
   
-  define ('SITE_ROOT', '/media');
-  define ('OS_ROOT', $_SERVER['DOCUMENT_ROOT']."/media");
+  define ('SITE_ROOT', '/skm');
+  define ('OS_ROOT', $_SERVER['DOCUMENT_ROOT']."/skm");
   
   
 ?>
