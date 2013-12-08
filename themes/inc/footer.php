@@ -1,3 +1,16 @@
+<?php
+	include_once("./classes/database.php");
+	include_once("./lib/persiandate.php");
+	$db = Database::GetDatabase(); 
+	$About_System = GetSettingValue('About_System',0);
+	$news = $db->SelectAll('news',NULL,NULL," ndate DESC");
+	$works = $db->SelectAll('works',NULL,NULL," fdate DESC");
+	$articles = $db->SelectAll('articles',NULL,NULL," ndate DESC");
+	$About_System = mb_substr(html_entity_decode(strip_tags($About_System), ENT_QUOTES, "UTF-8"), 0, 500,"UTF-8")."  ...";
+	$address = GetSettingValue('Address',0);
+	$tel = GetSettingValue('Tell_Number',0);
+	$fax = GetSettingValue('Fax_Number',0);
+?>
 <div id="footer_wrapper">
 	<div id="footer">
 		<div id="e404_flickr-3" class="one_fourth widgets widget_flickr">
