@@ -3,9 +3,7 @@
 	include_once("./lib/persiandate.php");
 	$db = Database::GetDatabase(); 
 	$About_System = GetSettingValue('About_System',0);
-	$news = $db->SelectAll('news',NULL,NULL," ndate DESC");
-	$works = $db->SelectAll('works',NULL,NULL," fdate DESC");
-	$articles = $db->SelectAll('articles',NULL,NULL," ndate DESC");
+	$news = $db->SelectAll('news',NULL,NULL," ndate DESC","0","3");	
 	$About_System = mb_substr(html_entity_decode(strip_tags($About_System), ENT_QUOTES, "UTF-8"), 0, 500,"UTF-8")."  ...";
 	$address = GetSettingValue('Address',0);
 	$tel = GetSettingValue('Tell_Number',0);
@@ -63,23 +61,20 @@
 				<li><a href="#">لینک چهار</a></li>
 			</ul>
 		</div>
-		<div id="e404_twitter-3" class="one_fourth widgets widget_twitter"><h3>اخبار</h3>
+		<div id="e404_twitter-3" class="one_fourth widgets widget_twitter">
+                    <h3>اخبار</h3>
 			<ul class="tweets">
-				<li>
-					<a href="#" title=""><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
-					<a href="#">لینک یک لینک یک لینک یک لینک</a>
-				</li>
-				<br class="clear">
-				<li>
-					<a href="#" title=""><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
-					<a href="#">لینک یک</a>
-				</li>
-				<br class="clear">
-				<li>
-					<a href="#" title=""><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
-					<a href="#">لینک یک</a>
-				</li>
-				<br class="clear">
+                        <?php    
+                        for($i=0 ; $i<3 ; $i++){    
+			echo   " <li> ".
+			       "	<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i][subject]}'> ". 
+                               "         <img src='{$news[$i][image]}' width='50' height='50' alt='{$news[$i][subject]}'> ".
+                               "       </a> ".
+                               "        <a href='news-fullpage{$news[$i][id]}.html'>{$news[$i][subject]}</a> ".
+			       " </li> ".
+			       " <br class='clear'> " ;
+                        }  
+                         ?>                                                      
 			</ul>
 		</div>
 		<div id="custom_cf7-3" class="one_fourth widgets widget_custom_cf7">
@@ -151,7 +146,7 @@
 var _wpcf7 = {"loaderUrl":"http:\/\/e404themes.com\/cold\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
 /* ]]> */
 </script>
-<script type="text/javascript" src="http://e404themes.com/cold/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2"></script> -->
-
+<scipt type="text/javascript" src="http://e404themes.com/cold/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2"></script> 
+-->
 </body>
 </html>
