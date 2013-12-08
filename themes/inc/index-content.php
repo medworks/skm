@@ -199,5 +199,6 @@ $html.=<<<cd
 	</div>
 </div>
 cd;
+    }
 echo $html;
 ?>
