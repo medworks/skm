@@ -46,9 +46,10 @@
 /* Caption styles */
 .nivo-caption {
 	position:absolute;
-	left:0px;
+	right:0px;
+	text-align: right;
 	bottom:0px;
-	font-size: 12px;
+	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
 	width:100%;
@@ -98,7 +99,7 @@
 
 .nivo-controlNav {
 	position:absolute;
-	right: 15px;
+	left: 15px;
 	bottom: 10px;
 }
 .nivo-controlNav a {
@@ -109,7 +110,7 @@
 	text-indent:-9999px;
 	border:0;
 	margin-right:3px;
-	float:left;
+	float:right;
 }
 .nivo-controlNav a.active {
 	background-position:0 -22px;

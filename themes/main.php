@@ -160,9 +160,9 @@
 		<div id="featured">
 			<!-- <div class="ribbon"></div>			 -->
 			<div class="slider" id="slider" style="height: 350px;">
-				<img src="themes/images/demo/slide1.jpg" title="Number twe12e by sykicktb" alt="Number twe12e by sykicktb">
-				<img src="themes/images/demo/slide2.jpg" title="Lettering by RhysDaven" alt="Lettering by RhysDaven">
-				<img src="themes/images/demo/slide3.jpg" title="Trial card designs by photojenni" alt="Trial card designs by photojenni">
+				<img src="themes/images/demo/slide1.jpg" title="اسلاید شماره یک" alt="اسلاید شماره یک">
+				<img src="themes/images/demo/slide2.jpg" title="اسلاید شماره دو" alt="اسلاید شماره دو">
+				<img src="themes/images/demo/slide3.jpg" title="اسلاید شماره سه" alt="اسلاید شماره سه">
 			</div>
 			<script type="text/javascript">
 				var slideParams = []; 
@@ -174,7 +174,7 @@
 				slideParams['directionNavHide'] = 1;
 				slideParams['controlNav'] = 1; 
 				slideParams['keyboardNav'] = 1; 
-				slideParams['pauseOnHover'] = 0; 
+				slideParams['pauseOnHover'] = 1; 
 				slideParams['manualAdvance'] = false;
 				slideParams['captionOpacity'] = 0.6;
 				slideParams['stopAtEnd'] = 0;
