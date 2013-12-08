@@ -125,52 +125,29 @@ $html.=<<<cd
 cd;
 }
 $html.=<<<cd
-        
+               </div>
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
 				<h3>اخبار</h3>
 				<p><a href="#">مشاهده تمام موارد</a></p>
 			</div>
-			<div class="one_fifth fancy_list_item">
-				<div class="shadow shadow_vsmall">
-					<a href="">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img aligncenter">
-					</a>
-				</div>
-				<h4>
-					<a href="">هدر اول</a>
-				</h4>
-			</div>
-			<div class="one_fifth fancy_list_item">
-				<div class="shadow shadow_vsmall">
-					<a href="">
-						<img src="themes/images/demo/smallpic.jpg" alt="y" title="" class="border-img aligncenter">
-					</a>
-				</div>
-				<h4>
-					<a href="">هدر دوم</a>
-				</h4>
-			</div>
-			<div class="one_fifth fancy_list_item">
-				<div class="shadow shadow_vsmall">
-					<a href="">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img aligncenter">
-					</a>
-				</div>
-				<h4>
-					<a href="">هدر سوم</a>
-				</h4>
-			</div>
-			<div class="one_fifth last fancy_list_item">
-				<div class="shadow shadow_vsmall">
-					<a href="">
-						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img aligncenter">
-					</a>
-				</div>
-				<h4>
-					<a href="">هدر چهارم</a>
-				</h4>
-			</div>
+cd;
+foreach($news as $key=>$val)
+{    
+$html.=<<<cd
+        <div class="one_fifth fancy_list_item">
+		<div class="shadow shadow_vsmall">
+			<a href="">
+				<img src="{$val[image]}" alt="{$val[subject]}" title="{$val[subject]}" class="border-img aligncenter">
+			</a>
+		</div>
+		<h4>
+			<a href="">{$val["subject"]}</a>
+		</h4>
+	</div>
+cd;
+}
+$html.=<<<cd
 			<br class="clear">
 		</div>
 	</div>
