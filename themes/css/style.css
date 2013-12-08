@@ -7,7 +7,7 @@ html {
 html,
 body,
 form {
-	font: 12px/18px "lucida grande","lucida sans unicode",tahoma,verdana,arial,sans-serif;
+	font: 18px "bmitra", tahoma, "lucida grande","lucida sans unicode",tahoma,verdana,arial,sans-serif;
 }
 body {
 	min-width: 990px;
@@ -274,7 +274,7 @@ h1 {
 	line-height: 30px;
 }
 h2 {
-	font-size: 22px;
+	font-size: 25px;
 	line-height: 26px;
 }
 h2.fancy-header {
@@ -885,7 +885,7 @@ blockquote p span {
 }
 blockquote cite {
 	display: block;
-	font-size: 11px;
+	font-size: 14px;
 	font-style: normal;
 	text-align: right;
 }

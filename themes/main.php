@@ -45,12 +45,13 @@
 
 <link rel="shortcut icon" href="favicon.ico">
 
-<style type="text/css">h1 { font-family: 'Lato', arial, serif; }
-	h2 { font-family: 'Lato', arial, serif; }
-	h3 { font-family: 'Lato', arial, serif; }
-	h4 { font-family: 'Lato', arial, serif; }
-	h5 { font-family: 'Lato', arial, serif; }
-	h6 { font-family: 'Lato', arial, serif; }
+<style type="text/css">
+	h1 { font-family: 'bmitra', tahoma, 'Lato', arial, serif; }
+	h2 { font-family: 'bmitra', tahoma, 'Lato', arial, serif; }
+	h3 { font-family: 'bmitra', tahoma, 'Lato', arial, serif; }
+	h4 { font-family: 'bmitra', tahoma, 'Lato', arial, serif; }
+	h5 { font-family: 'bmitra', tahoma, 'Lato', arial, serif; }
+	h6 { font-family: 'bmitra', tahoma, 'Lato', arial, serif; }
 	.sf-menu li { font-family: 'bmitra',tahoma,'Lato', arial, serif; }
 	.sf-menu li li { font-family: 'bmitra',tahoma,'Lato', arial, serif; }
 </style>
@@ -220,19 +221,19 @@
 		<br class="clear">
 		<!-- <hr class="dotted"> -->
 		<div class="one_third">
-			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="Slide Show"><a href="http://e404themes.com/cold/features/">Slide Show</a><span>4 awesome sliders</span></h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-			<p class="more"><a href="http://e404themes.com/cold/features/">More details</a></p>
+			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="Slide Show"><a href="http://e404themes.com/cold/features/">هدر یک</a><span>هدر یک</span></h2>
+			<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
+			<p class="more"><a href="#">اطلاعات تکمیلی</a></p>
 		</div>
 		<div class="one_third">
-			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="Google Web Fonts"><a href="http://www.google.com/webfonts">Google Web Fonts</a><span>Font replacement</span></h2>
-			<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
-			<p class="more"><a href="http://www.google.com/webfonts">More details</a></p>
+			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="Google Web Fonts"><a href="http://www.google.com/webfonts">هدر یک</a><span>هدر یک</span></h2>
+			<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
+			<p class="more"><a href="#">اطلاعات تکمیلی</a></p>
 		</div>
 		<div class="one_third last">
-			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="PrettyPhoto"><a href="http://e404themes.com/cold/shortcodes/">PrettyPhoto</a><span>With video support</span></h2>
-			<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum.</p>
-			<p class="more"><a href="http://e404themes.com/cold/shortcodes/">More details</a></p>
+			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="PrettyPhoto"><a href="http://e404themes.com/cold/shortcodes/">هدر یک</a><span>هدر یک</span></h2>
+			<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
+			<p class="more"><a href="#">اطلاعات تکمیلی</a></p>
 		</div>
 		<br class="clear">
 		<div class="fancy_list">
