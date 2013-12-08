@@ -430,6 +430,9 @@ hr {
 	position: relative;
 	margin: 0 0 40px 20px;
 }
+.one_fourth{
+	margin: 0 30px 40px 0 !important;
+}
 .full_page {
 	position: relative;
 	margin: 0 0 40px 0;
