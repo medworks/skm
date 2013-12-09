@@ -39,24 +39,27 @@ $html.=<<<cd
 						</div> -->
 					</div>
 					<h2 class="blog-header">
-						<a href="#" title="">خبر اول</a>
+						<a href="#" title="">{$post["subject"]}</a>
 					</h2>
 					<div class="meta posted-meta">
-				 		به وسیله <a title="" rel="author external">مجتبی امجدی</a>
+				 		به وسیله <a title="" rel="author external">{$post["userid"]}</a>
 				 		در گروه <a href="#" title="" rel="category tag">گیاهان دریایی</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="news-fullpage1.html" class="zoom" title="">
-							<img src="themes/images/demo/newspic.jpg" alt="" class="">
+						<a href="news-fullpage{$post[id]}.html" class="zoom" title="">
+							<img src="$post[image]" alt="$post[subject]" class="">
 						</a>
 					</div>
-					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
+					<p>{$post["body"]}</p>
 					<p class="more">
 						<a href="#">ادامه خبر</a>
 					</p>
 				</div>
-				<div class="wp-pagenavi">
+cd;
+}
+$html.=<<<cd
+                                       <div class="wp-pagenavi">
 					<span class="pages">صفحه ۱ از ۲</span>
 					<span class="current">1</span>
 					<a href="#" class="page larger">2</a>
