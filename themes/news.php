@@ -18,11 +18,22 @@ $html=<<<cd
 				<a>اخبار</a>
 			</div>
 			<div id="page-content" class="two_third">
+cd;
+foreach($news as $key => $post)
+{
+    $ndate = ToJalali($post["ndate"]," l d F  Y ساعت H:m");
+    $day = ToJalali($post["ndate"],"d");
+    $month = ToJalali($post["ndate"],"F");
+    $year = ToJalali($post["ndate"],"Y");
+    $post["userid"] = GetUserName($post["userid"]);	
+    $post["body"]= strip_tags($post["body"]);
+    $post["body"] = (mb_strlen($post["body"])>500) ? mb_substr($post["body"],0,500,"UTF-8")."..." : $post["body"];
+$html.=<<<cd
 				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-news tag-design tag-works">
 					<div class="meta-date">
-						<span class="meta-month">فروردین</span>
-						<span class="meta-day">09</span>
-						<span class="meta-year">1392</span>
+						<span class="meta-month">{$month}</span>
+						<span class="meta-day">{$day}</span>
+						<span class="meta-year">{$year}</span>
 						<!-- <div class="meta-comments">
 							<a href="#"><span>0</span></a>
 						</div> -->
