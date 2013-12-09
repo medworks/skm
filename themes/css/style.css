@@ -2749,7 +2749,7 @@ li.current-cat li {
 #footer .tweets li a:hover img{
 	opacity: 0.7;
 }
-.tweets li a{
+#sidebar .tweets li a{
 	padding: 0 8px 1px 0;
 	background: url('../images/small-arrow.png') 43px 6px no-repeat;
 }
