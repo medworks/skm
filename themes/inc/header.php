@@ -17,7 +17,7 @@
 <link rel="stylesheet" id="Lato-css" href="themes/css/tipsy.css" type="text/css" media="all">
 <link rel="stylesheet" id="contact-form-7-css" href="themes/css/styles.css?ver=3.5.2" type="text/css" media="all">
 
-<script type="text/javascript" src="themes/js/jquery.js?ver=1.10.2"></script>
+<script type="text/javascript" src="lib/js/jquery.js"></script>
 <script type="text/javascript" src="themes/js/jquery-migrate.min.js?ver=1.2.1"></script>
 <script type="text/javascript" src="themes/js/preloader.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/hoverIntent.js?ver=3.6.1"></script>
