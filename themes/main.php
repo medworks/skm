@@ -238,96 +238,94 @@
 		<br class="clear">
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
-				<h3>Recent Works</h3>
-				<p><a href="#">view all</a></p>
+				<h3>کارهای اخیر</h3>
+				<p><a href="#">مشاهده تمام موارد</a></p>
 			</div>
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="http://e404themes.com/cold/portfolio/cold-default/">
-						<img src="themes/images/demo/smallpic.jpg" alt="Cold Default" title="Cold Default" class="border-img">
+					<a href="#">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
 					</a>
 				</div>
+				<h4>
+					<a href="#">هدر اول</a>
+				</h4>
 			</div>
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="http://e404themes.com/cold/portfolio/mountain-view/">
-						<img src="themes/images/demo/smallpic.jpg" alt="Mountain View" title="Mountain View" class="border-img">
+					<a href="#">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
 					</a>
 				</div>
+				<h4>
+					<a href="#">هدر دوم</a>
+				</h4>
 			</div>
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="http://e404themes.com/cold/portfolio/city-lights/">
-						<img src="themes/images/demo/smallpic.jpg" alt="City Lights" title="City Lights" class="border-img">
+					<a href="">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
 					</a>
 				</div>
+				<h4>
+					<a href="">هدر سوم</a>
+				</h4>
 			</div>
 			<div class="one_fifth last fancy_list_item">
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
-					<a href="http://e404themes.com/cold/portfolio/natural-video/">
-						<img src="themes/images/demo/smallpic.jpg" alt="Natural &amp; Video" title="Natural &amp; Video" class="border-img">
+					<a href="">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img">
 					</a>
 				</div>
+				<h4>
+					<a href="">هدر چهارم</a>
+				</h4>
 			</div>
 			<br class="clear">
 		</div>
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
-				<h3>Recent Blog Posts</h3>
-				<p><a href="#">view all</a></p>
+				<h3>اخبار</h3>
+				<p><a href="#">مشاهده تمام موارد</a></p>
 			</div>
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall">
-					<a href="http://e404themes.com/cold/2011/04/image-aligned-left-right-center/">
-						<img src="themes/images/demo/smallpic.jpg" alt="Image aligned left, right &amp; center" title="Image aligned left, right &amp; center" class="border-img aligncenter">
+					<a href="">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img aligncenter">
 					</a>
-					<div class="fancy_meta">
-						<a href="http://e404themes.com/cold/2011/04/image-aligned-left-right-center/#comments" class="fancy_comments">5</a>
-					</div>
 				</div>
 				<h4>
-					<a href="http://e404themes.com/cold/2011/04/image-aligned-left-right-center/">Image aligned left, right &amp; center</a>
+					<a href="">هدر اول</a>
 				</h4>
 			</div>
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall">
-					<a href="http://e404themes.com/cold/2011/04/blog-entry-with-wordpress-gallery/">
-						<img src="themes/images/demo/smallpic.jpg" alt="Blog entry with WordPress Gallery" title="Blog entry with WordPress Gallery" class="border-img aligncenter">
+					<a href="">
+						<img src="themes/images/demo/smallpic.jpg" alt="y" title="" class="border-img aligncenter">
 					</a>
-					<div class="fancy_meta">
-						<a href="http://e404themes.com/cold/2011/04/blog-entry-with-wordpress-gallery/#comments" class="fancy_comments">3</a>
-					</div>
 				</div>
 				<h4>
-					<a href="http://e404themes.com/cold/2011/04/blog-entry-with-wordpress-gallery/">Blog entry with WordPress Gallery</a>
+					<a href="">هدر دوم</a>
 				</h4>
 			</div>
 			<div class="one_fifth fancy_list_item">
 				<div class="shadow shadow_vsmall">
-					<a href="http://e404themes.com/cold/2011/04/duis-aute-irure-dolor-in-reprehenderit/">
-						<img src="themes/images/demo/smallpic.jpg" alt="Duis aute irure dolor in reprehenderit" title="Duis aute irure dolor in reprehenderit" class="border-img aligncenter">
+					<a href="">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img aligncenter">
 					</a>
-					<div class="fancy_meta">
-						<a href="http://e404themes.com/cold/2011/04/duis-aute-irure-dolor-in-reprehenderit/#comments" class="fancy_comments">0</a>
-					</div>
 				</div>
 				<h4>
-					<a href="http://e404themes.com/cold/2011/04/duis-aute-irure-dolor-in-reprehenderit/">Duis aute irure dolor in reprehenderit
-					</a>
+					<a href="">هدر سوم</a>
 				</h4>
 			</div>
 			<div class="one_fifth last fancy_list_item">
 				<div class="shadow shadow_vsmall">
-					<a href="http://e404themes.com/cold/2011/04/praesentium-voluptatum-deleniti/">
-						<img src="themes/images/demo/smallpic.jpg" title="Praesentium voluptatum deleniti" class="border-img aligncenter">
+					<a href="">
+						<img src="themes/images/demo/smallpic.jpg" alt="" title="" class="border-img aligncenter">
 					</a>
-					<div class="fancy_meta">
-						<a href="http://e404themes.com/cold/2011/04/praesentium-voluptatum-deleniti/#comments" class="fancy_comments">0
-						</a>
-					</div>
 				</div>
 				<h4>
-					<a href="http://e404themes.com/cold/2011/04/praesentium-voluptatum-deleniti/">Praesentium voluptatum deleniti</a>
+					<a href="">هدر چهارم</a>
 				</h4>
 			</div>
 			<br class="clear">

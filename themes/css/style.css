@@ -294,7 +294,7 @@ h2.head-icon {
 	-webkit-border-radius: 30px 0 0 30px;
 }
 h3 {
-	font-size: 20px;
+	font-size: 25px;
 	line-height: 24px;
 }
 h4 {
@@ -780,10 +780,10 @@ a:hover img.attachment-thumbnail {
 	margin-top: 44px;
 }
 .fancy_list_item h4 {
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 18px;
-	padding-left: 15px;
-	background: url('../images/arrow.png') 0 5px no-repeat;
+	padding-right: 15px;
+	background: url('../images/arrow.png') 150px 5px no-repeat;
 }
 .fancy_list_item .aligncenter {
 	margin-top: 0;
@@ -1093,7 +1093,7 @@ code {
 }
 .aligncenter {
 	display: block;
-	margin: 20px auto;
+	margin: 20px auto 0;
 }
 .alignnone {
 	display: block;
