@@ -1070,7 +1070,7 @@ code {
 /* blog */
 .post {
 	margin-bottom: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 10px;
 	background: url('../images/hr1.png') 0 100% repeat-x;
 }
 .sticky {
@@ -1333,7 +1333,7 @@ code {
 	position: relative;
 }
 .share-this a {
-	float: left;
+	float: right;
 	background: #fff;
 	margin-right: 2px;
 	padding: 2px;

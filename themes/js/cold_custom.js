@@ -1,16 +1,16 @@
 jQuery(window).load(function(){
-	jQuery('.share_buttons').css('left', -jQuery('.share_buttons').width());
+	jQuery('.share_buttons').css('right', -jQuery('.share_buttons').width());
 	jQuery('.share_button').toggle(
 		function() {
 			var $lefty = jQuery(this).next('.share_buttons');
 			$lefty.animate({
-				left: jQuery(this).width()
+				right: jQuery(this).width()
 			});
 		},
 		function() {
 			var $lefty = jQuery(this).next('.share_buttons');
 			$lefty.animate({
-				left: -$lefty.outerWidth()
+				right: -$lefty.outerWidth()
 			});
 		}
 	);

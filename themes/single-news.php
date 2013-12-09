@@ -5,7 +5,8 @@ $html=<<<cd
 		<div id="main_wrapper">
 			<div id="breadcrumb">
 				<a href="./">صفحه اصلی</a> <span>›</span>
-				<a>اخبار</a>
+				<a href="news.html">اخبار</a> <span>›</span>
+				<a>خبر یک</a>
 			</div>
 			<div id="page-content" class="two_third">
 				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-news tag-design tag-works">
@@ -26,20 +27,28 @@ $html=<<<cd
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="news-fullpage1.html" class="zoom" title="">
+						<a href="themes/images/demo/newspic.jpg" rel="prettyPhoto" title="">
 							<img src="themes/images/demo/newspic.jpg" alt="" class="">
 						</a>
 					</div>
 					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-					<p class="more">
-						<a href="#">ادامه خبر</a>
-					</p>
-				</div>
-				<div class="wp-pagenavi">
-					<span class="pages">صفحه ۱ از ۲</span>
-					<span class="current">1</span>
-					<a href="#" class="page larger">2</a>
-					<a href="#" class="nextpostslink">&#8249;</a>
+					<br class="clear" />
+					<div class="share-this">
+						<span class="share_button">
+							<a href="#" title="Share This">
+								<img src="themes/images/add-this.png" alt="Share This">
+							</a>
+						</span>
+						<span class="share_buttons" style="right: -90px;">
+							<a href="#" target="_blank" title="Twitter">
+								<img src="themes/images/twitter-share.png" alt="Twitter">
+							</a>
+							<a href="#" target="_blank" title="Facebook">
+								<img src="themes/images/facebook-share.png" alt="Facebook">
+							</a>
+						</span>
+					</div>
+
 				</div>
 			</div>
 			<div id="sidebar" class="one_third last">
