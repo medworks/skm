@@ -575,7 +575,7 @@ form input[type="text"],
 form input[type="password"],
 textarea,
 select {
-	background: #fff url("images/form-bg.png") repeat;
+	background: #fff url("../images/form-bg.png") repeat;
 	line-height: 14px;
 	padding: 6px 8px;
 	border: 1px solid #ddd;
@@ -849,15 +849,21 @@ a:hover img.attachment-thumbnail {
 #breadcrumb {
 	margin-bottom: 5px;
 	margin-top: -15px;
-	font-size: 11px;
+	font-size: 17px;
 	text-align: right;
 	border-bottom: 4px solid #aaa;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
 }
 #breadcrumb span {
 	font-weight: bold;
 	color: #999;
 	font-size: 13px;
 	padding: 0 2px;
+}
+
+#breadcrumb a{
+	text-decoration: none;
 }
 
 /* ---------------------------------------- */
@@ -941,7 +947,7 @@ h2 span {
 
 .zoom,
 .gallery-icon a {
-	background: url('images/more-icon.png') 50% 50% no-repeat;
+	background: url('../images/more-icon.png') 50% 50% no-repeat;
 }
 .zoom:hover img,
 .gallery-icon a:hover img {
@@ -1175,6 +1181,9 @@ code {
 .posted-meta {
 	margin-bottom: 5px;
 }
+.posted-meta a{
+	text-decoration: none;
+}
 .tags-meta a {
 	display: inline-block;
 	background: #ddd url('../images/dot.png') 5px 50% no-repeat;
@@ -1196,11 +1205,11 @@ code {
 }
 
 .meta-date {
-	float: left;
+	float: right;
 	background: #666 url('../images/gradient-light-bottom.png') 0 100% repeat-x;
 	width: 60px;
 	padding: 6px 1px 1px;
-	margin: 0 20px 20px 0;
+	margin: 0 0 20px 20px;
 	text-align: center;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -1254,12 +1263,13 @@ code {
 
 /* pagination */
 .wp-pagenavi {	
-	font-size: 11px;
+	font-size: 18px;
 	margin-bottom: 20px;
+	line-height: 22px;
 }
 .wp-pagenavi a,
 .wp-pagenavi span {
-	float: left;
+	float: right;
 	margin: 0 5px 5px 0;
 	height: 18px;
 	padding-top: 1px;
@@ -1276,7 +1286,7 @@ code {
 .wp-pagenavi a.last,
 .wp-pagenavi a.previouspostslink,
 .wp-pagenavi a.nextpostslink {
-	padding: 0 8px 1px;
+	padding: 2px 8px;
 	font-weight: bold;
 	background: #eee url("../images/glass-sub.png") 0 -8px repeat-x;
 	border: 1px solid #ddd;
@@ -1288,13 +1298,13 @@ code {
 .wp-pagenavi span.current {
 	text-decoration: none;
 	font-weight: bold;
-	padding: 0 3px;
+	padding:2px 3px;
 }
 .wp-pagenavi a.page {
 	background: #aaa url("../images/gradient-btn.png") repeat-x;
 	color: #fff;
 	border: 1px solid #aaa;
-	padding: 0 8px 1px;
+	padding: 2px 8px;
 	text-decoration: none;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -2713,7 +2723,7 @@ li.current-cat li {
 .tweets li {
 	padding-left: 25px;
 	margin-bottom: 5px;
-	background: url('../images/twitter-blue.png') 0 4px no-repeat;
+	/*background: url('../images/twitter-blue.png') 0 4px no-repeat;*/
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -2739,10 +2749,14 @@ li.current-cat li {
 #footer .tweets li a:hover img{
 	opacity: 0.7;
 }
+.tweets li a{
+	padding: 0 8px 1px 0;
+	background: url('../images/small-arrow.png') 43px 6px no-repeat;
+}
 .tweets span,
 #footer .tweets span {
 	display: block;
-	font-size: 11px;
+	font-size: 13px;
 	margin-top: 5px;
 }
 .followme {
