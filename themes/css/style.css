@@ -330,7 +330,7 @@ h6 a {
 }
 #footer h3,
 #sidebar h3 {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 22px;
 }
 #footer h3,
@@ -593,7 +593,7 @@ select:focus {
 form input[type="submit"] {
 	background-position: 0 -4px;
 	background-repeat: repeat-x;
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 12px;
 	font-weight: bold;
 	padding: 5px 8px;
@@ -1024,7 +1024,7 @@ code {
 }
 #footer,
 #footer form {
-	font-size: 11px;
+	font-size: 17px;
 }
 
 /* copyright */
@@ -2680,8 +2680,8 @@ li.current-cat li {
 	padding: 0;
 }
 #footer .widgets li {
-	padding: 0 0 1px 14px;
-	background: url('../images/small-arrow.png') 0 6px no-repeat;
+	padding: 0 14px 1px 0;
+	background: url('../images/small-arrow.png') 200px 10px no-repeat;
 }
 #footer .widgets .recent-posts li,
 #footer .widgets .popular-posts li {
@@ -2712,10 +2712,21 @@ li.current-cat li {
 	-webkit-border-radius: 8px;
 }
 #footer .tweets li {
-	padding: 0 0 5px 25px;
+	padding: 0 0 5px 0;
 	margin-bottom: 5px;
-	background: url('../images/twitter-blue.png') 0 6px no-repeat;
 	border: none;
+	background: none;
+}
+#footer .tweets li img{
+	border: 1px solid #eee;
+	padding: 4px;
+	background: #efefef url('../images/gradient-light-h.png') 0 0 repeat-x;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-color: #ccc;
+	float: right;
+	margin-left: 5px;
 }
 .tweets span,
 #footer .tweets span {
@@ -2740,7 +2751,7 @@ li.current-cat li {
 /* ---------------------------------------- */
 /* widgets - flickr */
 .flickr li {
-	float: left;
+	float: right;
 	padding: 0 !important;
 	background: none;
 	margin: 0 5px 10px 5px;
