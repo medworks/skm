@@ -54,7 +54,7 @@
 			<ul class="tweets">
 				<li>
 					<a href="#" rel="prettyphoto" title="DSC_0159"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
-					<a href="#">لینک یک لینک یک لینک یک لینک یک </a>
+					<a href="#">لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک </a>
 				</li>
 				<br class="clear">
 				<li>

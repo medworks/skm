@@ -2722,6 +2722,7 @@ li.current-cat li {
 	margin-bottom: 5px;
 	border: none;
 	background: none;
+	min-height: 48px;
 }
 #footer .tweets li img{
 	border: 1px solid #eee;
