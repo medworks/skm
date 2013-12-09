@@ -1,9 +1,46 @@
 <?php
-	include_once("../config.php");
-    include_once("../classes/database.php");	
-	include_once("../classes/functions.php");		
-	$db = Database::GetDatabase();
-
+header('Content-Type: text/html; charset=UTF-8');
+include_once("../config.php");
+include_once("../classes/database.php");	
+include_once("../classes/functions.php");		
+$db = Database::GetDatabase();
+if ($_GET["items"]=="search")
+{ 
+      $table = $_GET["cat"];
+      $field = "subject";
+	  if ($table =="news") $page = "news";
+	  else if ($table =="articles") $page = "article";
+	  $rownum = 0;
+	  if (!empty($_POST["findtxt"])) $searchtxt = "'%{$_POST[findtxt]}%'";
+	  $rows = $db->SelectAll(
+				$table,
+				"*",
+				"{$field} LIKE {$searchtxt}",
+				"id DESC",
+				$_GET["pageNo"]*10,
+				10);
+	  if (!$rows)
+	  {
+	    echo "<div class='notification_error rtl'>عبارت مورد نظر یافت نشد</div>";
+	  }
+	  else
+	  {
+		 $success = count($rows);
+		 foreach($rows as $key=>$val)
+		 {
+			 ++$rownum;
+			 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='{$page}-fullpage{$val['id']}.html' class='srlink'>
+					 {$val['subject']}</a></p>";
+		}
+		$result=<<<rt
+		 <p class="sresult"><span>عبارت جستجو شده: </span>{$_POST["findtxt"]}</p>
+		 <p class="sresult"><span>تعداد نتایج یافت شده: </span>{$success}</p>
+		 {$row}		
+rt;
+        echo $result;
+       }
+	   
+}	   
 if ($_GET["news"]=="reg")
 {
 	$fields = array("`email`","`tel`","`name`");		
@@ -29,30 +66,30 @@ if ($_GET["news"]=="reg")
 
 if($_GET["contact"]=="reg"){
 
-	$admin = 'info@mediateq.ir';
+	$admin = 'info@soushiant.co';
 
-	$name    = $_POST['family'];
+	$name    = $_POST['name'];
 	$email   = $_POST['email'];
-	$subject = $_POST['subject'];
 	$text    = $_POST['message'];
-
+	$subject = $_POST['subject'];
 	$message = "$text";
+	
 
 	if( strlen($name)>=1 && checkEmail($email) && strlen($text)>=1 ){
 		if( @mail (
-				$admin,
-				"$subject",
-				$message,
-				"From:$name $email" )
-		){
-			echo "<div class='notification_ok rtl medium'>پیام شما با موفقیت ارسال شد.</div>";
+					$admin,
+					"$subject",
+					$message,
+					"From:$name $email" )
+			){
+				echo "<div class='notification_ok rtl medium'>پیام شما با موفقیت ارسال شد.</div>";
 
-		}else{
-			echo "<div class='notification_error rtl'>خطا! پیام شما ارسال نشد لطفا مجددا تلاش نمایید.</div>";
+			}else{
+				echo "<div class='notification_error rtl'>خطا! پیام شما ارسال نشد لطفا مجددا تلاش نمایید.</div>";
 
-		}
+			}
 	}else{
-		echo "<div class='notification_error rtl'>خطا! لطفا فیلدها را بررسی نمایید و مجددا ارسال کنید!</div>";
+		echo "<div class='notification_error rtl'>خطا! پیام شما ارسال نشد لطفا مجددا تلاش نمایید.</div>";
 	}
 
 }
@@ -128,19 +165,4 @@ cd;
 	echo $pics.$html;
 	 
 }
-if($_GET["poll"]=="reg")
-{
-		$ip = $_SERVER['REMOTE_ADDR'];
-		if ($db->CountOf("pollanswers","ip='{$ip}'") == 0)
-		{
-		    $fields = array("`poid`","`ip`");			
-		    $values = array("'{$_POST["poll"]}'","'{$ip}'");
-		    if ($db->InsertQuery("pollanswers",$fields,$values))
-			  echo "<div class='notification_ok rtl'>نظر شما با موفقیت ثبت شد</div>";
-			else
-              echo "<div class='notification_error rtl'>ثبت نظر با مشکل مواجه شد  لطفا فیلدها را بررسی نمایید و مجددا تلاش کنید.</div>";			
-		}        	
-		else 
-			echo "<div class='notification_error rtl'>شما قبلا نظر خود را ثبت نموده اید</div>";
-    }
 ?>
