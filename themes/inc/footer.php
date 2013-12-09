@@ -53,17 +53,17 @@
 		<div id="e404_twitter-3" class="one_fourth widgets widget_twitter"><h3>اخبار</h3>
 			<ul class="tweets">
 				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0159"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
-					<a href="#">لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک لینک یک </a>
+					<a href="#" title=""><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
+					<a href="#">لینک یک لینک یک لینک یک لینک</a>
 				</li>
 				<br class="clear">
 				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0159"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
+					<a href="#" title=""><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
 					<a href="#">لینک یک</a>
 				</li>
 				<br class="clear">
 				<li>
-					<a href="#" rel="prettyphoto" title="DSC_0159"><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
+					<a href="#" title=""><img src="themes/images/demo/smallpic.jpg" width="50" height="50" alt="DSC_0159"></a>
 					<a href="#">لینک یک</a>
 				</li>
 				<br class="clear">
@@ -107,7 +107,7 @@
 	    </div>
 		<br class="clear">
 	</div>
-	<div id="copyright">
+	<div id="copyright" class="latin-font">
 		<div class="last right fright">Designed by: 
 			<a href="http://www.mediateq.ir">Mediateq</a>.
 		</div>

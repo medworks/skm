@@ -19,6 +19,9 @@ body {
 	border: 0;
 	outline: 0;
 }
+.latin-font{
+	font-family: 'Lato', arial, serif;
+}
 .rtl{
 	direction: rtl;
 }
@@ -2734,6 +2737,9 @@ li.current-cat li {
 	border-color: #ccc;
 	float: right;
 	margin-left: 5px;
+}
+#footer .tweets li a:hover img{
+	opacity: 0.7;
 }
 .tweets span,
 #footer .tweets span {
