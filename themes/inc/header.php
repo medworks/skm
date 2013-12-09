@@ -14,7 +14,6 @@
 <link rel="stylesheet" id="nivo-css" href="themes/css/nivo-slider.css?ver=3.6.1" type="text/css" media="all">
 <link rel="stylesheet" id="prettyphoto-css" href="themes/css/prettyphoto.css?ver=3.6.1" type="text/css" media="all">
 <link rel="stylesheet" id="Lato-css" href="themes/css/fonts.css" type="text/css" media="all">
-<link rel="stylesheet" id="Lato-css" href="themes/css/tipsy.css" type="text/css" media="all">
 <link rel="stylesheet" id="contact-form-7-css" href="themes/css/styles.css?ver=3.5.2" type="text/css" media="all">
 
 <script type="text/javascript" src="lib/js/jquery.js"></script>
@@ -26,14 +25,11 @@
 <script type="text/javascript" src="themes/js/jquery.prettyphoto.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/prettyphoto_init.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/comment-reply.min.js?ver=3.6.1"></script>
-<script type="text/javascript" src="themes/js/jquery.tipsy.js"></script>
 
 <script type="text/javascript" src="themes/js/galleria.min.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/galleria.classic.min.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/flowplayer.min.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/jquery.nivo.slider.pack.js?ver=3.6.1"></script>
-<script type="text/javascript" src="themes/js/jquery.quicksand.js?ver=3.6.1"></script>
-<script type="text/javascript" src="themes/js/sortable.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/cold_custom.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/nivo_slider_init.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/jquery.form.min.js?ver=3.40.0-2013.08.13"></script>
