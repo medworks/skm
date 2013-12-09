@@ -25,7 +25,8 @@ foreach($news as $key => $post)
     $day = ToJalali($post["ndate"],"d");
     $month = ToJalali($post["ndate"],"F");
     $year = ToJalali($post["ndate"],"Y");
-    $post["userid"] = GetUserName($post["userid"]);	
+    $post["userid"] = GetUserName($post["userid"]);
+    $post["catid"] = GetCategoryName($post["catid"]);
     $post["body"]= strip_tags($post["body"]);
     $post["body"] = (mb_strlen($post["body"])>500) ? mb_substr($post["body"],0,500,"UTF-8")."..." : $post["body"];
 $html.=<<<cd
@@ -39,11 +40,11 @@ $html.=<<<cd
 						</div> -->
 					</div>
 					<h2 class="blog-header">
-						<a href="#" title="">{$post["subject"]}</a>
+						<a href="news-fullpage{$post[id]}.html" title="{$post["subject"]}">{$post["subject"]}</a>
 					</h2>
 					<div class="meta posted-meta">
 				 		به وسیله <a title="" rel="author external">{$post["userid"]}</a>
-				 		در گروه <a href="#" title="" rel="category tag">گیاهان دریایی</a>
+				 		در گروه <a href="" title="" rel="category tag">{$post["catid"]}</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
@@ -53,18 +54,17 @@ $html.=<<<cd
 					</div>
 					<p>{$post["body"]}</p>
 					<p class="more">
-						<a href="#">ادامه خبر</a>
+						<a href="news-fullpage{$post[id]}.html">ادامه خبر</a>
 					</p>
 				</div>
 cd;
 }
+$linkFormat = 'news-page'.$pid='%PN%'.'.html';
+$maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
+$pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
+$html .= $pageNos;
+
 $html.=<<<cd
-                                       <div class="wp-pagenavi">
-					<span class="pages">صفحه ۱ از ۲</span>
-					<span class="current">1</span>
-					<a href="#" class="page larger">2</a>
-					<a href="#" class="nextpostslink">&#8249;</a>
-				</div>
 			</div>
 			<div id="sidebar" class="one_third last">
 				<div id="search-2" class="widgets widget_search">
@@ -78,20 +78,22 @@ $html.=<<<cd
 				</div>
         		<br class="clear">
         		<div id="e404_twitter-2" class="widgets widget_twitter">
-        			<h3>آخرین اخبار</h3>
-					<ul class="tweets">
-						<li>
-							<a href="#" class="twitter-user">خبر یک</a>
-							<span>در 2 فروردین, ۱۳۹۲</a></span>
-						</li>
-						<li>
-							<a href="#" class="twitter-user">خبر یک</a>
-							<span>در 2 فروردین, ۱۳۹۲</a></span>
-						</li>
-						<li>
-							<a href="#" class="twitter-user">خبر یک</a>
-							<span>در 2 فروردین, ۱۳۹۲</a></span>
-						</li>						
+                            <h3>آخرین اخبار</h3>
+				<ul class="tweets">
+cd;
+$posts = $db->SelectAll("news","*",null,"ndate DESC","0","4");
+foreach($posts as $key=>$val)
+{    
+ $ndate = ToJalali($val["ndate"]," l d F  Y");
+$html.=<<<cd
+        
+        <li>
+                <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
+                <span>{$ndate}</a></span>
+        </li>        
+cd;
+}
+$html.=<<<cd
 					</ul>
 				</div>
         		<br class="clear">
