@@ -1,4 +1,4 @@
-<?php    
+<?php
     include_once("config.php");
     include_once("classes/functions.php");
     include_once("classes/seo.php");
@@ -8,39 +8,20 @@
     }else{
         include_once("./classes/database.php");
         include_once("./lib/persiandate.php");
-        $db = database::GetDatabase();
+        $db = Database::GetDatabase();
 //------------------------------- header slides part -------------------------
-		$slides = $db->SelectAll("slides","*");	
+	$slides = $db->SelectAll("slides","*");	
 //------------------------------- news part -------------------------	
-        $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");
-		$news[0]["body"] =(mb_strlen($news[0]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($news[0]["body"]), ENT_QUOTES, "UTF-8");		
-		$news[1]["body"] =(mb_strlen($news[1]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($news[1]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($news[1]["body"]), ENT_QUOTES, "UTF-8");
-        $news[2]["body"] =(mb_strlen($news[2]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($news[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($news[2]["body"]), ENT_QUOTES, "UTF-8");				
-		$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
-		$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
-		$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
+        $news = $db->SelectAll("news","*",null,"ndate DESC","0","3");		
+	$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
+	$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
+	$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
 //------------------------------- works part -------------------------
-		$works = $db->SelectAll("works","*",null,"fdate DESC","0","4");
-		$works[0]["body"] =(mb_strlen($works[0]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($works[0]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($works[0]["body"]), ENT_QUOTES, "UTF-8");
-		$works[1]["body"] =(mb_strlen($works[1]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($works[1]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($works[1]["body"]), ENT_QUOTES, "UTF-8");
-       
-        $works[2]["body"] =(mb_strlen($works[2]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($works[2]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($works[2]["body"]), ENT_QUOTES, "UTF-8");
-		$works[3]["body"] =(mb_strlen($works[3]["body"])>150)?
-                mb_substr(html_entity_decode(strip_tags($works[3]["body"]), ENT_QUOTES, "UTF-8"), 0, 150,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($works[3]["body"]), ENT_QUOTES, "UTF-8");				
-$html=<<<cd
+	$works = $db->SelectAll("works","*",null,"fdate DESC","0","4");
+//------------------------------- works part -------------------------
+
+$html.=<<<cd
+        
 <div id="wrapper">
 	<div id="main_wrapper">
 		<div id="featured">
