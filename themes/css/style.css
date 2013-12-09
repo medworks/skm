@@ -25,6 +25,12 @@ body {
 .ltr{
 	direction: ltr;
 }
+.fright{
+	float: right;
+}
+.fleft{
+	float: left;
+}
 
 /* forms */
 input,
@@ -1032,7 +1038,7 @@ code {
 	padding: 15px 30px;
 	margin: 0 auto;
 	width: 930px;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 /* ---------------------------------------- */

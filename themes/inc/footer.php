@@ -108,11 +108,11 @@
 		<br class="clear">
 	</div>
 	<div id="copyright">
-		<div class="one_half">Copyright © 2011 
-			<a href="http://themeforest.net/user/e404">Cold Theme</a>. All rights reserved.
+		<div class="last right fright">Designed by: 
+			<a href="http://www.mediateq.ir">Mediateq</a>.
 		</div>
-		<div class="one_half last right">Powered by: 
-			<a href="http://wordpress.org">WordPress</a>.
+		<div class="left fleft">Copyright © 2013 
+			<a href="./">Saman Kesht Mihan</a>. All rights reserved.
 		</div>
 		<br class="clear">
 	</div>
