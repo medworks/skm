@@ -48,7 +48,7 @@ $html.=<<<cd
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="news-fullpage{$post[id]}.html" class="zoom" title="">
+						<a href="news-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
 							<img src="$post[image]" alt="$post[subject]" class="">
 						</a>
 					</div>
@@ -68,13 +68,35 @@ $html.=<<<cd
 			</div>
 			<div id="sidebar" class="one_third last">
 				<div id="search-2" class="widgets widget_search">
-					<form role="search" method="get" id="searchform" class="searchform" action="">
+					<form id="frmsearch" method="post" action="">
 						<div>
 							<label class="screen-reader-text" for="s">جستجو برای</label>
-							<input type="text" class="rtl" value="" name="s" id="s">
+							<input type="text" class="rtl" value="" id="findtxt" name="findtxt">
 							<input type="submit" id="searchsubmit" value="جستجو">
 						</div>
 					</form>
+                                        <div id="srhresult"></div>
+                       
+                <script type='text/javascript'>        
+                                   // $(document).ready(function(){                
+                                        $("#frmsearch").submit(function(){                                      
+                                                $.ajax({									    
+                                                        type: "POST",
+                                                        url: "manager/ajaxcommand.php?items=search&cat=news",
+                                                        data: $("#frmsearch").serialize(), 
+                                                        success: function(msg)
+                                                        {                                                                                  
+                                                                $("#srhresult").ajaxComplete(function(event, request, settings){
+                                                                        $(this).hide();
+                                                                        $(this).html(msg).slideDown("slow");
+                                                                        $(this).html(msg);
+                                                                });
+                                                        }
+                                                });
+                                                return false;
+                                        });
+                            //});
+                        </script>
 				</div>
         		<br class="clear">
         		<div id="e404_twitter-2" class="widgets widget_twitter">
