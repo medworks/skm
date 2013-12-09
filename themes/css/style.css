@@ -2492,7 +2492,7 @@ a.light-btn .frenchrose-btn {
 /* ---------------------------------------- */
 /* lists styles */
 #main_wrapper ul li {
-	list-style: inside disc;
+	/*list-style: inside disc;*/
 }
 #main_wrapper ul ul,
 #main_wrapper ol ol,
@@ -2960,4 +2960,26 @@ object {
 	float: none;
 	width: 100px;
 	z-index: 100;
+}
+div.more-pic ul li{
+	float: right;
+	list-style: none;
+	margin: 10px 0;
+}
+div.more-pic ul li img{
+	width: 137px;
+	height: 80px;
+	border: 1px solid #eee;
+	padding: 4px;
+	background: #efefef url('../images/gradient-light-h.png') 0 0 repeat-x;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-color: #ccc;
+	float: right;
+	margin-right: 5px;
+}
+
+div.more-pic ul li:first-child{
+	margin-right: 0px;
 }

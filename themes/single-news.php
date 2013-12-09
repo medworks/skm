@@ -28,7 +28,7 @@ $html=<<<cd
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
 						<a href="themes/images/demo/newspic.jpg" rel="prettyPhoto" title="">
-							<img src="themes/images/demo/newspic.jpg" alt="" class="">
+							<img src="themes/images/demo/newspic.jpg" alt="">
 						</a>
 					</div>
 					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
@@ -48,6 +48,42 @@ $html=<<<cd
 							</a>
 						</span>
 					</div>
+					<div class="more-pic">
+						<ul>
+							<li>
+								<a href="themes/images/demo/slide1.jpg" rel="prettyPhoto[g1]" title="">
+									<img src="themes/images/demo/slide1.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
+									<img src="themes/images/demo/slide2.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
+									<img src="themes/images/demo/slide3.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
+									<img src="themes/images/demo/slide3.jpg" alt="">
+								</a>
+							</li>
+							<br class="clear" />
+							<li>
+								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
+									<img src="themes/images/demo/slide3.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
+									<img src="themes/images/demo/slide3.jpg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<br class="clear" />
 
 				</div>
 			</div>
