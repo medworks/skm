@@ -437,10 +437,7 @@ hr {
 .seven_eighth {
 	float: right;
 	position: relative;
-	margin: 0 0 40px 20px;
-}
-.one_fourth{
-	margin: 0 30px 40px 0 !important;
+	margin: 0 0 40px 30px;
 }
 .full_page {
 	position: relative;
@@ -562,7 +559,7 @@ hr {
 div.last,
 #page-content div.last,
 #intro div.last {
-	margin-right: 0;
+	margin-left: 0;
 }
 #page-content {
 	margin-bottom: 0;
@@ -854,6 +851,7 @@ a:hover img.attachment-thumbnail {
 	margin-top: -15px;
 	font-size: 11px;
 	text-align: right;
+	border-bottom: 4px solid #aaa;
 }
 #breadcrumb span {
 	font-weight: bold;
@@ -1025,7 +1023,7 @@ code {
 	background-position: 50% 0;
 }
 #footer {
-	padding: 40px 0 20px 30px;
+	padding: 40px 30px 20px 0;
 	margin: 0 auto;
 	width: 960px;
 	background-image: url('../images/shadow980.png');
@@ -1033,7 +1031,7 @@ code {
 }
 #footer,
 #footer form {
-	font-size: 17px;
+	font-size: 18px;
 }
 
 /* copyright */
@@ -2690,7 +2688,7 @@ li.current-cat li {
 }
 #footer .widgets li {
 	padding: 0 14px 1px 0;
-	background: url('../images/small-arrow.png') 200px 10px no-repeat;
+	background: url('../images/small-arrow.png') 200px 6px no-repeat;
 }
 #footer .widgets .recent-posts li,
 #footer .widgets .popular-posts li {

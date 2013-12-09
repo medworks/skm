@@ -111,10 +111,17 @@ $html.=<<<cd
 cd;
 for($i=0;$i<=3;$i++)
 {
-    if (!empty($works[$i]["subject"]))
-    {
+    if (!empty($works[$i]["subject"])){
+    	if($i==3){
+$html.=<<<cd
+			<div class="one_fifth fancy_list_item last">
+cd;
+    	}else{
 $html.=<<<cd
 			<div class="one_fifth fancy_list_item">
+cd;
+    	}
+$html.=<<<cd
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
 				<a href="work-fullpage{$works[$i][id]}.html">
 					<img src="{$works[$i][image]}" alt="{$works[$i][subject]}" 
@@ -129,28 +136,37 @@ cd;
     }
 }
 $html.=<<<cd
-               </div>
+			<br class="clear">
+        </div>
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
 				<h3>اخبار</h3>
 				<p><a href="#">مشاهده تمام موارد</a></p>
 			</div>
 cd;
-foreach($news as $key=>$val)
-{    
-    if (!empty($val["subject"]))
-    {
+
+for($i=0;$i<=3;$i++)
+{
+    if (!empty($news[$i]["subject"])){
+    	if($i==3){
 $html.=<<<cd
-        <div class="one_fifth fancy_list_item">
-		<div class="shadow shadow_vsmall">
-			<a href="news-fullpage{$val[id]}.html">
-				<img src="{$val[image]}" alt="{$val[subject]}" title="{$val[subject]}" class="border-img aligncenter">
-			</a>
-		</div>
-		<h4>
-			<a href="news-fullpage{$val[id]}.html">{$val["subject"]}</a>
-		</h4>
-	</div>
+			<div class="one_fifth fancy_list_item last">
+cd;
+    	}else{
+$html.=<<<cd
+			<div class="one_fifth fancy_list_item">
+cd;
+   		}
+$html.=<<<cd
+				<div class="shadow shadow_vsmall">
+					<a href="news-fullpage{$news[$i][id]}.html">
+						<img src="{$news[$i][image]}" alt="{$news[$i][subject]}" title="{$news[$i][subject]}" class="border-img aligncenter">
+					</a>
+				</div>
+				<h4>
+					<a href="news[$i]-fullpage{$news[$i][id]}.html">{$news[$i]["subject"]}</a>
+				</h4>
+			</div>
 cd;
     }
 }
