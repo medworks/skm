@@ -31,7 +31,7 @@
 				if ($act=="do") return "dashboard.php";
 			break;	
             case 'works':
-				$seo->Site_Title = "کارهای ما";
+				$seo->Site_Title = "رزومه";
                 if ($act=="do") return "themes/works.php";
             break;
             case 'fullworks':

@@ -1480,12 +1480,12 @@ code {
 .portfolio-list .portfolio-item {
 	margin-bottom: 40px;
 	padding-bottom: 4px;
-	background: url('images/hr1.png') 0 100% repeat-x;
+	background: url('../images/hr1.png') 0 100% repeat-x;
 }
 .portfolio-columns .portfolio-item {
 	margin-bottom: 40px;
 	padding-bottom: 44px;
-	background: url('images/hr1.png') 0 100% repeat-x;
+	background: url('../images/hr1.png') 0 100% repeat-x;
 }
 .portfolio-page .aligncenter {
 	margin-top: 0;
@@ -1521,10 +1521,11 @@ code {
 	list-style: none;
 	height: 250px;
 	margin-bottom: 0;
+	width: 208px;
 }
 
 ul.portfolio-columns {
-	margin: 0 -30px 0 0;
+	margin: 0 0px 0 -40px;
 	width: 960px;
 }
 .portfolio-columns li.last {
@@ -1541,17 +1542,25 @@ ul.portfolio-columns {
 #main_wrapper ul.portfolio-columns .fancy_nav li {
 	margin-top: 1px;
 }
+#main_wrapper ul.portfolio-columns li{
+	background: none;
+	padding-bottom: 0;
+}
 .fancy_meta_pf {
 	display: none;
 	position: absolute;
 	float: none;
-	bottom: 45px;
+	right: -10px;
+	bottom: 29px;
 	z-index: 5;
 	font-size: 9px;
 	font-weight: bold;
 	background: #fff;
 	margin: 5px;
-	padding: 8px 10px;
+	padding: 8px 10px 2px;
+}
+.fancy_meta_pf h3{
+	font-size: 15px;
 }
 .portfolio-item:hover .fancy_meta_pf {
 	display: block;
@@ -2930,11 +2939,11 @@ object {
 	border-bottom: 1px solid #e5e5e5;
 }
 #wrapper #pcats li {
-	float: left;
+	float: right;
 	list-style: none;
 }
 #pcats li a {
-	font-size: 12px;
+	font-size: 1۵px;
 	line-height: 16px;
 	font-weight: bold;
 	display: block;
