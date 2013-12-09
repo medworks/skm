@@ -1,4 +1,14 @@
 <?php
+include_once("./classes/database.php");
+  include_once("./lib/persiandate.php");
+  $db = Database::GetDatabase();
+  $pageNo = ($_GET["pid"]) ? $_GET["pid"] : 1;
+  $maxItemsInPage = GetSettingValue('Max_Post_Number',0);
+  $from = ($pageNo - 1) * $maxItemsInPage;
+  $count = $maxItemsInPage;
+  
+  $news = $db->SelectAll("news","*",null,"ndate DESC",$from,$count);  
+  $itemsCount = $db->CountAll("news");
 
 $html=<<<cd
 	<div id="wrapper">
