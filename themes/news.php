@@ -103,13 +103,14 @@ $html.=<<<cd
                             <h3>آخرین اخبار</h3>
 				<ul class="tweets">
 cd;
-$posts = $db->SelectAll("news","*",null,"ndate DESC","0","4");
+$posts = $db->SelectAll("news","*",null,"ndate DESC","0","7");
 foreach($posts as $key=>$val)
 {    
  $ndate = ToJalali($val["ndate"]," l d F  Y");
 $html.=<<<cd
         
         <li>
+				<span class="arro"></span>        
                 <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</a></span>
         </li>        
