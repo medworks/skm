@@ -28,7 +28,7 @@ $html=<<<cd
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
 						<a href="themes/images/demo/newspic.jpg" rel="prettyPhoto" title="">
-							<img src="themes/images/demo/newspic.jpg" alt="">
+							<img src="themes/images/demo/newspic.jpg" alt="" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
 					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>

@@ -124,8 +124,7 @@ cd;
 $html.=<<<cd
 				<div class="shadow shadow_vsmall aligncenter shadow_center">
 				<a href="work-fullpage{$works[$i][id]}.html">
-					<img src="{$works[$i][image]}" alt="{$works[$i][subject]}" 
-                                          title="{$works[$i][subject]}" class="border-img">
+					<img src="{$works[$i][image]}" alt="{$works[$i][subject]}" title="{$works[$i][subject]}" class="border-img" style="width:152px;height:90px">
 				</a>
 				</div>
 				<h4>
@@ -160,7 +159,7 @@ cd;
 $html.=<<<cd
 				<div class="shadow shadow_vsmall">
 					<a href="news-fullpage{$news[$i][id]}.html">
-						<img src="{$news[$i][image]}" alt="{$news[$i][subject]}" title="{$news[$i][subject]}" class="border-img aligncenter">
+						<img src="{$news[$i][image]}" alt="{$news[$i][subject]}" title="{$news[$i][subject]}" class="border-img aligncenter" style="width:152px;height:90px">
 					</a>
 				</div>
 				<h4>

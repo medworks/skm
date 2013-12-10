@@ -49,7 +49,7 @@ $html.=<<<cd
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
 						<a href="news-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
-							<img src="$post[image]" alt="$post[subject]" class="">
+							<img src="$post[image]" alt="$post[subject]" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
 					<p>{$post["body"]}</p>
