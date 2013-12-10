@@ -75,7 +75,7 @@ $html.=<<<cd
 							<input type="submit" id="searchsubmit" value="جستجو">
 						</div>
 					</form>
-                                        <div id="srhresult"></div>
+                    <div id="srhresult" class="rtl"></div>
                        
                 <script type='text/javascript'>        
                                    // $(document).ready(function(){                
