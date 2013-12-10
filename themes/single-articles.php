@@ -136,7 +136,7 @@ $html=<<<cd
                             </script>               
         		<br class="clear">
         		<div id="e404_twitter-2" class="widgets widget_twitter">
-        			<h3>آخرین اخبار</h3>
+        			<h3>آخرین مطالب </h3>
 					<ul class="tweets">
 cd;
 $articles = $db->SelectAll("articles","*",null,"ndate DESC","0","7");
