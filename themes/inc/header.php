@@ -121,7 +121,7 @@
 				<a href="#" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
-				<form action="search.html" method="get">
+				<form action="search.html" id="topsearch" method="get">
 					<input type="submit" value="جستجو">
 					<input type="text" class="rtl" name="s" value="جستجو..." onfocus="if (this.value == 'جستجو...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو...';}">
 				</form>
