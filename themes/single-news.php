@@ -84,7 +84,6 @@ $html=<<<cd
 						</ul>
 					</div>
 					<br class="clear" />
-
 				</div>
 			</div>
 			<div id="sidebar" class="one_third last">

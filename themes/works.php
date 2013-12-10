@@ -10,7 +10,7 @@ $html=<<<cd
 			<div class="portfolio portfolio-columns">
 				<div class="one_third portfolio-item" id="post-294">
 					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" rel="prettyPhoto" title="">
+						<a href="work-fullpage1.html" class="zoom" title="">
 							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
 						</a>
 					</div>
@@ -22,7 +22,7 @@ $html=<<<cd
 				</div>
 				<div class="one_third portfolio-item" id="post-294">
 					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" rel="prettyPhoto" title="">
+						<a href="#" class="zoom" title="">
 							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
 						</a>
 					</div>
@@ -34,7 +34,7 @@ $html=<<<cd
 				</div>
 				<div class="one_third portfolio-item last" id="post-294">
 					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" rel="prettyPhoto" title="">
+						<a href="#" class="zoom" title="">
 							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
 						</a>
 					</div>
@@ -46,7 +46,7 @@ $html=<<<cd
 				</div>
 				<div class="one_third portfolio-item" id="post-294">
 					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" rel="prettyPhoto" title="">
+						<a href="#" class="zoom" title="">
 							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
 						</a>
 					</div>
