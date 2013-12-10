@@ -1,4 +1,16 @@
 <?php
+include_once("./config.php");
+include_once("./lib/persiandate.php");
+include_once("./classes/database.php");	
+include_once("./classes/seo.php");	
+$db = Database::GetDatabase();
+$seo = Seo::GetSeo();
+$news = $db->Select('news',NULL,"id={$_GET[wid]}"," ndate DESC");
+$ndate = ToJalali($news["ndate"]," l d F  Y ");
+$news["userid"] = GetUserName($news["userid"]);
+$body = $news['body'];
+$seo->Site_Title = $news["subject"];
+$seo->Site_Describtion = strip_tags(mb_substr($news["body"],0,150,"UTF-8"));
 
 $html=<<<cd
 	<div id="wrapper">
