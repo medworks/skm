@@ -31,7 +31,6 @@
 <script type="text/javascript" src="themes/js/flowplayer.min.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/jquery.nivo.slider.pack.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/cold_custom.js?ver=3.6.1"></script>
-<script type="text/javascript" src="themes/js/nivo_slider_init.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/jquery.form.min.js?ver=3.40.0-2013.08.13"></script>
 
 <!-- <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://e404themes.com/cold/xmlrpc.php?rsd">
@@ -142,7 +141,7 @@
 			</ul>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="articles.html">مطالب مفید</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">گالری تصاویر</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="gallery.html">گالری تصاویر</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">تماس با ما</a></li>
 	</ul>
 	<br class="clear">

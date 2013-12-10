@@ -22,7 +22,8 @@
 //------------------------------- works part -------------------------
 
 $html.=<<<cd
-        
+<script type="text/javascript" src="themes/js/nivo_slider_init.js?ver=3.6.1"></script>
+       
 <div id="wrapper">
 	<div id="main_wrapper">
 		<div id="featured">
