@@ -146,7 +146,7 @@ foreach ($articles as $key=>$val)
 	$ndate = ToJalali($val["ndate"]," l d F  Y");                                        
 $html.=<<<cd
         <li>
-                <a href="#" class="twitter-user">{$val["subject"]}</a>
+                <a href="article-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>
 cd;
