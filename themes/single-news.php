@@ -7,7 +7,11 @@ $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
 $news = $db->Select('news',NULL,"id={$_GET[wid]}"," ndate DESC");
 $ndate = ToJalali($news["ndate"]," l d F  Y ");
+$day = ToJalali($post["ndate"],"d");
+$month = ToJalali($post["ndate"],"F");
+$year = ToJalali($post["ndate"],"Y");
 $news["userid"] = GetUserName($news["userid"]);
+$news["catid"] = GetCategoryName($post["catid"]);
 $body = $news['body'];
 $seo->Site_Title = $news["subject"];
 $seo->Site_Describtion = strip_tags(mb_substr($news["body"],0,150,"UTF-8"));
@@ -18,32 +22,32 @@ $html=<<<cd
 			<div id="breadcrumb">
 				<a href="./">صفحه اصلی</a> <span>›</span>
 				<a href="news.html">اخبار</a> <span>›</span>
-				<a>خبر یک</a>
+				<a>{$news["subject"]}</a>
 			</div>
 			<div id="page-content" class="two_third">
 				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-news tag-design tag-works">
 					<div class="meta-date">
-						<span class="meta-month">فروردین</span>
-						<span class="meta-day">09</span>
-						<span class="meta-year">1392</span>
+						<span class="meta-month">{$month}</span>
+						<span class="meta-day">{$day}</span>
+						<span class="meta-year">{$year}</span>
 						<!-- <div class="meta-comments">
 							<a href="#"><span>0</span></a>
 						</div> -->
 					</div>
 					<h2 class="blog-header">
-						<a href="#" title="">خبر اول</a>
+						<a href="#" title="{$news["subject"]}">{$news["subject"]}</a>
 					</h2>
 					<div class="meta posted-meta">
-				 		به وسیله <a title="" rel="author external">مجتبی امجدی</a>
-				 		در گروه <a href="#" title="" rel="category tag">گیاهان دریایی</a>
+				 		به وسیله <a title="" rel="author external">{$news["userid"]}</a>
+				 		در گروه <a href="#" title="" rel="category tag">{$news["catid"]}</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="themes/images/demo/newspic.jpg" rel="prettyPhoto" title="">
-							<img src="themes/images/demo/newspic.jpg" alt="" class="border-img" style="width:600px;height:229px;">
+						<a href="{$news[image]}" rel="prettyPhoto" title="">
+							<img src="{$news[image]}" alt="{$news[subject]}" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
-					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
+					<p>{$news["body"]}</p>
 					<br class="clear" />
 					<div class="share-this">
 						<span class="share_button">
@@ -100,14 +104,36 @@ $html=<<<cd
 			</div>
 			<div id="sidebar" class="one_third last">
 				<div id="search-2" class="widgets widget_search">
-					<form role="search" method="get" id="searchform" class="searchform" action="">
+					<form id="frmsearch" method="post" action="">
 						<div>
-							<label class="screen-reader-text" for="s">جستجو برای</label>
-							<input type="text" class="rtl" value="" name="s" id="s">
+							<label class="screen-reader-text" for="findtxt">جستجو برای</label>
+							<input type="text" class="rtl" value="" id="findtxt" name="findtxt">
 							<input type="submit" id="searchsubmit" value="جستجو">
 						</div>
 					</form>
 				</div>
+                         <div id="srhresult"></div>                    
+				<script type='text/javascript'>
+                                $(document).ready(function(){
+                                    $("#frmsearch").submit(function(){
+                                        $.ajax({                                        
+                                            type: "POST",
+                                            url: "manager/ajaxcommand.php?items=search&cat=news",
+                                            data: $("#frmsearch").serialize(), 
+                                            success: function(msg)
+                                            {
+                                                $('.info_fieldset').css('display','block');
+                                                $("#srhresult").ajaxComplete(function(event, request, settings){
+                                                    $(this).hide();
+                                                    $(this).html(msg).slideDown("slow");
+                                                    $(this).html(msg);
+                                                });
+                                            }
+                                        });
+                                        return false;
+                                    });
+                                });
+                            </script>               
         		<br class="clear">
         		<div id="e404_twitter-2" class="widgets widget_twitter">
         			<h3>آخرین اخبار</h3>
