@@ -131,18 +131,19 @@
 </div>
 <div id="navigation">
 	<ul id="menu-top-menu" class="sf-menu">
-		<li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-5 current_page_item menu-item-427"><a href="./">صفحه اصلی</a></li>
-		<li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="#">درباره ما</a></li>
-		<li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="news.html">اخبار</a></li>
-		<li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-426"><a href="works.html">رزومه</a></li>
-		<li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="#">فضای سبز</a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="./">صفحه اصلی</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">درباره ما</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="news.html">اخبار</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="works.html">رزومه</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز</a>
 			<ul class="sub-menu">
-				<li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-433"><a href="#">فضای سبز داخلی</a></li>
-				<li id="menu-item-448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-448"><a href="#">فضای سبز خارجی</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز داخلی</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز خارجی</a></li>
 			</ul>
 		</li>
-		<li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-429"><a href="#">گالری تصاویر</a></li>
-		<li id="menu-item-459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459"><a href="#">تماس با ما</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="articles.html">مطالب مفید</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">گالری تصاویر</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">تماس با ما</a></li>
 	</ul>
 	<br class="clear">
 </div>
