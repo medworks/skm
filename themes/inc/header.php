@@ -131,7 +131,7 @@
 </div>
 <div id="navigation">
 	<ul id="menu-top-menu" class="sf-menu">
-		<li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-427"><a href="./">صفحه اصلی</a></li>
+		<li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-5 current_page_item menu-item-427"><a href="./">صفحه اصلی</a></li>
 		<li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="#">درباره ما</a></li>
 		<li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="news.html">اخبار</a></li>
 		<li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-426"><a href="works.html">رزومه</a></li>

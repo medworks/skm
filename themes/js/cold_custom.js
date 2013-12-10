@@ -63,3 +63,17 @@ jQuery(document).ready(function(){
 jQuery(function() {
 	jQuery('ul.sf-menu').superfish({ delay: 300, animation: { height:'show' }, speed: 'normal' });
 });
+
+jQuery(function() {
+	$('ul#menu-top-menu li a').each(function(){
+		if(this.href.trim()==url){
+			$(this).parent().addClass("current-menu-item");
+			return false;
+		}else if(url.match(/page/i)){
+			var href=window.location.href.substr(url.indexOf("/"));
+			href=href.split('-');
+			href=href[0].split('/');
+			$('ul#menu-top-menu li a[href*="'+href[3]+'"]').parent().addClass('current-menu-item');
+		}
+	});
+});
