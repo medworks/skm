@@ -114,7 +114,7 @@ $html=<<<cd
 				</div>
                          <div id="srhresult"></div>                    
 				<script type='text/javascript'>
-                                $(document).ready(function(){
+                               // $(document).ready(function(){
                                     $("#frmsearch").submit(function(){
                                         $.ajax({                                        
                                             type: "POST",
@@ -132,24 +132,26 @@ $html=<<<cd
                                         });
                                         return false;
                                     });
-                                });
+                               // });
                             </script>               
         		<br class="clear">
         		<div id="e404_twitter-2" class="widgets widget_twitter">
         			<h3>آخرین اخبار</h3>
 					<ul class="tweets">
-						<li>
-							<a href="#" class="twitter-user">خبر یک</a>
-							<span>در 2 فروردین, ۱۳۹۲</a></span>
-						</li>
-						<li>
-							<a href="#" class="twitter-user">خبر یک</a>
-							<span>در 2 فروردین, ۱۳۹۲</a></span>
-						</li>
-						<li>
-							<a href="#" class="twitter-user">خبر یک</a>
-							<span>در 2 فروردین, ۱۳۹۲</a></span>
-						</li>						
+cd;
+$news = $db->SelectAll("news","*",null,"ndate DESC","0","7");
+foreach ($news as $key=>$val)
+{
+  if (!isset($val[id])) break;
+	$ndate = ToJalali($val["ndate"]," l d F  Y");                                        
+$html.=<<<cd
+        <li>
+                <a href="#" class="twitter-user">{$val["subject"]}</a>
+                <span>{$ndate}</span>
+        </li>
+cd;
+}
+$html.=<<<cd
 					</ul>
 				</div>
         		<br class="clear">
