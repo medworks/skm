@@ -1,5 +1,5 @@
 <?php
-include_once("./classes/database.php");
+  include_once("./classes/database.php");
   include_once("./lib/persiandate.php");
   $db = Database::GetDatabase();
   $pageNo = ($_GET["pid"]) ? $_GET["pid"] : 1;
@@ -7,8 +7,8 @@ include_once("./classes/database.php");
   $from = ($pageNo - 1) * $maxItemsInPage;
   $count = $maxItemsInPage;
   
-  $news = $db->SelectAll("news","*",null,"ndate DESC",$from,$count);  
-  $itemsCount = $db->CountAll("news");
+  $articles = $db->SelectAll("articles","*",null,"ndate DESC",$from,$count);  
+  $itemsCount = $db->CountAll("articles");
 
 $html=<<<cd
 	<div id="wrapper">
@@ -19,7 +19,7 @@ $html=<<<cd
 			</div>
 			<div id="page-content" class="two_third">
 cd;
-foreach($news as $key => $post)
+foreach($articles as $key => $post)
 {
     $ndate = ToJalali($post["ndate"]," l d F  Y ساعت H:m");
     $day = ToJalali($post["ndate"],"d");
@@ -30,7 +30,7 @@ foreach($news as $key => $post)
     $post["body"]= strip_tags($post["body"]);
     $post["body"] = (mb_strlen($post["body"])>500) ? mb_substr($post["body"],0,500,"UTF-8")."..." : $post["body"];
 $html.=<<<cd
-				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-news tag-design tag-works">
+				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-articles tag-design tag-works">
 					<div class="meta-date">
 						<span class="meta-month">{$month}</span>
 						<span class="meta-day">{$day}</span>
@@ -48,18 +48,18 @@ $html.=<<<cd
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="news-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
+						<a href="article-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
 							<img src="$post[image]" alt="$post[subject]" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
 					<p>{$post["body"]}</p>
 					<p class="more">
-						<a href="news-fullpage{$post[id]}.html">ادامه مطلب</a>
+						<a href="article-fullpage{$post[id]}.html">ادامه مطلب</a>
 					</p>
 				</div>
 cd;
 }
-$linkFormat = 'news-page'.$pid='%PN%'.'.html';
+$linkFormat = 'articles-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
 $html .= $pageNos;
@@ -82,7 +82,7 @@ $html.=<<<cd
                                         $("#frmsearch").submit(function(){                                      
                                                 $.ajax({									    
                                                         type: "POST",
-                                                        url: "manager/ajaxcommand.php?items=search&cat=news",
+                                                        url: "manager/ajaxcommand.php?items=search&cat=articles",
                                                         data: $("#frmsearch").serialize(), 
                                                         success: function(msg)
                                                         {                                                                                  
@@ -103,7 +103,7 @@ $html.=<<<cd
                             <h3>آخرین مطالب</h3>
 				<ul class="tweets">
 cd;
-$posts = $db->SelectAll("news","*",null,"ndate DESC","0","7");
+$posts = $db->SelectAll("articles","*",null,"ndate DESC","0","7");
 foreach($posts as $key=>$val)
 {    
  $ndate = ToJalali($val["ndate"]," l d F  Y");
@@ -111,7 +111,7 @@ $html.=<<<cd
         
         <li>
 				<span class="arro"></span>        
-                <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
+                <a href="article-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</a></span>
         </li>        
 cd;
