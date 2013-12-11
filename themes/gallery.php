@@ -8,6 +8,9 @@ $html=<<<cd
 				<a href="./">صفحه اصلی</a> <span>›</span>
 				<a>گالری تصاویر</a>
 			</div>
+			<div id="intro" class="text-intro">
+				<h1>گالری تصاویر</h1>
+			</div>
 			<div class="gallery-default">
 				<div class="full_page">
 					<div id="post-221">

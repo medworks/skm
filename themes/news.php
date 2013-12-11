@@ -17,6 +17,9 @@ $html=<<<cd
 				<a href="./">صفحه اصلی</a> <span>›</span>
 				<a>اخبار</a>
 			</div>
+			<div id="intro" class="text-intro">
+				<h1>اخبار</h1>
+			</div>
 			<div id="page-content" class="two_third">
 cd;
 foreach($news as $key => $post)

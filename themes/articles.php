@@ -15,7 +15,10 @@ $html=<<<cd
 		<div id="main_wrapper">
 			<div id="breadcrumb">
 				<a href="./">صفحه اصلی</a> <span>›</span>
-			<a>مطالب مفید</a>
+				<a>مطالب مفید</a>
+			</div>
+			<div id="intro" class="text-intro">
+				<h1>مطالب مفید</h1>
 			</div>
 			<div id="page-content" class="two_third">
 cd;

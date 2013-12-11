@@ -855,10 +855,10 @@ a:hover img.attachment-thumbnail {
 	margin-bottom: 5px;
 	margin-top: -15px;
 	font-size: 17px;
-	text-align: right;
-	border-bottom: 4px solid #aaa;
+	text-align: left;
+	/*border-bottom: 4px solid #aaa;*/
 	padding-bottom: 10px;
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 #breadcrumb span {
 	font-weight: bold;

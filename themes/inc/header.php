@@ -142,7 +142,7 @@
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="articles.html">مطالب مفید</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="gallery.html">گالری تصاویر</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">تماس با ما</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contact.html">تماس با ما</a></li>
 	</ul>
 	<br class="clear">
 </div>

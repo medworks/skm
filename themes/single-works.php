@@ -8,6 +8,9 @@ $html=<<<cd
 				<a href="works.html">رزومه</a> <span>›</span>
 				<a>رزومه یک</a>
 			</div>
+			<div id="intro" class="text-intro">
+				<h1>اخبار/ <strong> {$works["subject"]}</strong></h1>
+			</div>
 			<div class="two_third">
 				<div class="shadow shadow_huge">
 					<a href="#" rel="prettyPhoto" title="">

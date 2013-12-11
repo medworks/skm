@@ -24,6 +24,9 @@ $html=<<<cd
 				<a href="articles.html">مطالب مفید</a> <span>›</span>
 				<a>{$articles["subject"]}</a>
 			</div>
+			<div id="intro" class="text-intro">
+				<h1>اخبار/ <strong> {$articles["subject"]}</strong></h1>
+			</div>
 			<div id="page-content" class="two_third">
 				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-articles tag-design tag-works">
 					<div class="meta-date">
