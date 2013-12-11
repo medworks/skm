@@ -172,9 +172,9 @@ img {
 }
 #search form input[type="text"] {
 	width: 150px;
-	padding: 4px 8px 5px;
+	padding: 0px 8px 0px;
 	border: none;
-	font-size: 1۴px;
+	font-size: 14px;
 	line-height: 14px;
 	border-radius: 20px;
 	-moz-border-radius: 20px;
@@ -184,7 +184,6 @@ img {
 	width: 200px;
 }
 #search form input[type="text"] {
-	padding: 4px 8px 6px;
 	vertical-align: middle;
 	background: #fff;
 	box-shadow: none;
@@ -612,7 +611,8 @@ form input[type="submit"] {
 	margin: 10px 0;
 }
 form#topsearch input[type="submit"]{
-	margin: 0;
+	margin: 1px 0 0;
+	font-size: 14px;
 }
 form input[type="submit"]:hover {
 	filter: alpha(opacity=80);
