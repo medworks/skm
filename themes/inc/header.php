@@ -110,7 +110,7 @@
 <body>
 <div id="header_wrapper">
 	<div id="header">
-		<div class="rightside" id="logo"><a href="./"><img src="themes/images/demo/logo.png" alt="Saman Kesht Mihan"></a></div>
+		<div class="rightside" id="logo"><a href="./"><img src="themes/images/logo.png" alt="Saman Kesht Mihan"></a></div>
 		<div id="header_nav" class="leftside">
 			<div id="social_icons" class="leftside">
 				<a href="#" target="_blank" title="Contact"><img src="themes/images/contact.png" alt="Contact"></a>
