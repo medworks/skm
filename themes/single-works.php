@@ -1,5 +1,17 @@
 <?php
-
+include_once("./config.php");
+include_once("./lib/persiandate.php");
+include_once("./classes/database.php");	
+include_once("./classes/seo.php");	
+$db = Database::GetDatabase();
+$seo = Seo::GetSeo();
+$work = $db->Select('works',NULL,"id={$_GET[wid]}");
+$works = $db->SelectAll("workpics","*","wid={$_GET[wid]}");
+// $sdate = ToJalali($work["sdate"]," l d F  Y ");
+// $fdate = ToJalali($work["fdate"]," l d F  Y ");		
+$catname = GetCategoryName($work["catid"]);
+$seo->Site_Title = $work["subject"];
+$seo->Site_Describtion = strip_tags(mb_substr($work["body"],0,150,"UTF-8"));
 $html=<<<cd
 	<div id="wrapper">
 		<div id="main_wrapper">
