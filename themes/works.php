@@ -1,4 +1,10 @@
 <?php
+  include_once("./classes/database.php");
+  include_once("./lib/persiandate.php");
+  $db = Database::GetDatabase();   
+  $works = $db->SelectAll("works","*",null,"fdate DESC");
+  foreach($works as $key=>$val) $cats[] = $val["catid"];    
+  $uniqcats = array_unique($cats);
 
 $html=<<<cd
 	<div id="wrapper">
@@ -8,56 +14,34 @@ $html=<<<cd
 				<a>رزومه</a>
 			</div>
 			<div class="portfolio portfolio-columns">
-				<div class="one_third portfolio-item" id="post-294">
-					<div class="shadow shadow_medium">
-						<a href="work-fullpage1.html" class="zoom" title="">
-							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
-						</a>
-					</div>
-					<h3>
-						<a href="#" title="Cold Default">رزومه اول</a>
-					</h3>
-					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-					<p class="more"><a href="#">ادامه رزومه</a></p>
-				</div>
-				<div class="one_third portfolio-item" id="post-294">
-					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" title="">
-							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
-						</a>
-					</div>
-					<h3>
-						<a href="#" title="Cold Default">رزومه اول</a>
-					</h3>
-					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-					<p class="more"><a href="#">ادامه رزومه</a></p>
-				</div>
-				<div class="one_third portfolio-item last" id="post-294">
-					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" title="">
-							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
-						</a>
-					</div>
-					<h3>
-						<a href="#" title="Cold Default">رزومه اول</a>
-					</h3>
-					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-					<p class="more"><a href="#">ادامه رزومه</a></p>
-				</div>
-				<div class="one_third portfolio-item" id="post-294">
-					<div class="shadow shadow_medium">
-						<a href="#" class="zoom" title="">
-							<img src="themes/images/demo/slide1.jpg" alt="Cold Default" class="border-img" style="width:280px;height:157px;">
-						</a>
-					</div>
-					<h3>
-						<a href="#" title="Cold Default">رزومه اول</a>
-					</h3>
-					<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-					<p class="more"><a href="#">ادامه رزومه</a></p>
-				</div>
-				<br class="clear">			
-			</div>
+cd;
+$i = 0;
+foreach($works as $key=>$val)
+{
+    ++$i;
+    if ($i % 3 == 0)
+      {$div = "<div class='one_third portfolio-item last' >";}
+    else {$div = "<div class='one_third portfolio-item' >";}
+          
+$html.=<<<cd
+                {$div}
+                        <div class="shadow shadow_medium">
+                                <a href="work-fullpage{$val[id]}.html" class="zoom" title="{$val[subject]}">
+                                        <img src="{$val[image]}" alt="{$val[subject]}" class="border-img" style="width:280px;height:157px;">
+                                </a>
+                        </div>
+                        <h3>
+                                <a href="work-fullpage{$val[id]}.html" title="{$val[subject]}">{$val[subject]}</a>
+                        </h3>
+                        <p>{$val["body"]}</p>
+                        <p class="more"><a href="work-fullpage{$val[id]}.html">ادامه رزومه</a></p>
+                </div>		
+cd;
+}
+                        
+$html.=<<<cd
+        <br class="clear">
+        </div>
 		</div>
 	</div>
 cd;
