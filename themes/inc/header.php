@@ -2,12 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SKM</title>
-<!-- <link rel="profile" href="http://gmpg.org/xfn/11"> -->
+
 <link rel="stylesheet" type="text/css" media="all" href="themes/css/style.css">
-<!-- <link rel="pingback" href="http://e404themes.com/cold/xmlrpc.php">
-<link rel="alternate" type="application/rss+xml" title="Cold Theme » Feed" href="http://e404themes.com/cold/feed/">
-<link rel="alternate" type="application/rss+xml" title="Cold Theme » Comments Feed" href="http://e404themes.com/cold/comments/feed/">
-<link rel="alternate" type="application/rss+xml" title="Cold Theme » Home Comments Feed" href="http://e404themes.com/cold/home/feed/"> -->
 <link rel="stylesheet" id="galleria-css" href="themes/css/galleria.classic.css?ver=3.6.1" type="text/css" media="all">
 <link rel="stylesheet" id="superfish-css" href="themes/css/menu.css?ver=3.6.1" type="text/css" media="all">
 <link rel="stylesheet" id="scrollable-css" href="themes/css/scrollable.css?ver=3.6.1" type="text/css" media="all">
@@ -15,6 +11,8 @@
 <link rel="stylesheet" id="prettyphoto-css" href="themes/css/prettyphoto.css?ver=3.6.1" type="text/css" media="all">
 <link rel="stylesheet" id="Lato-css" href="themes/css/fonts.css" type="text/css" media="all">
 <link rel="stylesheet" id="contact-form-7-css" href="themes/css/styles.css?ver=3.5.2" type="text/css" media="all">
+<link href="themes/css/style_13.css" rel="stylesheet" type="text/css">
+
 
 <script type="text/javascript" src="lib/js/jquery.js"></script>
 <script type="text/javascript" src="themes/js/jquery-migrate.min.js?ver=1.2.1"></script>
@@ -32,15 +30,11 @@
 <script type="text/javascript" src="themes/js/jquery.nivo.slider.pack.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/cold_custom.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/jquery.form.min.js?ver=3.40.0-2013.08.13"></script>
+<script type="text/javascript" src="themes/js/scripts.js?ver=3.5.2"></script> 
 
-<!-- <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://e404themes.com/cold/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://e404themes.com/cold/wp-includes/wlwmanifest.xml">  -->
 
 <meta name="generator" content="Mediateq">
 
-<!-- <link rel="canonical" href="http://e404themes.com/cold/"> -->
-
-<link href="themes/css/style_13.css" rel="stylesheet" type="text/css">
 
 <link rel="shortcut icon" href="favicon.ico">
 

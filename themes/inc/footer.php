@@ -60,11 +60,11 @@
 	    	    <div class="wpcf7" id="wpcf7-f853-w1-o1">
 					<form action="" method="post" class="wpcf7-form">
 						<div style="display: none;">
-						<input type="hidden" name="_wpcf7" value="853"><br>
-						<input type="hidden" name="_wpcf7_version" value="3.5.2"><br>
-						<input type="hidden" name="_wpcf7_locale" value=""><br>
-						<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f853-w1-o1"><br>
-						<input type="hidden" name="_wpnonce" value="700208ddec">
+							<input type="hidden" name="_wpcf7" value="853"><br>
+							<input type="hidden" name="_wpcf7_version" value="3.5.2"><br>
+							<input type="hidden" name="_wpcf7_locale" value=""><br>
+							<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f853-w1-o1"><br>
+							<input type="hidden" name="_wpnonce" value="700208ddec">
 						</div>
 						<p>نام و نام خانوادگی (*)<br>
 						    <span class="wpcf7-form-control-wrap your-name">
@@ -103,27 +103,5 @@
 	</div>
 </div>
 
-<!-- <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-137579-8']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script> -->
-
-
-<!-- <script type="text/javascript">
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/e404themes.com\/cold\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
-/* ]]> */
-</script>
-<scipt type="text/javascript" src="http://e404themes.com/cold/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2"></script> 
--->
 </body>
 </html>
