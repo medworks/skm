@@ -55,6 +55,13 @@
 			case 'fullarticles':
                 if ($act=="do") return "themes/single-articles.php";
 			break;
+			case 'space':
+				$seo->Site_Title = "فضای سبز";
+                return "themes/space.php";
+			break;
+			case 'fullspace':
+                if ($act=="do") return "themes/single-space.php";
+			break;
 			case 'uploadmgr':
               if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/uploadmgr.php";
 			break;
