@@ -18,15 +18,15 @@ $html=<<<cd
 			<div id="breadcrumb">
 				<a href="./">صفحه اصلی</a> <span>›</span>
 				<a href="works.html">رزومه</a> <span>›</span>
-				<a>رزومه یک</a>
+				<a>{$work["subject"]}</a>
 			</div>
 			<div id="intro" class="text-intro">
 				<h1>اخبار/ <strong> {$works["subject"]}</strong></h1>
 			</div>
 			<div class="two_third">
 				<div class="shadow shadow_huge">
-					<a href="#" rel="prettyPhoto" title="">
-						<img src="themes/images/demo/slide1.jpg" alt="" class="border-img" style="width:600px;height:336px">
+					<a href="#" rel="prettyPhoto" title="{$work[subject]}">
+						<img src="{$work[image]}" alt="{$work[subject]}" class="border-img" style="width:600px;height:336px">
 					</a>
 				</div>
 				<div class="share-this">
@@ -44,7 +44,9 @@ $html=<<<cd
 						</a>
 					</span>
 				</div>
-				<div class="more-pic">
+cd;
+$html.=<<<cd
+                                                <div class="more-pic">
 					<ul>
 						<li>
 							<a href="themes/images/demo/slide1.jpg" rel="prettyPhoto[g1]" title="">
