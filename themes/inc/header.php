@@ -125,7 +125,7 @@
 <div id="navigation">
 	<ul id="menu-top-menu" class="sf-menu">
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="./">صفحه اصلی</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">درباره ما</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about-us.html">درباره ما</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="news.html">اخبار</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="works.html">رزومه</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز</a>

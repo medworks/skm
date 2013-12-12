@@ -10,7 +10,6 @@ $html=<<<cd
 			<div id="intro" class="text-intro">
 				<h1>تماس با ما</h1>
 			</div>
-			<!-- -->
 			<div class="full_page">
 				<div id="contact">
 					<h3>مکان ما بر روی نقشه</h3>
@@ -64,7 +63,6 @@ $html=<<<cd
 
 				</div>
 			</div>
-			<!-- -->
 		</div>
 	</div>
 cd;
