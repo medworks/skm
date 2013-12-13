@@ -2,16 +2,18 @@ jQuery(window).load(function(){
 	jQuery('.share_buttons').css('right', -jQuery('.share_buttons').width());
 	jQuery('.share_button').toggle(
 		function() {
-			var $lefty = jQuery(this).next('.share_buttons');
-			$lefty.animate({
+			var $righty = jQuery(this).next('.share_buttons');
+			$righty.animate({
 				right: jQuery(this).width()
 			});
+			jQuery("#add-this img").attr('src','themes/images/minus-this.png');
 		},
 		function() {
-			var $lefty = jQuery(this).next('.share_buttons');
-			$lefty.animate({
-				right: -$lefty.outerWidth()
+			var $righty = jQuery(this).next('.share_buttons');
+			$righty.animate({
+				right: -$righty.outerWidth()
 			});
+			jQuery("#add-this img").attr('src','themes/images/add-this.png');
 		}
 	);
 });

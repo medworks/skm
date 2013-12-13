@@ -7,7 +7,7 @@ $cur=curPageURL();
 $html.=<<<cd
 	<div class="share-this">
 		<span class="share_button">
-			<a href="#" title="اشتراک">
+			<a href="#" id="add-this" title="اشتراک">
 				<img src="themes/images/add-this.png" alt="Share This">
 			</a>
 		</span>
