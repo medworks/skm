@@ -29,42 +29,27 @@ $html=<<<cd
 						<img src="{$work[image]}" alt="{$work[subject]}" class="border-img" style="width:600px;height:336px">
 					</a>
 				</div>
+				<div class="more-pic">
+					<ul>
 cd;
 					include_once('themes/inc/share.php');
+$j = 0;					
+foreach($works as $key=>$val)
+{
+	++$j;
+	$post = $db->Select('works',NULL,"id={$val[wid]}");
+	if ($j%3 == 0)
+	{$br = "<br class='clear' />";}
 $html.=<<<cd
-                                                <div class="more-pic">
-					<ul>
 						<li>
-							<a href="themes/images/demo/slide1.jpg" rel="prettyPhoto[g1]" title="">
-								<img src="themes/images/demo/slide1.jpg" alt="">
+							<a href="{$val[image]}" rel="prettyPhoto[g1]" title="{$val[subject]}">
+								<img src="{$val[image]}" alt="{$val[subject]}">
 							</a>
 						</li>
-						<li>
-							<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-								<img src="themes/images/demo/slide2.jpg" alt="">
-							</a>
-						</li>
-						<li>
-							<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-								<img src="themes/images/demo/slide3.jpg" alt="">
-							</a>
-						</li>
-						<li>
-							<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-								<img src="themes/images/demo/slide3.jpg" alt="">
-							</a>
-						</li>
-						<br class="clear" />
-						<li>
-							<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-								<img src="themes/images/demo/slide3.jpg" alt="">
-							</a>
-						</li>
-						<li>
-							<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-								<img src="themes/images/demo/slide3.jpg" alt="">
-							</a>
-						</li>
+						{$br}
+cd;
+}
+$html.=<<<cd
 					</ul>
 				</div>
 			</div>
