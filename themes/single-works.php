@@ -39,7 +39,7 @@ foreach($works as $key=>$val)
 	++$j;
 	$post = $db->Select('works',NULL,"id={$val[wid]}");
 	if ($j%3 == 0)
-	{$br = "<br class='clear' />";}
+		{$br = "<br class='clear' />";}
 $html.=<<<cd
 						<li>
 							<a href="{$val[image]}" rel="prettyPhoto[g1]" title="{$val[subject]}">
