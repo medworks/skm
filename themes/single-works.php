@@ -29,22 +29,8 @@ $html=<<<cd
 						<img src="{$work[image]}" alt="{$work[subject]}" class="border-img" style="width:600px;height:336px">
 					</a>
 				</div>
-				<div class="share-this">
-					<span class="share_button">
-						<a href="#" title="Share This">
-							<img src="themes/images/add-this.png" alt="Share This">
-						</a>
-					</span>
-					<span class="share_buttons" style="right: -90px;">
-						<a href="#" target="_blank" title="Twitter">
-							<img src="themes/images/twitter-share.png" alt="Twitter">
-						</a>
-						<a href="#" target="_blank" title="Facebook">
-							<img src="themes/images/facebook-share.png" alt="Facebook">
-						</a>
-					</span>
-				</div>
 cd;
+					include_once('themes/inc/share.php');
 $html.=<<<cd
                                                 <div class="more-pic">
 					<ul>

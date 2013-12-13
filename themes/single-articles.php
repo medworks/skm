@@ -52,21 +52,9 @@ $html=<<<cd
 					</div>
 					<p>{$articles["body"]}</p>
 					<br class="clear" />
-					<div class="share-this">
-						<span class="share_button">
-							<a href="#" title="Share This">
-								<img src="themes/images/add-this.png" alt="Share This">
-							</a>
-						</span>
-						<span class="share_buttons" style="right: -90px;">
-							<a href="#" target="_blank" title="Twitter">
-								<img src="themes/images/twitter-share.png" alt="Twitter">
-							</a>
-							<a href="#" target="_blank" title="Facebook">
-								<img src="themes/images/facebook-share.png" alt="Facebook">
-							</a>
-						</span>
-					</div>
+cd;
+					include_once('themes/inc/share.php');
+$html.=<<<cd
 					<div class="more-pic">
 						<ul>
 							<li>
