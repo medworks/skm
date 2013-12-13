@@ -21,7 +21,7 @@ $html=<<<cd
 				<a>{$work["subject"]}</a>
 			</div>
 			<div id="intro" class="text-intro">
-				<h1>اخبار/ <strong> {$works["subject"]}</strong></h1>
+				<h1>رزومه/ <strong> {$work["subject"]}</strong></h1>
 			</div>
 			<div class="two_third">
 				<div class="shadow shadow_huge">
