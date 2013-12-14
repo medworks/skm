@@ -169,7 +169,7 @@ if ($_GET["cmd"]=="workpics")
 {
 	$pics = "";	
 	$files = array();
-    $dir = "../workspics";
+        $dir = "../workspics";
 	$checkboxs = $db->SelectAll("workpics","*","wid = '{$_GET[id]}'");
 	//echo $db->cmd;
 	//echo "test is test for test";
