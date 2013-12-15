@@ -97,6 +97,9 @@
           <li >            
             <a href="?item=worksmgr&act=do" id="works" name="works" class="works"><p>مدیریت کارها</p></a>
           </li>
+          <li >            
+            <a href="?item=areamgr&act=do" id="area" name="area" class="works"><p>مدیریت فضا ها</p></a>
+          </li>
           <li>
             <a href="?item=slidesmgr&act=do" class="slidemgr"><p>مدیریت اسلاید</p></a>
           </li>
