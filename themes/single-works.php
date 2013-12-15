@@ -42,8 +42,8 @@ foreach($works as $key=>$val)
 		{$br = "<br class='clear' />";}
 $html.=<<<cd
 						<li>
-							<a href="{$val[image]}" rel="prettyPhoto[g1]" title="{$val[subject]}">
-								<img src="{$val[image]}" alt="{$val[subject]}">
+							<a href="{$val[image]}" rel="prettyPhoto[g1]" title="{$post[subject]}">
+								<img src="{$val[image]}" alt="{$post[subject]}">
 							</a>
 						</li>
 						{$br}
