@@ -270,7 +270,7 @@ if ($_GET["cmd"]=="newspics")
 	$pics = "";	
 	$files = array();
         $dir = "../newspics";
-	$checkboxs = $db->SelectAll("newspics","*","wid = '{$_GET[id]}'");
+	$checkboxs = $db->SelectAll("newspics","*","nid = '{$_GET[id]}'");
 	//echo $db->cmd;
 	//echo "test is test for test";
 	if (!empty($checkboxs))
@@ -278,8 +278,8 @@ if ($_GET["cmd"]=="newspics")
 	//echo "<br/>not empty<br/>";
 		foreach($checkboxs as $key=>$val) 
 		{		    
-			$files[] = mb_substr($val["image"],12,mb_strlen($val["image"]),"UTF-8");	
-		//	var_dump($files);
+			$files[] = mb_substr($val["image"],11,mb_strlen($val["image"]),"UTF-8");	
+			//var_dump($files);
 		}	
 	}	
 	$handle=opendir($dir);
