@@ -55,42 +55,6 @@ $html=<<<cd
 cd;
 					include_once('themes/inc/share.php');
 $html.=<<<cd
-					<div class="more-pic">
-						<ul>
-							<li>
-								<a href="themes/images/demo/slide1.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide1.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide2.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<br class="clear" />
-							<li>
-								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-						</ul>
-					</div>
-					<br class="clear" />
 				</div>
 			</div>
 			<div id="sidebar" class="one_third last">
