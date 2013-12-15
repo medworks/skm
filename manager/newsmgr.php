@@ -73,18 +73,55 @@
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);	    
 		$values = array("`subject`"=>"'{$_POST[subject]}'",
-			            "`image`"=>"'{$_POST[selectpic]}'",
-						"`body`"=>"'{$_POST[detail]}'",
-						"`ndate`"=>"'{$ndatetime}'",
-						"`userid`"=>"'{$userid}'",
-						"`resource`"=>"'{$_POST[res]}'",
-						"`catid`"=>"'{$_POST[cbcat]}'");
+			        "`image`"=>"'{$_POST[selectpic]}'",
+				"`body`"=>"'{$_POST[detail]}'",
+				"`ndate`"=>"'{$ndatetime}'",
+				"`userid`"=>"'{$userid}'",
+				"`resource`"=>"'{$_POST[res]}'",
+				"`catid`"=>"'{$_POST[cbcat]}'");
 			
         $db->UpdateQuery("news",$values,array("id='{$_GET[nid]}'"));
 		header('location:?item=newsmgr&act=mgr');
 		//$_GET["item"] = "newsmgr";
 		//$_GET["act"] = "act";			
 	}
+        if (!$overall_error && $_POST["mark"]=="addmorepic")
+	{			
+                $pics = $db->SelectAll("newspics","*","nid = '{$_GET[nid]}'");	
+		$img = array();
+		$reqimg = array();
+		$dif = array();
+		if (empty($pics))
+		{
+			$fields = array("`nid`","`image`");
+			if(!empty($_POST['picslist'])) 
+			{
+			  foreach($_POST['picslist'] as $key=>$val)
+			  {		    
+				$values = array("'{$_GET[wid]}'","'./newspics/{$val}'");
+				$db->InsertQuery('newspics',$fields,$values);		
+			  }	
+			 }
+		}
+		else
+		{
+			foreach($pics as $key=>$val) $img[] = $val["image"];
+			foreach($_POST['picslist'] as $key=>$val) $reqimg[] = "./newspics/{$val}";
+			$dif = array_diff($img, $reqimg);
+			foreach($dif as $key=>$val)
+			{
+				$db->Delete("newspics"," image","{$val}");				
+			}
+			$dif = array_diff($reqimg, $img);
+			$fields = array("`nid`","`image`");
+			foreach($dif as $key=>$val)
+			{			
+			    $values = array("'{$_GET[wid]}'","'{$val}'");
+				$db->InsertQuery('newspics',$fields,$values);
+			}
+		}
+		header('location:?item=newsmgr&act=mgr');		 
+	 }
 
 	if ($overall_error)
 	{
