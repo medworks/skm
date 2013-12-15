@@ -252,7 +252,45 @@ $html=<<<cd
   </div>  
    
 cd;
-} else
+} 
+else
+if ($_GET['act']=="pic")
+{
+$msgs = GetMessage($_GET['msg']);
+$html=<<<cd
+<script type='text/javascript'>
+	$(document).ready(function(){		  	 		
+		$("#tab1").click(function(){
+		$.get('ajaxcommand.php?cmd=newspics&id={$_GET[nid]}', function(data) {
+						$('#catab1 ul').html(data);
+				});			
+			return false;
+		});		
+		$("#tab1").click();
+	});
+</script>	
+<div class="mes" id="message">{$msgs}</div>   
+	<div class="picmanager">		
+		<div class="files right add-pics">
+			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
+				<div class="cat-tabs-header" id="cat-tabs-header">
+					<ul>						
+						<li id="tab1" class="active"><a href="#catab1">پوشه اخبار</a></li>						
+					</ul>
+				</div>				
+				<div class="cat-tabs-wrap-pic" id="catab1">
+					<ul>
+					
+					</ul>
+					<div class="badboy"></div>
+				</div>				
+			</div>
+		<div class="badboy"></div>
+	</div>
+</div>
+cd;
+}
+else
 if ($_GET['act']=="mgr")
 {
 	if ($_POST["mark"]=="srhnews")
@@ -333,7 +371,8 @@ del;
 							"ndate"=>"تاریخ",
 							"resource"=>"منبع",							
 							"username"=>"کاربر",
-                            "edit"=>"ویرایش",
+                                                        "addpic"=>"عکس",
+                                                        "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=newsmgr&act=mgr");
                     
