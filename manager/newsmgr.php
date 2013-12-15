@@ -98,7 +98,7 @@
 			{
 			  foreach($_POST['picslist'] as $key=>$val)
 			  {		    
-				$values = array("'{$_GET[wid]}'","'./newspics/{$val}'");
+				$values = array("'{$_GET[nid]}'","'./newspics/{$val}'");
 				$db->InsertQuery('newspics',$fields,$values);		
 			  }	
 			 }
@@ -116,8 +116,8 @@
 			$fields = array("`nid`","`image`");
 			foreach($dif as $key=>$val)
 			{			
-			    $values = array("'{$_GET[wid]}'","'{$val}'");
-				$db->InsertQuery('newspics',$fields,$values);
+			    $values = array("'{$_GET[nid]}'","'{$val}'");
+			    $db->InsertQuery('newspics',$fields,$values);
 			}
 		}
 		header('location:?item=newsmgr&act=mgr');		 
