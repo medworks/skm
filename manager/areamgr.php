@@ -50,7 +50,7 @@
 	{	    
 		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`catid`","`type`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'");
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'","'{$_POST[cbtype]}'");
 		if (!$db->InsertQuery('area',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -77,7 +77,8 @@
 				"`body`"=>"'{$_POST[detail]}'",
 				"`ndate`"=>"'{$ndatetime}'",
 				"`userid`"=>"'{$userid}'",				
-				"`catid`"=>"'{$_POST[cbcat]}'");
+				"`catid`"=>"'{$_POST[cbcat]}'",
+                                "`type`"=>"'{$_POST[cbtype]}'");
 			
         $db->UpdateQuery("area",$values,array("id='{$_GET[aid]}'"));
 		header('location:?item=areamgr&act=mgr');
