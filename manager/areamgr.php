@@ -16,7 +16,7 @@
 	$sess = Session::GetSesstion();	
 	$userid = $sess->Get("userid");
 	$overall_error = false;
-	if ($_GET['item']!="newsmgr")	exit();	   
+	if ($_GET['item']!="areamgr")	exit();	   
 	if (isset($_POST["mark"]) and $_POST["mark"]!="srhnews")
 	{
 	   date_default_timezone_set('Asia/Tehran');
@@ -163,19 +163,19 @@ if ($_GET['act']=="do")
 		<div class="title">
 	      <ul>
 	        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-	        <li><span>مدیریت اخبار</span></li>
+	        <li><span>مدیریت فضاها</span></li>
 	      </ul>
 	      <div class="badboy"></div>
 	    </div>
 		<div class="sub-menu" id="mainnav">
 			<ul>
 			  <li>		  
-				<a href="?item=newsmgr&act=new">درج خبر جدید
+				<a href="?item=newsmgr&act=new">درج فضای جدید
 					<span class="add-news"></span>
 				</a>
 			  </li>
 			  <li>
-				<a href="?item=newsmgr&act=mgr" id="news" name="news">حذف/ویرایش اخبار
+				<a href="?item=newsmgr&act=mgr" id="news" name="news">حذف / ویرایش فضا
 					<span class="edit-news"></span>
 				</a>
 			  </li>

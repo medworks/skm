@@ -75,7 +75,7 @@
                 if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit" or $act=="pic") return "../manager/newsmgr.php";
 			break;
                         case 'areamgr':
-                if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit" or $act=="pic") return "../manager/worksmgr.php";
+                if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit" or $act=="pic") return "../manager/areamgr.php";
 			break;
 			case 'usermgr':
                 if ($act=="do" or $act=="new" or $act=="mgr" or $act=="del" or $act=="edit") return "../manager/usermgr.php";
