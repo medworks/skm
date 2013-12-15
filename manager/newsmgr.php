@@ -25,7 +25,7 @@
 	   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);		
 	   $ndatetime = Date("Y-m-d H:i:s",mktime($hour, $minute, $second, $gmonth, $gday, $gyear));		
 				  
-	   if(empty($_POST["selectpic"]))
+	   if(empty($_POST["selectpic"])&& $_POST["mark"]!="addmorepic")
 	   { 
 			//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
 			header('location:?item=newsmgr&act=new&msg=4');
@@ -36,7 +36,7 @@
 			//exit();
 		}
 		else						
-		if (empty($_POST['detail']))
+           if (empty($_POST['detail'])&& $_POST["mark"]!="addmorepic")
 		{
 		   header('location:?item=newsmgr&act=new&msg=5');
 			//$_GET["item"] = "newsmgr";
@@ -349,6 +349,8 @@ if ($_GET['act']=="mgr")
 				}
 				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
 				$rows[$i]["catid"] = GetCategoryName($rows[$i]["catid"]);
+                                $rows[$i]["addpic"] = "<a href='?item=newsmgr&act=pic&nid={$rows[$i]["id"]}' class='add-pic'" .
+						"style='text-decoration:none;'></a>";
 				$rows[$i]["edit"] = "<a href='?item=newsmgr&act=edit&nid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["delete"]=<<< del
