@@ -203,8 +203,8 @@ form .upload-file .action{
   width: 80px;
 }
 
-#filesbrowserbtn,#planbrowserbtn,#pricebrowserbtn,
-#selectbuttton,#selectplanbuttton,#selectpricebuttton{
+#filesbrowserbtn,
+#selectbuttton{
   cursor: pointer;
   margin-right: -4px;
   margin-bottom: 0;
@@ -246,9 +246,7 @@ form .upload-file .action{
   width: 80px;
 }
 
-#filesbrowserbtn,
-#planbrowserbtn,
-#pricebrowserbtn{
+#filesbrowserbtn{
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
@@ -287,11 +285,9 @@ label{
   direction: ltr;
 }
 
-#filesbrowser .files .pics .select,
-#planbrowser .files .pics .select,
-#pricebrowser .files .pics .select{
+#filesbrowser .files .pics .select{
   float: right;
-  width: 100px;
+  width: 150px;
   outline: 0 none;
   border: transparent;
   border-top-color: transparent;
@@ -444,20 +440,18 @@ label{
 }
 
 /* Tabbed Categories */
-.cat-tabs-wrap-pic,
-.cat-tabs-wrap-plan,
-.cat-tabs-wrap-price{
+.cat-tabs-wrap{
   padding:20px;
 }
 
-#cat-tabs-header{
+.cat-tabs-header{
   background:#F7F7F7;
   height:35px;
   border-bottom: 3px solid #EAEAEA;
   padding:8px 10px 0;
 }
 
-#cat-tabs-header li{
+.cat-tabs-header li{
   float:right;
   margin-right:10px;
   line-height:30px;
@@ -472,7 +466,7 @@ label{
   font-size:12pt;
 }
 
-#cat-tabs-header li.active{
+.cat-tabs-header li.active{
   background:#FFF;
   -webkit-box-shadow:0 -1px 2px #d4d4d4;
   -moz-box-shadow:0 -1px 2px #d4d4d4;
@@ -481,36 +475,28 @@ label{
   box-shadow:0 -1px 2px #d4d4d4;
 }
 
-.cat-tabs-wrap-pic li,
-.cat-tabs-wrap-plan li,
-.cat-tabs-wrap-price li{
+.cat-tabs-wrap li{
   overflow:hidden;
   padding: 5px 0;
   width:118px;
   float:right;
 }
 
-.cat-tabs-wrap-pic li.picture,
-.cat-tabs-wrap-plan li.picture,
-.cat-tabs-wrap-price li.picture{
+.cat-tabs-wrap li.picture{
   overflow:hidden;
   padding: 5px 18px;
   width: 58px;
   float:right;
 }
 
-.cat-tabs-wrap-pic li.first-li,
-.cat-tabs-wrap-plan li.first-li,
-.cat-tabs-wrap-price li.first-li{
+.cat-tabs-wrap li.first-li{
   padding:0;
   width:310px;
   float:right;
   margin-left: 25px;
 }
 
-.cat-tabs-wrap-pic li.first-li p.post-meta,
-.cat-tabs-wrap-plan li.first-li p.post-meta,
-.cat-tabs-wrap-price li.first-li p.post-meta{
+.cat-tabs-wrap li.first-li p.post-meta{
   margin:10px 0;
 }
 
@@ -518,8 +504,8 @@ label{
   padding: 0;
 }
 
-.tab #cat-tabs-header li a{
-  font-size: 15px;
+.tab .cat-tabs-header li a{
+  font-size: 18px;
 }
 
 .tab li.first-li .pic{
@@ -545,18 +531,14 @@ label{
   margin-bottom: 10px;
 }
 /******************/
-.cat-tabs-wrap-pic li.first-li-picture,
-.cat-tabs-wrap-plan li.first-li-picture,
-.cat-tabs-wrap-price li.first-li-picture{
+.cat-tabs-wrap li.first-li-picture{
   padding:0;
   width:256px;
   float:right;
   margin-left: 25px;
 }
 
-.cat-tabs-wrap-pic li.first-li-picture p.post-meta,
-.cat-tabs-wrap-plan li.first-li-picture p.post-meta,
-.cat-tabs-wrap-price li.first-li-picture p.post-meta{
+.cat-tabs-wrap li.first-li-picture p.post-meta{
   margin:10px 0;
 }
 .tab li.first-li-picture .pic{
@@ -745,6 +727,10 @@ header #mini-nav span.newSignup{
   background-image: url('./images/newletter.png');
 }
 
+#mainnav > ul > li a.pollmgr{
+  background-image: url('./images/poll.png');
+}
+
 #mainnav > ul > li a.users{
   background-image: url('./images/users.png');
 }
@@ -918,6 +904,14 @@ header #mini-nav span.newSignup{
   background-image: url('./images/editnews.png');
 }
 
+.sub-menu ul li span.add-poll{
+  background-image: url('./images/add-poll.png');
+}
+
+.sub-menu ul li span.edit-poll{
+  background-image: url('./images/edit-poll.png');
+}
+
 .sub-menu ul li span.add-works{
   background-image: url('./images/addworks.png');
 }
@@ -1027,7 +1021,7 @@ header #mini-nav span.newSignup{
 /*  this section related to right nav div */
 .admin_right_panel{
  float : right;
- width :155px;
+ width :150px;
  margin-top : 11px;
  }
 
@@ -1035,7 +1029,7 @@ header #mini-nav span.newSignup{
 .admin_container{
   float : right;
   min-height: 600px;
-  width : 780px;
+  width : 782px;
   top: 15px;
   background: #fff;
   border: 1px solid #e6e6e6;
@@ -1310,33 +1304,44 @@ select.select2{
   border-radius: 3px;
 }
 
+.admin_container a.edit-field{
+  background: url('./images/icons/edit.gif') no-repeat center;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.admin_container a.del-field{
+  background: url('./images/icons/delete.gif') no-repeat center;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.admin_container a.stat-field{
+  background: url('./images/icons/chart.gif') no-repeat center;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
 .admin_container a.add-pic{
   background: url('./images/icons/picture-add.png') no-repeat center;
   display: block;
   height: 16px;
 }
 
-.admin_container a.edit-field{
-  background: url('./images/icons/edit.gif') no-repeat center;
-  display: block;
-  height: 16px;
-}
-
-.admin_container a.del-field{
-  background: url('./images/icons/delete.gif') no-repeat center;
-  display: block;
-  height: 16px;
-}
-
 .admin_container a.dis-field{
   background: url('./images/icons/disable.gif') no-repeat center;
-  display: block;
+  display: inline-block;
+  width: 16px;
   height: 16px;
 }
 
 .admin_container a.en-field{
   background: url('./images/icons/enable.gif') no-repeat center;
-  display: block;
+  display: inline-block;
+  width: 16px;
   height: 16px;
 }
 
@@ -1436,9 +1441,7 @@ input.search-form:hover{
   color: #000 !important;
 }
 /**********************************Files browser*********************************/
-#filesbrowser,
-#planbrowser,
-#pricebrowser{
+#filesbrowser{
   width: 748px;
   text-align: right;
   border: 1px solid #eee;
@@ -1547,53 +1550,4 @@ p.note{
   font-size: 17px;
   padding-right: 10px;
   line-height: 2;
-}
-
-.add-pics{
-  width: 750px !important;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.add-pics .cat-tabs-header{
-  border-top: 1px solid #EAEAEA;
-}
-
-.add-pics .cat-tabs-header li a{
-  font-size: 18px;
-}
-
-.add-pics .cat-tabs-wrap-pic li,
-.add-pics .cat-tabs-wrap-plan li,
-.add-pics .cat-tabs-wrap-price li{
-  text-align: right;
-}
-
-.add-pics .cat-tabs-wrap-pic .submit,
-.add-pics .cat-tabs-wrap-plan .submit,
-.add-pics .cat-tabs-wrap-price .submit{
-  margin-bottom: 10px !important;
-  margin-top: 50px !important;
-}
-
-.add-pics .cat-tabs-wrap-pic li h2,
-.add-pics .cat-tabs-wrap-plan li h2,
-.add-pics .cat-tabs-wrap-price li h2{
-  display: inline-block;
-  font-size: 12px;
-}
-
-.add-pics .cat-tabs-wrap-pic li .pic a,
-.add-pics .cat-tabs-wrap-plan li .pic a,
-.add-pics .cat-tabs-wrap-price li .pic a{
-  background: 0 none !important;
-  border: 0 none !important;
-  padding: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.add-pics .cat-tabs-wrap-pic li .pic .overlay,
-.add-pics .cat-tabs-wrap-plan li .pic .overlay,
-.add-pics .cat-tabs-wrap-price li .pic .overlay{
-  display: none;
 }
