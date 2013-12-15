@@ -25,7 +25,7 @@
 	   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);		
 	   $ndatetime = Date("Y-m-d H:i:s",mktime($hour, $minute, $second, $gmonth, $gday, $gyear));		
 				  
-	   if(empty($_POST["selectpic"]))
+	   if(empty($_POST["selectpic"])&& $_POST["mark"]!="addmorepic")
 	   { 
 			//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
 			header('location:?item=newsmgr&act=new&msg=4');
@@ -36,7 +36,7 @@
 			//exit();
 		}
 		else						
-		if (empty($_POST['detail']))
+           if (empty($_POST['detail'])&& $_POST["mark"]!="addmorepic")
 		{
 		   header('location:?item=newsmgr&act=new&msg=5');
 			//$_GET["item"] = "newsmgr";
@@ -73,18 +73,55 @@
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);	    
 		$values = array("`subject`"=>"'{$_POST[subject]}'",
-			            "`image`"=>"'{$_POST[selectpic]}'",
-						"`body`"=>"'{$_POST[detail]}'",
-						"`ndate`"=>"'{$ndatetime}'",
-						"`userid`"=>"'{$userid}'",
-						"`resource`"=>"'{$_POST[res]}'",
-						"`catid`"=>"'{$_POST[cbcat]}'");
+			        "`image`"=>"'{$_POST[selectpic]}'",
+				"`body`"=>"'{$_POST[detail]}'",
+				"`ndate`"=>"'{$ndatetime}'",
+				"`userid`"=>"'{$userid}'",
+				"`resource`"=>"'{$_POST[res]}'",
+				"`catid`"=>"'{$_POST[cbcat]}'");
 			
         $db->UpdateQuery("news",$values,array("id='{$_GET[nid]}'"));
 		header('location:?item=newsmgr&act=mgr');
 		//$_GET["item"] = "newsmgr";
 		//$_GET["act"] = "act";			
 	}
+        if (!$overall_error && $_POST["mark"]=="addmorepic")
+	{			
+                $pics = $db->SelectAll("newspics","*","nid = '{$_GET[nid]}'");	
+		$img = array();
+		$reqimg = array();
+		$dif = array();
+		if (empty($pics))
+		{
+			$fields = array("`nid`","`image`");
+			if(!empty($_POST['picslist'])) 
+			{
+			  foreach($_POST['picslist'] as $key=>$val)
+			  {		    
+				$values = array("'{$_GET[nid]}'","'./newspics/{$val}'");
+				$db->InsertQuery('newspics',$fields,$values);		
+			  }	
+			 }
+		}
+		else
+		{
+			foreach($pics as $key=>$val) $img[] = $val["image"];
+			foreach($_POST['picslist'] as $key=>$val) $reqimg[] = "./newspics/{$val}";
+			$dif = array_diff($img, $reqimg);
+			foreach($dif as $key=>$val)
+			{
+				$db->Delete("newspics"," image","{$val}");				
+			}
+			$dif = array_diff($reqimg, $img);
+			$fields = array("`nid`","`image`");
+			foreach($dif as $key=>$val)
+			{			
+			    $values = array("'{$_GET[nid]}'","'{$val}'");
+			    $db->InsertQuery('newspics',$fields,$values);
+			}
+		}
+		header('location:?item=newsmgr&act=mgr');		 
+	 }
 
 	if ($overall_error)
 	{
@@ -252,7 +289,45 @@ $html=<<<cd
   </div>  
    
 cd;
-} else
+} 
+else
+if ($_GET['act']=="pic")
+{
+$msgs = GetMessage($_GET['msg']);
+$html=<<<cd
+<script type='text/javascript'>
+	$(document).ready(function(){		  	 		
+		$("#tab1").click(function(){
+		$.get('ajaxcommand.php?cmd=newspics&id={$_GET[nid]}', function(data) {
+						$('#catab1 ul').html(data);
+				});			
+			return false;
+		});		
+		$("#tab1").click();
+	});
+</script>	
+<div class="mes" id="message">{$msgs}</div>   
+	<div class="picmanager">		
+		<div class="files right add-pics">
+			<div class="pics cat-box-content cat-box tab" id="cats-tabs-box">
+				<div class="cat-tabs-header" id="cat-tabs-header">
+					<ul>						
+						<li id="tab1" class="active"><a href="#catab1">پوشه اخبار</a></li>						
+					</ul>
+				</div>				
+				<div class="cat-tabs-wrap-pic" id="catab1">
+					<ul>
+					
+					</ul>
+					<div class="badboy"></div>
+				</div>				
+			</div>
+		<div class="badboy"></div>
+	</div>
+</div>
+cd;
+}
+else
 if ($_GET['act']=="mgr")
 {
 	if ($_POST["mark"]=="srhnews")
@@ -311,6 +386,8 @@ if ($_GET['act']=="mgr")
 				}
 				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
 				$rows[$i]["catid"] = GetCategoryName($rows[$i]["catid"]);
+                                $rows[$i]["addpic"] = "<a href='?item=newsmgr&act=pic&nid={$rows[$i]["id"]}' class='add-pic'" .
+						"style='text-decoration:none;'></a>";
 				$rows[$i]["edit"] = "<a href='?item=newsmgr&act=edit&nid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["delete"]=<<< del
@@ -333,7 +410,8 @@ del;
 							"ndate"=>"تاریخ",
 							"resource"=>"منبع",							
 							"username"=>"کاربر",
-                            "edit"=>"ویرایش",
+                                                        "addpic"=>"عکس",
+                                                        "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=newsmgr&act=mgr");
                     

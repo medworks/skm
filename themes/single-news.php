@@ -6,6 +6,7 @@ include_once("./classes/seo.php");
 $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
 $news = $db->Select('news',NULL,"id={$_GET[wid]}"," ndate DESC");
+$newspics = $db->SelectAll("newspics","*","nid={$_GET[wid]}");
 $ndate = ToJalali($news["ndate"]," l d F  Y ");
 $day = ToJalali($post["ndate"],"d");
 $month = ToJalali($post["ndate"],"F");
@@ -52,42 +53,27 @@ $html=<<<cd
 					</div>
 					<p>{$news["body"]}</p>
 					<br class="clear" />
-cd;
-					include_once('themes/inc/share.php');
-$html.=<<<cd
-					<div class="more-pic">
+                                        <div class="more-pic">
 						<ul>
-							<li>
-								<a href="themes/images/demo/slide1.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide1.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide2.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<br class="clear" />
-							<li>
-								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
+cd;
+                                        include_once('themes/inc/share.php');
+$j = 0;					
+foreach($newspics as $key=>$val)
+{
+   ++$j;
+   $post = $db->Select('news',NULL,"id={$val[nid]}");
+   if ($j%3 == 0)
+    	{$br = "<br class='clear' />";}					
+$html.=<<<cd
+	<li>
+	   <a href="{$val[image]}" rel="prettyPhoto[g1]" title="{$post[subject]}">
+		<img src="{$val[image]}" alt="{$post[subject]}">
+	   </a>
+	</li>
+	{$br}
+cd;
+}        
+$html.=<<<cd
 						</ul>
 					</div>
 					<br class="clear" />
