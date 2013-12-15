@@ -48,7 +48,7 @@
 	}	
 	if (!$overall_error && $_POST["mark"]=="savearea")
 	{	    
-		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`resource`","`catid`");
+		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`catid`","`type`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
 		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'");
 		if (!$db->InsertQuery('area',$fields,$values)) 
@@ -76,18 +76,17 @@
 			        "`image`"=>"'{$_POST[selectpic]}'",
 				"`body`"=>"'{$_POST[detail]}'",
 				"`ndate`"=>"'{$ndatetime}'",
-				"`userid`"=>"'{$userid}'",
-				"`resource`"=>"'{$_POST[res]}'",
+				"`userid`"=>"'{$userid}'",				
 				"`catid`"=>"'{$_POST[cbcat]}'");
 			
-        $db->UpdateQuery("area",$values,array("id='{$_GET[nid]}'"));
+        $db->UpdateQuery("area",$values,array("id='{$_GET[aid]}'"));
 		header('location:?item=areamgr&act=mgr');
 		//$_GET["item"] = "areamgr";
 		//$_GET["act"] = "act";			
 	}
         if (!$overall_error && $_POST["mark"]=="addmorepic")
 	{			
-                $pics = $db->SelectAll("areapics","*","aid = '{$_GET[nid]}'");	
+                $pics = $db->SelectAll("areapics","*","aid = '{$_GET[aid]}'");	
 		$img = array();
 		$reqimg = array();
 		$dif = array();
@@ -129,8 +128,7 @@
 		             "image"=>$_POST['image'],
 					 "body"=>$_POST['detail'],
 					 "ndate"=>$_POST['ndate'],
-					 "userid"=>$userid,
-					 "resource"=>$_POST['res'],
+					 "userid"=>$userid,					
 					 "cat"=>$_POST['cbcat']);
 	}
 	
@@ -188,6 +186,8 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
 $sections = $db->SelectAll("section","*",null,"id ASC");
+$cbarr = array(1=>"فضای داخلی",2=>"فضای خارجی");
+$cbtype = SelectOptionTag("cbtype",$cbarr,1);
 if ($_GET['act']=="edit") 
 {   
     $category = $db->SelectAll("category","*",null,"id ASC");
@@ -226,6 +226,11 @@ $html=<<<cd
 	<form name="frmareamgr" id="frmareamgr" class="" action="" method="post" >
      <p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>
 	 <div class="badboy"></div>
+       <p>
+         <label for="cbtype">نوع فضا </label>
+         <span>*</span>
+       </p>    
+        {$cbtype}
        <p>
          <label for="cbsection">سر گروه </label>
          <span>*</span>
@@ -403,8 +408,7 @@ del;
                                                 "subject"=>"عنوان",
                                                 "image"=>"تصویر",
                                                 "body"=>"توضیحات",
-                                                "ndate"=>"تاریخ",
-                                                "resource"=>"منبع",							
+                                                "ndate"=>"تاریخ",                                               						
                                                 "username"=>"کاربر",
                                                 "addpic"=>"عکس",
                                                 "edit"=>"ویرایش",
