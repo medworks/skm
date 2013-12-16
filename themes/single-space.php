@@ -6,7 +6,7 @@ include_once("./classes/seo.php");
 $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
 $area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");
-$areapics = $db->SelectAll("areapics","*","nid={$_GET[wid]}");
+$areapics = $db->SelectAll("areapics","*","aid={$_GET[wid]}");
 $ndate = ToJalali($area["ndate"]," l d F  Y ");
 $day = ToJalali($post["ndate"],"d");
 $month = ToJalali($post["ndate"],"F");
@@ -61,7 +61,7 @@ $j = 0;
 foreach($areapics as $key=>$val)
 {
    ++$j;
-   $post = $db->Select('news',NULL,"id={$val[nid]}");
+   $post = $db->Select('area',NULL,"id={$val[nid]}");
    if ($j%3 == 0)
     	{$br = "<br class='clear' />";}					
 $html.=<<<cd
