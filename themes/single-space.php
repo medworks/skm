@@ -15,11 +15,11 @@ $seo = Seo::GetSeo();
 
 $areapics = $db->SelectAll("areapics","*","aid={$_GET[wid]}");
 $ndate = ToJalali($area["ndate"]," l d F  Y ");
-$day = ToJalali($post["ndate"],"d");
-$month = ToJalali($post["ndate"],"F");
-$year = ToJalali($post["ndate"],"Y");
+$day = ToJalali($area["ndate"],"d");
+$month = ToJalali($area["ndate"],"F");
+$year = ToJalali($area["ndate"],"Y");
 $area["userid"] = GetUserName($area["userid"]);
-$area["type"] = GetTypeName($post["type"]);
+$area["type"] = GetTypeName($area["type"]);
 $body = $area['body'];
 $seo->Site_Title = $area["subject"];
 $seo->Site_Describtion = strip_tags(mb_substr($area["body"],0,150,"UTF-8"));
