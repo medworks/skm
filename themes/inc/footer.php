@@ -4,6 +4,7 @@
 	$db = Database::GetDatabase(); 
 	$About_System = GetSettingValue('About_System',0);
 	$news = $db->SelectAll('news',NULL,NULL," ndate DESC","0","3");
+        $area = $db->SelectAll('area',NULL,NULL," ndate DESC","0","3");
         $gallery = $db->SelectAll('gallery',NULL,NULL,NULL,"0","13");	
 	$About_System = mb_substr(html_entity_decode(strip_tags($About_System), ENT_QUOTES, "UTF-8"), 0, 500,"UTF-8")."  ...";
 	$address = GetSettingValue('Address',0);
@@ -33,7 +34,9 @@
             <h3>اخبار</h3>
 			<ul class="tweets">
                         <?php    
-                        for($i=0 ; $i<3 ; $i++){    
+                        for($i=0 ; $i<3 ; $i++){
+                            if (!empty($news[$i]["subject"])) 
+                            {   
 			echo   " <li> ".
 			       "	<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i][subject]}'> ". 
                                "         <img src='{$news[$i][image]}' width='50' height='50' alt='{$news[$i][subject]}'> ".
@@ -41,6 +44,7 @@
                                "        <a href='news-fullpage{$news[$i][id]}.html'>{$news[$i][subject]}</a> ".
 			       " </li> ".
 			       " <br class='clear'> " ;
+                            }
                         }  
                          ?>                                                      
 			</ul>
@@ -59,14 +63,18 @@
 	    	<ul class="tweets">
                         <?php    
                         for($i=0 ; $i<3 ; $i++){    
+                           if (!empty($area[$i]["subject"])) 
+                           {    
+                            $area[$i]["type"] =  GetTypeName($area[$i]["type"]) ;
 			echo   " <li> ".
-			       "	<a href='news-fullpage{$news[$i][id]}.html' title='{$news[$i][subject]}'> ". 
-                               "         <img src='{$news[$i][image]}' width='50' height='50' alt='{$news[$i][subject]}'> ".
+			       "	<a href='space-fullpage{$area[$i][id]}.html' title='{$area[$i][subject]}'> ". 
+                               "         <img src='{$area[$i][image]}' width='50' height='50' alt='{$area[$i][subject]}'> ".
                                "       </a> ".
-                               "        <a href='news-fullpage{$news[$i][id]}.html'>{$news[$i][subject]}</a> ".
-                               "        <span>فضای داخلی</span> ".
+                               "        <a href='space-fullpage{$area[$i][id]}.html'>{$area[$i][subject]}</a> ".
+                               "        <span>{$area[$i][type]}</span> ".
 			       " </li> ".
 			       " <br class='clear'> " ;
+                           }                               
                         }  
                          ?>                                                      
 			</ul>
