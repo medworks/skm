@@ -62,7 +62,7 @@ $html.=<<<cd
 				</div>
 cd;
 }
-$linkFormat = 'news-page'.$pid='%PN%'.'.html';
+$linkFormat = 'space-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
 $html .= $pageNos;
@@ -118,10 +118,10 @@ $posts = $db->SelectAll("area","*",null,"ndate DESC","0","7");
 foreach($posts as $key=>$val)
 {    
  $ndate = ToJalali($val["ndate"]," l d F  Y");
-$html.=<<<cd
+ $html.=<<<cd
         
         <li>
-				<span class="arro"></span>        
+		<span class="arro"></span>        
                 <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>        
