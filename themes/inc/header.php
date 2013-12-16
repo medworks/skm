@@ -146,10 +146,10 @@
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="about-us.html">درباره ما</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="news.html">اخبار</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="works.html">رزومه</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="space.html">فضای سبز</a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز</a>
 			<ul class="sub-menu">
-				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز داخلی</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#">فضای سبز خارجی</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="space-type1.html">فضای سبز داخلی</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="space-type2.html">فضای سبز خارجی</a></li>
 			</ul>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="articles.html">مطالب مفید</a></li>
