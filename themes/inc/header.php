@@ -129,10 +129,12 @@
 				<a href="#" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
-				<form action="themes/search.php" id="topsearch" method="get">
-					<input type="submit" value="جستجو">
-					<input type="text" class="rtl" name="s" value="جستجو..." onfocus="if (this.value == 'جستجو...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'جستجو...';}">
+                            <form action="search.html" method="post" name="frmsearch">
+					<input type="text" name="searchtxt" id="header-search-input" autocomplete="off" placeholder="جستجو..."/>
+                                        <input type="submit" value="جستجو">
+					<input type="hidden" name="mark" value="search" />
 				</form>
+				
 			</div>
 		</div>
 	</div>
