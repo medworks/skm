@@ -66,7 +66,7 @@ if ($_GET["news"]=="reg")
 
 if($_GET["contact"]=="reg"){
 
-	$admin = 'info@soushiant.co';
+	$admin = 'info@wskm.ir';
 
 	$name    = $_POST['name'];
 	$email   = $_POST['email'];

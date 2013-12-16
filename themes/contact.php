@@ -1,5 +1,9 @@
 <?php
 
+$address = GetSettingValue('Address',0);
+$tel = GetSettingValue('Tell_Number',0);
+$fax = GetSettingValue('Fax_Number',0);
+
 $html=<<<cd
 	<div id="wrapper">
 		<div id="main_wrapper">
@@ -10,52 +14,96 @@ $html=<<<cd
 			<div id="intro" class="text-intro">
 				<h1>تماس با ما</h1>
 			</div>
+			<script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false'></script>
+			<script>
+				function initialize()
+				{
+					var mapProp = {
+					  center:new google.maps.LatLng(36.293224, 59.534149),
+					  zoom:18,
+					  mapTypeId:google.maps.MapTypeId.ROADMAP
+					  };
+
+					var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+				}
+
+				google.maps.event.addDomListener(window, "load", initialize);
+
+				$(document).ready(function(){
+					$("#contactfrm").submit(function(){
+
+					    $.ajax({
+						    type: "POST",
+						    url: "./manager/ajaxcommand.php?contact=reg",
+						    data: $("#contactfrm").serialize(),
+							    success: function(msg)
+								{
+									$("#note-contact").ajaxComplete(function(event, request, settings){				
+										$(this).hide();
+										$(this).html(msg).slideDown("slow");
+										$(this).html(msg);
+
+
+									});
+								}
+					    });
+						return false;
+					});
+					$("#contactfrm").validationEngine();			
+				});
+			</script>
 			<div class="full_page">
 				<div id="contact">
 					<h3>مکان ما بر روی نقشه</h3>
 					<div class="full_page border-box">
-						<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
+						<div id="googleMap" style="height:380px;"></div>
 					</div>
 					<div class="one_third">
 						<h3>آدرس</h3>
+						<p>{$address}</p>
+						<p>تلفن: {$tel}</p>
+						<p>فاکس: {$fax}</p>
 						<p>
-							مشهد - بلوار پیروزی
-						</p>
-						<p>تلفن: +01 555 55 55</p>
-						<p>فاکس: +01 555 12 34</p>
-						<p><a href="#">name@domain.com</a> :ایمیل</p>
+							<script type="text/javascript">
+                                emailE='wskm.ir'
+                                emailE=('info' + '@' + emailE)
+                                document.write('<a href="mailto:' + emailE + '" target="_blank">' + emailE + '</a>')
+                            </script>
+                            :ایمیل
+                        </p>
 					</div>
 					<div class="two_third last">
 						<h3>فرم تماس</h3>
 						<div class="wpcf7" id="wpcf7-f853-p322-o1">
-							<form action="" method="post" class="wpcf7-form">
-								<div style="display: none;">
-									<input type="hidden" name="_wpcf7" value="853"><br>
-									<input type="hidden" name="_wpcf7_version" value="3.5.4"><br>
-									<input type="hidden" name="_wpcf7_locale" value=""><br>
-									<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f853-p322-o1"><br>
-									<input type="hidden" name="_wpnonce" value="700208ddec">
-								</div>
+							<form id="contactfrm" action="" method="post" class="wpcf7-form">
 								<p>نام و نام خانوادگی (*)<br>
 		   							<span class="wpcf7-form-control-wrap your-name">
-		   								<input type="text" name="your-name" value="" size="40" class="rtl wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true">
+		   								<input type="text" name="name" value="" size="40" class="rtl validate[required] wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true">
 		   							</span>
 		   						</p>
 								<p>ایمیل (*)<br>
 		    						<span class="wpcf7-form-control-wrap your-email">
-		    							<input type="text" name="your-email" value="" size="40" class="rtlwpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true">
+		    							<input type="text" name="email" value="" size="40" class="validate[required,custom[email]] wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true">
 		    						</span>
 		    					</p>
-								<p>پیام<br>
+		    					<p>موضوع<br>
+		    						<span class="wpcf7-form-control-wrap your-subject">
+		    							<input type="text" name="subject" value="" size="40" class="rtl rtlwpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true">
+		    						</span>
+		    					</p>
+								<p>پیام (*)<br>
 		    						<span class="wpcf7-form-control-wrap your-message">
-		    							<textarea name="your-message" cols="40" rows="10" class="rtl wpcf7-form-control wpcf7-textarea"></textarea>
+		    							<textarea name="message" cols="40" rows="10" class="rtl validate[required] wpcf7-form-control wpcf7-textarea"></textarea>
 		    						</span>
 		    					</p>
 								<p>
-									<img class="ajax-loader" src="themes/images/ajax-loader.gif" alt="ارسال ..." style="visibility: hidden;">
 									<input type="submit" value="ارسال پیام" class="wpcf7-form-control wpcf7-submit">
 								</p>
 								<div class="wpcf7-response-output wpcf7-display-none"></div>
+								<fieldset class="info_fieldset info_contact">
+									<div id="note-contact"></div>
+								</fieldset>
 							</form>
 						</div>
 					</div>

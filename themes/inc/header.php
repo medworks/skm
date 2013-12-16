@@ -11,10 +11,14 @@
 <link rel="stylesheet" id="prettyphoto-css" href="themes/css/prettyphoto.css?ver=3.6.1" type="text/css" media="all">
 <link rel="stylesheet" id="Lato-css" href="themes/css/fonts.css" type="text/css" media="all">
 <link rel="stylesheet" id="contact-form-7-css" href="themes/css/styles.css?ver=3.5.2" type="text/css" media="all">
+<link href="themes/css/validationEngine.jquery.css" rel="stylesheet">
+<link href="themes/css/validationEngine.css" rel="stylesheet">
 <link href="themes/css/style_13.css" rel="stylesheet" type="text/css">
 
 
 <script type="text/javascript" src="lib/js/jquery.js"></script>
+<script type="text/javascript" src="themes/js/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="themes/js/jquery.validationEngine.js"></script>
 <script type="text/javascript" src="themes/js/jquery-migrate.min.js?ver=1.2.1"></script>
 <script type="text/javascript" src="themes/js/preloader.js?ver=3.6.1"></script>
 <script type="text/javascript" src="themes/js/hoverIntent.js?ver=3.6.1"></script>
