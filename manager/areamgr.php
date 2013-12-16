@@ -97,7 +97,7 @@
 			{
 			  foreach($_POST['picslist'] as $key=>$val)
 			  {		    
-				$values = array("'{$_GET[nid]}'","'./areapics/{$val}'");
+				$values = array("'{$_GET[aid]}'","'./areapics/{$val}'");
 				$db->InsertQuery('areapics',$fields,$values);		
 			  }	
 			 }
