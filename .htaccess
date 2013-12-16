@@ -21,6 +21,7 @@ deny from all
 	RewriteRule ^article-fullpage([0-9]+).html skm/index.php?item=fullarticles&act=do&wid=$1 [L]
 	RewriteRule ^space.html skm/index.php?item=space&act=do&wid=$1 [L]
 	RewriteRule ^space-fullpage([0-9]+).html skm/index.php?item=fullspace&act=do&wid=$1 [L]
+        RewriteRule ^space-type([0-9]+).html skm/index.php?item=space&act=do&tid=$1 [L]
         RewriteRule ^space-page([0-9]+).html skm/index.php?item=space&act=do&pid=$1 [L]
 	RewriteRule ^sitemap.xml sitemap.php [L]	#sitemap.xml
 	#RewriteRule (.*)\.xml (.*)$1.php [NC]	#sitemap.xml
