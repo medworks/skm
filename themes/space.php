@@ -51,7 +51,7 @@ $html.=<<<cd
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="news-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
+						<a href="space-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
 							<img src="$post[image]" alt="$post[subject]" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
@@ -122,7 +122,7 @@ foreach($posts as $key=>$val)
         
         <li>
 		<span class="arro"></span>        
-                <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
+                <a href="space-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>        
 cd;
