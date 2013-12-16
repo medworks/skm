@@ -70,6 +70,12 @@ $html=<<<cd
 				});			
 			return false;
 		});
+                $("#tab6").click(function(){
+		$.get('ajaxcommand.php?cmd=file&item=areapics', function(data) {
+						$('#catab6 ul').html(data);
+				});			
+			return false;
+		});
 		$("#tab1").click();
 	});
 </script>	   
@@ -95,6 +101,7 @@ $html=<<<cd
 						<li id="tab3"><a href="#catab3">پوشه اسلاید ها</a></li>
 						<li id="tab4"><a href="#catab4">پوشه گالری</a></li>
 						<li id="tab5"><a href="#catab5">پوشه کاربران</a></li>
+                                                <li id="tab6"><a href="#catab6">پوشه فضاها</a></li>
 					</ul>
 				</div>
 				<div class="cat-tabs-wrap" id="catab1">
@@ -122,6 +129,12 @@ $html=<<<cd
 					<div class="badboy"></div>
 				</div>
 				<div class="cat-tabs-wrap" id="catab5">
+					<ul>
+						
+					</ul>
+					<div class="badboy"></div>
+				</div>
+                                <div class="cat-tabs-wrap" id="catab6">
 					<ul>
 						
 					</ul>
