@@ -6,6 +6,7 @@ include_once("./classes/seo.php");
 $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
 $area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");
+$areapics = $db->SelectAll("areapics","*","nid={$_GET[wid]}");
 $ndate = ToJalali($area["ndate"]," l d F  Y ");
 $day = ToJalali($post["ndate"],"d");
 $month = ToJalali($post["ndate"],"F");
@@ -57,7 +58,7 @@ $html=<<<cd
 cd;
     include_once('themes/inc/share.php');
 $j = 0;					
-foreach($newspics as $key=>$val)
+foreach($areapics as $key=>$val)
 {
    ++$j;
    $post = $db->Select('news',NULL,"id={$val[nid]}");
@@ -94,7 +95,7 @@ $html.=<<<cd
                                     $("#frmsearch").submit(function(){
                                         $.ajax({                                        
                                             type: "POST",
-                                            url: "manager/ajaxcommand.php?items=search&cat=news",
+                                            url: "manager/ajaxcommand.php?items=search&cat=area",
                                             data: $("#frmsearch").serialize(), 
                                             success: function(msg)
                                             {
@@ -114,8 +115,8 @@ $html.=<<<cd
         		<div class="widgets widget_twitter">
                     <h3>دسته بندی</h3>
                     <ul class="tweets">
-                    	<li><a href="news-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
-                    	<li><a href="news-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
+                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
+                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
                     </ul>
         		</div>
         		<br class="clear">
@@ -123,14 +124,14 @@ $html.=<<<cd
         			<h3>پست های اخیر</h3>
 					<ul class="tweets">
 cd;
-$area = $db->SelectAll("news","*",null,"ndate DESC","0","7");
+$area = $db->SelectAll("area","*",null,"ndate DESC","0","7");
 foreach ($area as $key=>$val)
 {
   if (!isset($val[id])) break;
 	$ndate = ToJalali($val["ndate"]," l d F  Y");                                        
 $html.=<<<cd
         <li>
-                <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
+                <a href="space-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>
 cd;
