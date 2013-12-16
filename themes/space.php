@@ -6,8 +6,13 @@ include_once("./classes/database.php");
   $maxItemsInPage = GetSettingValue('Max_Post_Number',0);
   $from = ($pageNo - 1) * $maxItemsInPage;
   $count = $maxItemsInPage;
-  
-  $area = $db->SelectAll("area","*",null,"ndate DESC",$from,$count);  
+  if (!empty($_GET["tid"]))
+  {
+    $area = $db->SelectAll("area","*","type='{$_GET[tid]}'","ndate DESC",$from,$count); 
+  }
+else {
+    $area = $db->SelectAll("area","*",null,"ndate DESC",$from,$count); 
+}
   $itemsCount = $db->CountAll("area");
 
 $html=<<<cd

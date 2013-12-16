@@ -5,7 +5,14 @@ include_once("./classes/database.php");
 include_once("./classes/seo.php");	
 $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
-$area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");
+ if (!empty($_GET["tid"]))
+  {
+    $area = $db->SelectAll("area","*","type='{$_GET[tid]}'","ndate DESC",$from,$count); 
+  }
+ else {
+    $area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");      
+}
+
 $areapics = $db->SelectAll("areapics","*","aid={$_GET[wid]}");
 $ndate = ToJalali($area["ndate"]," l d F  Y ");
 $day = ToJalali($post["ndate"],"d");
