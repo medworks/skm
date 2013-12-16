@@ -62,7 +62,7 @@
 <body>
 <div class="container">
     <header>
-      <a href="../" class="logo" title="Mediateq" target="_blank">Mediateq website</a>
+      <a href="../" class="logo" title="Mediateq" target="_blank">Saman Kesht Mihan website</a>
       <div id="mini-nav">
         <ul class="hidden-phone">
           <li class="pic"><img src="<?php echo $pic; ?>" alt="<?php echo $name; ?>" /></li>       
@@ -98,7 +98,7 @@
             <a href="?item=worksmgr&act=do" id="works" name="works" class="works"><p>مدیریت کارها</p></a>
           </li>
           <li >            
-            <a href="?item=areamgr&act=do" id="area" name="area" class="works"><p>مدیریت فضا ها</p></a>
+            <a href="?item=areamgr&act=do" id="area" name="area" class="area"><p>مدیریت فضاها</p></a>
           </li>
           <li>
             <a href="?item=slidesmgr&act=do" class="slidemgr"><p>مدیریت اسلاید</p></a>
@@ -144,7 +144,7 @@
  <footer>
   <div class="foot">
    <p>پانل مدیرت مدیا تک</p>
-   <img src="./images/logo.png" alt="MEdiateq" />
+   <img src="./images/logo.png" alt="Mediateq" />
   </div>
  </footer>
  </div>

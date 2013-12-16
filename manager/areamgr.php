@@ -1,6 +1,6 @@
 <?php 
-        include_once("../config.php");
-        include_once("../classes/database.php");
+    include_once("../config.php");
+    include_once("../classes/database.php");
 	include_once("../classes/messages.php");
 	include_once("../classes/session.php");	
 	include_once("../classes/functions.php");
@@ -170,12 +170,12 @@ if ($_GET['act']=="do")
 			<ul>
 			  <li>		  
 				<a href="?item=areamgr&act=new">درج فضای جدید
-					<span class="add-news"></span>
+					<span class="add-area"></span>
 				</a>
 			  </li>
 			  <li>
-				<a href="?item=areamgr&act=mgr" id="news" name="news">حذف / ویرایش فضا
-					<span class="edit-news"></span>
+				<a href="?item=areamgr&act=mgr" id="area" name="area">حذف / ویرایش فضا
+					<span class="edit-area"></span>
 				</a>
 			  </li>
 			 </ul>
@@ -188,7 +188,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 $msgs = GetMessage($_GET['msg']);
 $sections = $db->SelectAll("section","*",null,"id ASC");
 $cbarr = array(1=>"فضای داخلی",2=>"فضای خارجی");
-$cbtype = SelectOptionTag("cbtype",$cbarr,1);
+$cbtype = SelectOptionTag("cbtype",$cbarr,1,null,"select validate[required]");
 if ($_GET['act']=="edit") 
 {   
     $category = $db->SelectAll("category","*",null,"id ASC");
@@ -232,7 +232,8 @@ $html=<<<cd
          <span>*</span>
        </p>    
         {$cbtype}
-       <p>
+      	<div class="badboy"></div>
+       <!-- <p>
          <label for="cbsection">سر گروه </label>
          <span>*</span>
        </p>    
@@ -240,7 +241,7 @@ $html=<<<cd
 	   <div id="catgory">
 		   {$cbcategory}
 	   </div>
-       <div class="badboy"></div>
+       <div class="badboy"></div> -->
        <p>
          <label for="subject">عنوان </label>
          <span>*</span>

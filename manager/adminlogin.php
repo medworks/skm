@@ -39,7 +39,7 @@ else
 	</head>
 	<body>
 	<div class="container">
-		<div class="logo"><img src="./images/logo2.png" alt="mediateq"></div>
+		<div class="logo"><img src="./images/logo2.png" alt="Saman Kesht Mihan" style="height: 61px;width: 316px;margin: 25px;"></div>
 		<div class="login-content">
 			<form action="" method="post">
 					<fieldset>

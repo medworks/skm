@@ -723,6 +723,10 @@ header #mini-nav span.newSignup{
   background-image: url('./images/works.png');
 }
 
+#mainnav > ul > li a.area{
+  background-image: url('./images/green-area.png');
+}
+
 #mainnav > ul > li a.newslettermgr{
   background-image: url('./images/newletter.png');
 }
@@ -918,6 +922,14 @@ header #mini-nav span.newSignup{
 
 .sub-menu ul li span.edit-works{
   background-image: url('./images/editworks.png');
+}
+
+.sub-menu ul li span.add-area{
+  background-image: url('./images/add-green.png');
+}
+
+.sub-menu ul li span.edit-area{
+  background-image: url('./images/edit-green.png');
 }
 
 .sub-menu ul li span.add-cat{
