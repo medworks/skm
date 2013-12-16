@@ -362,7 +362,8 @@ if ($_GET['act']=="mgr")
 				{
 						$rowsClass[] = "datagridoddrow";
 				}
-				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 				
+				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]);
+                                $rows[$i]["type"]=  GetTypeName($rows[$i]["type"]);
                                 $rows[$i]["addpic"] = "<a href='?item=areamgr&act=pic&aid={$rows[$i]["id"]}' class='add-pic'" .
 						"style='text-decoration:none;'></a>";
 				$rows[$i]["edit"] = "<a href='?item=areamgr&act=edit&aid={$rows[$i]["id"]}' class='edit-field'" .
@@ -382,6 +383,7 @@ del;
                     $gridcode .= DataGrid(array( 					       
                                                 "subject"=>"عنوان",
                                                 "image"=>"تصویر",
+                                                "type"=>"نوع فضا",
                                                 "body"=>"توضیحات",
                                                 "ndate"=>"تاریخ",                                               						
                                                 "username"=>"کاربر",
