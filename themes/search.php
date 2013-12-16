@@ -6,7 +6,8 @@
    
    
    $table = "";
-   $field = "";   
+   $field = "";  
+   if (!empty($_POST["searchtxt"])) $searchtxt = "'%{$_POST[searchtxt]}%'";
    $db = Database::GetDatabase();
    if ($_POST["mark"]=="search")
    {
@@ -16,7 +17,7 @@
 	  $rows = $db->SelectAll(
 				$table,
 				"*",
-				"{$field} LIKE '%{$_POST[searchtxt]}%'",
+				"{$field} LIKE $searchtxt",
 				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
@@ -65,7 +66,7 @@ rt;
 	$rows = $db->SelectAll(
 				$table,
 				"*",
-				"{$field} LIKE '%{$_POST[searchtxt]}%'",
+				"{$field} LIKE $searchtxt",
 				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
@@ -144,6 +145,15 @@ rt;
 						 {$val['subject']}</a></p>";
 			          }
 					break;
+                                  case 'area':
+					$cat = "فضاها";					
+					  foreach($rows as $key=>$val)
+					  {
+					     ++$rownum;
+						 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='space-fullpage{$val['id']}.html' class='srlink'>
+						 {$val['subject']}</a></p>";
+			          }
+					break;      
 			   } 
 			   
 			   $result=<<<rt
@@ -196,7 +206,7 @@ $html=<<<cd
 								        <label>مطالب مفید</label>
 							        </p>
 							        <p>
-								        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
+								        <input type="radio" name="category" class="subject right mar-lef" id="category" value="area" />
 								        <label>فضای سبز</label>
 							        </p>
 			                    </li>
