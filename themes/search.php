@@ -1,14 +1,16 @@
 <?php
-   include_once("../config.php");
-   include_once("../classes/database.php");
-   include_once("../classes/messages.php");
+   include_once("./config.php");
+   include_once("./classes/database.php");
+   include_once("./classes/functions.php");
+   include_once("./classes/messages.php");
+   
    
    $table = "";
    $field = "";   
    $db = Database::GetDatabase();
    if ($_POST["mark"]=="search")
    {
-      $table = "works";
+      $table = "news";
       $field = "subject";
 	  $rownum = 0;
 	  $rows = $db->SelectAll(
@@ -41,7 +43,7 @@
 				 {$row}				 
 rt;
 			} */
-				$cat = "پروژه ها";
+				$cat = "اخبار";
 				$success = count($rows);
 				foreach($rows as $key=>$val)
 				{
@@ -125,7 +127,7 @@ rt;
 			          }
 					break;
 					case 'works':
-					$cat = "پروژه ها";					
+					$cat = "رزومه";					
 					  foreach($rows as $key=>$val)
 					  {
 					     ++$rownum;
