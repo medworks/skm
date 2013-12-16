@@ -115,8 +115,8 @@ $html.=<<<cd
         		<div class="widgets widget_twitter">
                     <h3>دسته بندی</h3>
                     <ul class="tweets">
-                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
-                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
+                    	<li><a href="space-type1.html" class="twitter-user">فضای سبز داخلی</a></li>
+                    	<li><a href="space-type2.html" class="twitter-user">فضای سبز خارجی</a></li>
                     </ul>
         		</div>
         		<br class="clear">
