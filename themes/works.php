@@ -13,6 +13,9 @@ $html=<<<cd
 				<a href="./">صفحه اصلی</a> <span>›</span>
 				<a>رزومه</a>
 			</div>
+      <div id="intro" class="text-intro">
+        <h1>رزومه</h1>
+      </div>
 			<div class="portfolio portfolio-columns">
 cd;
 $i = 0;
