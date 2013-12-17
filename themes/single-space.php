@@ -5,14 +5,21 @@ include_once("./classes/database.php");
 include_once("./classes/seo.php");	
 $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
-$area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");
-$areapics = $db->SelectAll("areapics","*","nid={$_GET[wid]}");
+ if (!empty($_GET["tid"]))
+  {
+    $area = $db->SelectAll("area","*","type='{$_GET[tid]}'","ndate DESC",$from,$count); 
+  }
+ else {
+    $area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");      
+}
+
+$areapics = $db->SelectAll("areapics","*","aid={$_GET[wid]}");
 $ndate = ToJalali($area["ndate"]," l d F  Y ");
-$day = ToJalali($post["ndate"],"d");
-$month = ToJalali($post["ndate"],"F");
-$year = ToJalali($post["ndate"],"Y");
+$day = ToJalali($area["ndate"],"d");
+$month = ToJalali($area["ndate"],"F");
+$year = ToJalali($area["ndate"],"Y");
 $area["userid"] = GetUserName($area["userid"]);
-$area["type"] = GetTypeName($post["type"]);
+$area["type"] = GetTypeName($area["type"]);
 $body = $area['body'];
 $seo->Site_Title = $area["subject"];
 $seo->Site_Describtion = strip_tags(mb_substr($area["body"],0,150,"UTF-8"));
@@ -61,7 +68,7 @@ $j = 0;
 foreach($areapics as $key=>$val)
 {
    ++$j;
-   $post = $db->Select('news',NULL,"id={$val[nid]}");
+   $post = $db->Select('area',NULL,"id={$val[nid]}");
    if ($j%3 == 0)
     	{$br = "<br class='clear' />";}					
 $html.=<<<cd
@@ -115,8 +122,8 @@ $html.=<<<cd
         		<div class="widgets widget_twitter">
                     <h3>دسته بندی</h3>
                     <ul class="tweets">
-                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
-                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
+                    	<li><a href="space-type1.html" class="twitter-user">فضای سبز داخلی</a></li>
+                    	<li><a href="space-type2.html" class="twitter-user">فضای سبز خارجی</a></li>
                     </ul>
         		</div>
         		<br class="clear">

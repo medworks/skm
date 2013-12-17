@@ -6,8 +6,13 @@ include_once("./classes/database.php");
   $maxItemsInPage = GetSettingValue('Max_Post_Number',0);
   $from = ($pageNo - 1) * $maxItemsInPage;
   $count = $maxItemsInPage;
-  
-  $area = $db->SelectAll("area","*",null,"ndate DESC",$from,$count);  
+  if (!empty($_GET["tid"]))
+  {
+    $area = $db->SelectAll("area","*","type='{$_GET[tid]}'","ndate DESC",$from,$count); 
+  }
+else {
+    $area = $db->SelectAll("area","*",null,"ndate DESC",$from,$count); 
+}
   $itemsCount = $db->CountAll("area");
 
 $html=<<<cd
@@ -51,13 +56,13 @@ $html.=<<<cd
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="news-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
+						<a href="space-fullpage{$post[id]}.html" class="zoom" title="$post[subject]">
 							<img src="$post[image]" alt="$post[subject]" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
 					<p>{$post["body"]}</p>
 					<p class="more">
-						<a href="news-fullpage{$post[id]}.html">ادامه مطلب</a>
+						<a href="space-fullpage{$post[id]}.html">ادامه مطلب</a>
 					</p>
 				</div>
 cd;
@@ -105,8 +110,8 @@ $html.=<<<cd
         		<div class="widgets widget_twitter">
                     <h3>دسته بندی</h3>
                     <ul class="tweets">
-                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
-                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
+                    	<li><a href="space-type1.html" class="twitter-user">فضای سبز داخلی</a></li>
+                    	<li><a href="space-type2.html" class="twitter-user">فضای سبز خارجی</a></li>
                     </ul>
         		</div>
         		<br class="clear">
@@ -122,7 +127,7 @@ foreach($posts as $key=>$val)
         
         <li>
 		<span class="arro"></span>        
-                <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
+                <a href="space-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>        
 cd;
