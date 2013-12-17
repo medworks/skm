@@ -101,7 +101,7 @@ foreach ($area as $key=>$val)
 $html.=<<<cd
 		<div class="one_third">
 			<h2 class="head-icon">
-                         <img src="{$val[image]}" class="icon" alt="{$val[subject]}">
+                         <img src="themes/images/sign.png" class="icon" alt="Google Web Fonts">
                          <a href="space-fullpage{$val[id]}.html">{$val[subject]}</a>
                          <span>{$val[type]}</span></h2>
 			<p>{$val["body"]}</p>
