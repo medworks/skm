@@ -39,6 +39,7 @@
 	<link rel="stylesheet" type="text/css" href="../themes/css/validationEngine.css"/>
 	<link rel="stylesheet" type="text/css" href="./calendar-blue.css" />
 	<link rel="stylesheet" type="text/css" href="./adminpanel.css" />
+  <link rel="shortcut icon" href="../favicon.ico">
 
 	<script type="text/javascript" src="../lib/js/jquery.js"></script>  
 	<script type="text/javascript" src="../lib/js/jalali.js"></script>  

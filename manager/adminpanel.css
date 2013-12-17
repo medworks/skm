@@ -505,7 +505,7 @@ label{
 }
 
 .tab .cat-tabs-header li a{
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .tab li.first-li .pic{
@@ -1514,7 +1514,7 @@ a#filesbrowserbtn{
   width: 512px;
   /*padding: 20px 10px 10px 10px;*/
   border-right: 1px solid #eee;
-  min-height: 300px;
+  min-height: 240px;
 }
 
 /*.picmanager .files .pics ul li{
@@ -1562,4 +1562,37 @@ p.note{
   font-size: 17px;
   padding-right: 10px;
   line-height: 2;
+}
+
+.add-pics {
+width: 750px !important;
+border-left: 1px solid #eee;
+border-bottom: 1px solid #eee;
+}
+
+.add-pics li{
+  text-align:right;
+}
+
+.cat-tabs-wrap-pic{
+  padding: 20px;
+}
+
+.cat-tabs-wrap-pic li{
+  overflow: hidden;
+  padding: 5px 0;
+  width: 118px;
+  float: right;
+}
+
+.add-pics .cat-tabs-wrap-pic li .pic a{
+  background: 0 none !important;
+  border: 0 none !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.add-pics .cat-tabs-wrap-pic li h2{
+  display: inline-block;
+  font-size: 12px;
 }

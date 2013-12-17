@@ -36,6 +36,7 @@ else
 	<title>بخش مديريت سايت</title>		
 	<link rel="stylesheet" type="text/css" href="../themes/css/1styles.css"></link>   
 	<link rel="stylesheet" type="text/css" href="./adminlogin.css"></link>	
+	<link rel="shortcut icon" href="../favicon.ico">
 	</head>
 	<body>
 	<div class="container">
