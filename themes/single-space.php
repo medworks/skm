@@ -36,7 +36,7 @@ $html=<<<cd
                                 <h1>{$area["type"]}/ <strong> {$area["subject"]}</strong></h1>
 			</div>
 			<div id="page-content" class="two_third">
-				<div class="">
+				<div class="post type-post status-publish format-standard sticky hentry category-articles tag-design tag-works">
 					<div class="meta-date">
 						<span class="meta-month">{$month}</span>
 						<span class="meta-day">{$day}</span>
