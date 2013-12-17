@@ -67,15 +67,17 @@ $html=<<<cd
 					<div class="one_third">
 						<h3>آدرس</h3>
 						<p>{$address}</p>
-						<p>تلفن: {$tel}</p>
-						<p>فاکس: {$fax}</p>
-						<p>
+						<p class="rtl">تلفن:</p>
+						<p style="text-align:left">{$tel}</p>
+						<p class="rtl">فاکس:</p>
+						<p style="text-align:left">{$fax}</p>
+						<p class="rtl">ایمیل:</p>
+						<p style="text-align:left">
 							<script type="text/javascript">
                                 emailE='wskm.ir'
                                 emailE=('info' + '@' + emailE)
                                 document.write('<a href="mailto:' + emailE + '" target="_blank">' + emailE + '</a>')
                             </script>
-                            :ایمیل
                         </p>
 					</div>
 					<div class="two_third last">
