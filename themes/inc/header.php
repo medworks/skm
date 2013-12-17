@@ -132,7 +132,7 @@
 			<div id="search" class="leftside">
                 <form action="search.html" method="post" name="frmsearch">
 					<input type="submit" value="جستجو" style="margin:2px;">
-					<input type="text" name="searchtxt" class="rtl" id="header-search-input" autocomplete="off" placeholder="جستجو..."/>              
+					<input type="text" name="searchtxt" class="rtl" id="header-search-input" autocomplete="off" placeholder="جستجو..." style="margin-top:5px;"/>              
 					<input type="hidden" name="mark" value="search" />
 				</form>
 				

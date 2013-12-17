@@ -1,5 +1,10 @@
 <?php
 
+	include_once("./config.php");
+	include_once("./classes/database.php");
+	include_once("./classes/functions.php");
+	$db = database::GetDatabase();
+
 $address = GetSettingValue('Address',0);
 $tel = GetSettingValue('Tell_Number',0);
 $fax = GetSettingValue('Fax_Number',0);
