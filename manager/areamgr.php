@@ -50,7 +50,7 @@
 	{	    
 		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`type`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbtype]}'");
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[cbtype]}'");
 		if (!$db->InsertQuery('area',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -97,7 +97,7 @@
 			{
 			  foreach($_POST['picslist'] as $key=>$val)
 			  {		    
-				$values = array("'{$_GET[nid]}'","'./areapics/{$val}'");
+				$values = array("'{$_GET[aid]}'","'./areapics/{$val}'");
 				$db->InsertQuery('areapics',$fields,$values);		
 			  }	
 			 }

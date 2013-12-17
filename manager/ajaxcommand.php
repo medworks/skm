@@ -379,7 +379,7 @@ if ($_GET["cmd"]=="areapics")
 		foreach($checkboxs as $key=>$val) 
 		{		    
 			$files[] = mb_substr($val["image"],11,mb_strlen($val["image"]),"UTF-8");	
-			//var_dump($files);
+		//	var_dump($files);
 		}	
 	}	
 	$handle=opendir($dir);
