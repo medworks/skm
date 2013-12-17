@@ -10,13 +10,13 @@
 	$Site_Describtion=GetSettingValue("Site_Describtion",1);
 	$Admin_Email=GetSettingValue("Admin_Email",1);
 	$now = date("D, d M Y H:i:s T");
-	$site = "http://www.mediateq.ir";
+	$site = "http://www.wskm.ir";
 	$uri = "?item=fullnews&act=do&wid=";
 	
 	$rss2_writer = new RSS2Writer(
 									$Site_Title, 
 									$Site_Describtion, 
-									'www.mediateq.ir', 
+									'www.wskm.ir', 
 									6, //indent
 									false //use CDATA
 		                          );
