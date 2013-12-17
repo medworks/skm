@@ -1,5 +1,6 @@
 <?php
-
+$db = database::GetDatabase();
+$gallery= $db->SelectAll('gallery',NULL,NULL," id DESC");
 
 $html=<<<cd
 	<div id="wrapper">
@@ -15,10 +16,13 @@ $html=<<<cd
 				<div class="full_page">
 					<div id="post-221">
 						<div id="galleria-1">
-				            <img src="themes/images/demo/slide1.jpg">
-				            <img src="themes/images/demo/slide2.jpg">
-				            <img src="themes/images/demo/slide3.jpg">
-				            <img src="themes/images/demo/slide3.jpg">
+cd;
+						for($i=0 ; $i<count($gallery) ; $i++){
+$html.=<<<cd
+				            <img src="{$gallery[$i][image]}" alt="{$gallery[$i][subject]}" title="{$gallery[$i][subject]}" />
+cd;
+						}
+$html.=<<<cd
 				        </div>
 						<script type="text/javascript">
 							jQuery(document).ready(function()
