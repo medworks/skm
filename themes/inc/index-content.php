@@ -11,8 +11,10 @@
         $db = Database::GetDatabase();
 //------------------------------- header slides part -------------------------
 	$slides = $db->SelectAll("slides","*");	
+//------------------------------- area part -------------------------	        
+        $area = $db->SelectAll("area","*",null,"ndate DESC","0","3");
 //------------------------------- news part -------------------------	
-        $news = $db->SelectAll("news","*",null,"ndate DESC","0","4");		
+        $news = $db->SelectAll("news","*",null,"ndate DESC","0","4");
 	$news[0]["ndate"] = ToJalali($news[0]["ndate"]," l d F  Y");
 	$news[1]["ndate"] = ToJalali($news[1]["ndate"]," l d F  Y");
 	$news[2]["ndate"] = ToJalali($news[2]["ndate"]," l d F  Y");
@@ -88,31 +90,38 @@ $html.=<<<cd
 		</div> -->
 		<br class="clear">
 		<!-- <hr class="dotted"> -->
+cd;
+foreach ($area as $key=>$val)
+{   
+   if (!empty($val["subject"]))
+   { 
+   
+    $val["type"] = GetTypeName($val["type"]);
+    $val["body"] = strip_tags(mb_substr($val["body"],0,150,"UTF-8"));
+$html.=<<<cd
 		<div class="one_third">
-			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="Slide Show"><a href="http://e404themes.com/cold/features/">هدر یک</a><span>هدر یک</span></h2>
-			<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-			<p class="more"><a href="#">اطلاعات تکمیلی</a></p>
+			<h2 class="head-icon">
+                         <img src="{$val[image]}" class="icon" alt="{$val[subject]}">
+                         <a href="space-fullpage{$val[id]}.html">{$val[subject]}</a>
+                         <span>{$val[type]}</span></h2>
+			<p>{$val["body"]}</p>
+			<p class="more"><a href="space-fullpage{$val[id]}.html">اطلاعات تکمیلی</a></p>
 		</div>
-		<div class="one_third">
-			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="Google Web Fonts"><a href="http://www.google.com/webfonts">هدر یک</a><span>هدر یک</span></h2>
-			<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-			<p class="more"><a href="#">اطلاعات تکمیلی</a></p>
-		</div>
-		<div class="one_third last">
-			<h2 class="head-icon"><img src="themes/images/sign.png" class="icon" alt="PrettyPhoto"><a href="http://e404themes.com/cold/shortcodes/">هدر یک</a><span>هدر یک</span></h2>
-			<p>توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... توضیحات... </p>
-			<p class="more"><a href="#">اطلاعات تکمیلی</a></p>
-		</div>
+cd;
+   }
+}  
+$html.=<<<cd
 		<br class="clear">
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
 				<h3>رزومه</h3>
-				<p><a href="#">مشاهده تمام موارد</a></p>
+				<p><a href="works.html">مشاهده تمام موارد</a></p>
 			</div>
 cd;
 for($i=0;$i<=3;$i++)
 {
     if (!empty($works[$i]["subject"])){
+        $works[$i]["body"] = strip_tags(mb_substr($works[$i]["body"],0,150,"UTF-8"));
     	if($i==3){
 $html.=<<<cd
 			<div class="one_fifth fancy_list_item last">
@@ -148,6 +157,7 @@ cd;
 for($i=0;$i<=3;$i++)
 {
     if (!empty($news[$i]["subject"])){
+        $news[$i]["body"] = strip_tags(mb_substr($news[$i]["body"],0,150,"UTF-8"));
     	if($i==3){
 $html.=<<<cd
 			<div class="one_fifth fancy_list_item last">
