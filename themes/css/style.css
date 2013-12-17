@@ -2544,9 +2544,9 @@ ul.img-list li,
 	padding: 2px 0 2px 20px;
 }
 ul.small-list li {
-	background-position: 0 9px;
+	background-position: 442px 14px;
 	background-repeat: no-repeat;
-	padding: 2px 0 2px 14px;
+	padding: 2px 12px 2px 14px;
 }
 .ico-access-denied,.ico-access-denied li {background-image: url('images/bullets/access-denied.png');}
 .ico-alert,.ico-alert li {background-image: url('images/bullets/alert.png');}
@@ -2713,7 +2713,7 @@ li.current-cat li {
 }
 #footer .widgets li {
 	padding: 0 14px 1px 0;
-	background: url('../images/small-arrow.png') 200px 6px no-repeat;
+	background: url('../images/small-arrow.png') 200px 11px no-repeat;
 }
 #footer .widgets .recent-posts li,
 #footer .widgets .popular-posts li {
@@ -2775,7 +2775,7 @@ li.current-cat li {
 #footer .tweets span {
 	display: block;
 	font-size: 13px;
-	margin-top: 5px;
+	margin-top: 9px;
 }
 .followme {
 	text-align: right;
