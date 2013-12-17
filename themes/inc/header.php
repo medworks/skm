@@ -130,8 +130,8 @@
 				<a href="https://<?php echo $gplus; ?>" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
-                            <form action="search.html" method="post" name="frmsearch">
-					<input type="submit" value="جستجو">
+                <form action="search.html" method="post" name="frmsearch">
+					<input type="submit" value="جستجو" style="margin:2px;">
 					<input type="text" name="searchtxt" class="rtl" id="header-search-input" autocomplete="off" placeholder="جستجو..."/>              
 					<input type="hidden" name="mark" value="search" />
 				</form>
