@@ -169,53 +169,55 @@ $html=<<<cd
 				{$result}
 	        </div>
 	        <div id="sidebar" class="one_third last">
-	        	<form action="" id="searchfrm" method="post">
-		            <div id="portfolio-item-info" class="rtl large-3 columns no-padding">
-		                <ul id="portfolio-item-meta">
-		                	<li>
-		                		<p style="font-size:19px;">
-						        	<label class="mar-bot">عبارت مورد نظر </label>
-						        </p>
-						        <input type="text" name="searchtxt" class="subject" id="searchtxt" value="{$_POST[searchtxt]}" style="width:272px" />
-		                	</li>
-		                    <li>
-		                    	<p style="margin-top:20px;font-size:19px;">
-						        	<label class="mar-bot">جستجو در: </label>
-						        </p>
-						        <p>
-							        <input type="radio" name="category" class="subject right mar-lef" id="category" value="news" checked/>
-							        <label>اخبار</label>
-						        </p>
-						        <p>
-							        <input type="radio" name="category" class="right subject mar-lef" id="category" value="works" />
-							        <label>رزومه</label>
-						        </p>
-						        <p>
-							        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
-							        <label>مطالب مفید</label>
-						        </p>
-						        <p>
-							        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
-							        <label>فضای سبز</label>
-						        </p>
-		                    </li>
-		                    <li>
-		                    	<p style="font-size:19px;">
-						        	<label class="mar-bot">قسمت: </label>
-						        </p>
-						        <p>  
-						        	<input type="radio" name="subcat" class="subject right mar-lef" id="category" value="subject" checked/>
-							        <label>عنوان</label>
-					        	</p>
-						        <p>
-							        <input type="radio" name="subcat" class="subject right mar-lef" id="category" value="body" />
-							        <label>توضیحات</label>
-						        </p>
-		                    </li>              
-		                </ul>
-		            </div>
-					<input type="hidden" name="mark" value="find" />
-		        </form>
+	        	<div id="search-2" class="widgets widget_search">
+		        	<form action="" id="searchfrm" method="post">
+			            <div id="portfolio-item-info" class="rtl large-3 columns no-padding">
+			                <ul id="portfolio-item-meta">
+			                	<li>
+			                		<p style="font-size:19px;">
+							        	<label class="mar-bot">عبارت مورد نظر </label>
+							        </p>
+							        <input type="text" name="searchtxt" class="subject" id="searchtxt" value="{$_POST[searchtxt]}" />
+			                	</li>
+			                    <li>
+			                    	<p style="margin-top:20px;font-size:19px;">
+							        	<label class="mar-bot">جستجو در: </label>
+							        </p>
+							        <p>
+								        <input type="radio" name="category" class="subject right mar-lef" id="category" value="news" checked/>
+								        <label>اخبار</label>
+							        </p>
+							        <p>
+								        <input type="radio" name="category" class="right subject mar-lef" id="category" value="works" />
+								        <label>رزومه</label>
+							        </p>
+							        <p>
+								        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
+								        <label>مطالب مفید</label>
+							        </p>
+							        <p>
+								        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
+								        <label>فضای سبز</label>
+							        </p>
+			                    </li>
+			                    <li>
+			                    	<p style="font-size:19px;">
+							        	<label class="mar-bot">قسمت: </label>
+							        </p>
+							        <p>  
+							        	<input type="radio" name="subcat" class="subject right mar-lef" id="category" value="subject" checked/>
+								        <label>عنوان</label>
+						        	</p>
+							        <p>
+								        <input type="radio" name="subcat" class="subject right mar-lef" id="category" value="body" />
+								        <label>توضیحات</label>
+							        </p>
+			                    </li>              
+			                </ul>
+			            </div>
+						<input type="hidden" name="mark" value="find" />
+			        </form>
+			    </div>
 	        </div>
 	        <br class="clear" />
 	    </div>
