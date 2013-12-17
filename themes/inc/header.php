@@ -4,6 +4,7 @@
 	include_once("./classes/functions.php");
 	$db = database::GetDatabase();
 	
+	$email = GetSettingValue('Contact_Email',0);
 	$gplus = GetSettingValue('Gplus_Add',0);
 	$facebook = GetSettingValue('FaceBook_Add',0);
 	$twitter = GetSettingValue('Twitter_Add',0);
@@ -122,16 +123,16 @@
 		<div class="rightside" id="logo"><a href="./"><img src="themes/images/logo.png" alt="Saman Kesht Mihan"></a></div>
 		<div id="header_nav" class="leftside">
 			<div id="social_icons" class="leftside">
-				<a href="#" target="_blank" title="Contact"><img src="themes/images/contact.png" alt="Contact"></a>
-				<a href="#" target="_blank" title="RSS"><img src="themes/images/rss.png" alt="RSS"></a>
-				<a href="#" target="_blank" title="Twitter"><img src="themes/images/twitter.png" alt="Twitter"></a>
+				<a href="mailto:<?php echo $email; ?>" target="_blank" title="Contact"><img src="themes/images/contact.png" alt="Contact"></a>
+				<a href="http://<?php echo $rss; ?>" target="_blank" title="RSS"><img src="themes/images/rss.png" alt="RSS"></a>
+				<a href="https://<?php echo $twitter; ?>" target="_blank" title="Twitter"><img src="themes/images/twitter.png" alt="Twitter"></a>
 				<a href="https://<?php echo $facebook; ?>" target="_blank" title="Facebook"><img src="themes/images/facebook.png" alt="Facebook"></a>
-				<a href="#" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
+				<a href="https://<?php echo $gplus; ?>" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
                             <form action="search.html" method="post" name="frmsearch">
-					<input type="text" name="searchtxt" id="header-search-input" autocomplete="off" placeholder="جستجو..."/>
-                                        <input type="submit" value="جستجو">
+					<input type="submit" value="جستجو">
+					<input type="text" name="searchtxt" class="rtl" id="header-search-input" autocomplete="off" placeholder="جستجو..."/>              
 					<input type="hidden" name="mark" value="search" />
 				</form>
 				
