@@ -29,11 +29,15 @@ $html.=<<<cd
 <div id="wrapper">
 	<div id="main_wrapper">
 		<div id="featured">
-			<!-- <div class="ribbon"></div>			 -->
+			<!-- <div class="ribbon"></div>-->
 			<div class="slider" id="slider" style="height: 350px;">
-				<img src="themes/images/demo/slide1.jpg" title="اسلاید شماره یک" alt="اسلاید شماره یک">
-				<img src="themes/images/demo/slide2.jpg" title="اسلاید شماره دو" alt="اسلاید شماره دو">
-				<img src="themes/images/demo/slide3.jpg" title="اسلاید شماره سه" alt="اسلاید شماره سه">
+cd;
+				foreach($slides as $key=>$val){
+$html.=<<<cd
+					<img src="{$val[image]}" title="{$val[subject]}" alt="{$val[subject]}" />
+cd;
+				}
+$html.=<<<cd
 			</div>
 			<script type="text/javascript">
 				var slideParams = []; 
