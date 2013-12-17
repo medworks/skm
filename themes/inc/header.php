@@ -1,3 +1,14 @@
+<?php
+	include_once("./config.php");
+	include_once("./classes/database.php");
+	include_once("./classes/functions.php");
+	$db = database::GetDatabase();
+	
+	$gplus = GetSettingValue('Gplus_Add',0);
+	$facebook = GetSettingValue('FaceBook_Add',0);
+	$twitter = GetSettingValue('Twitter_Add',0);
+	$rss = GetSettingValue('Rss_Add',0);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -114,7 +125,7 @@
 				<a href="#" target="_blank" title="Contact"><img src="themes/images/contact.png" alt="Contact"></a>
 				<a href="#" target="_blank" title="RSS"><img src="themes/images/rss.png" alt="RSS"></a>
 				<a href="#" target="_blank" title="Twitter"><img src="themes/images/twitter.png" alt="Twitter"></a>
-				<a href="#" target="_blank" title="Facebook"><img src="themes/images/facebook.png" alt="Facebook"></a>
+				<a href="https://<?php echo $facebook; ?>" target="_blank" title="Facebook"><img src="themes/images/facebook.png" alt="Facebook"></a>
 				<a href="#" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
