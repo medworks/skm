@@ -127,7 +127,7 @@
 				<a href="http://<?php echo $rss; ?>" target="_blank" title="RSS"><img src="themes/images/rss.png" alt="RSS"></a>
 				<a href="https://<?php echo $twitter; ?>" target="_blank" title="Twitter"><img src="themes/images/twitter.png" alt="Twitter"></a>
 				<a href="https://<?php echo $facebook; ?>" target="_blank" title="Facebook"><img src="themes/images/facebook.png" alt="Facebook"></a>
-				<a href="https://<?php echo $gplus; ?>" target="_blank" title="Dribbble"><img src="themes/images/dribbble.png" alt="Dribbble"></a>
+				<a href="https://<?php echo $gplus; ?>" target="_blank" title="Google Plus"><img src="themes/images/google-plus.png" alt="Dribbble"></a>
 			</div>
 			<div id="search" class="leftside">
                 <form action="search.html" method="post" name="frmsearch">
