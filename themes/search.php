@@ -165,18 +165,21 @@ $html=<<<cd
 			<div id="intro" class="text-intro">
 				<h1>جستجو</h1>
 			</div>
-	        <div>
-				<form action="" id="searchfrm" method="post">
-		            <div id="portfolio-item-info" class="large-3 columns no-padding">
+	        <div class="rtl two_third">
+				{$result}
+	        </div>
+	        <div id="sidebar" class="one_third last">
+	        	<form action="" id="searchfrm" method="post">
+		            <div id="portfolio-item-info" class="rtl large-3 columns no-padding">
 		                <ul id="portfolio-item-meta">
 		                	<li>
-		                		<p>
+		                		<p style="font-size:19px;">
 						        	<label class="mar-bot">عبارت مورد نظر </label>
 						        </p>
-						        <input type="text" name="searchtxt" class="subject" id="searchtxt" value="{$_POST[searchtxt]}"/>
+						        <input type="text" name="searchtxt" class="subject" id="searchtxt" value="{$_POST[searchtxt]}" style="width:272px" />
 		                	</li>
 		                    <li>
-		                    	<p>
+		                    	<p style="margin-top:20px;font-size:19px;">
 						        	<label class="mar-bot">جستجو در: </label>
 						        </p>
 						        <p>
@@ -185,15 +188,19 @@ $html=<<<cd
 						        </p>
 						        <p>
 							        <input type="radio" name="category" class="right subject mar-lef" id="category" value="works" />
-							        <label>کارهای ما</label>
+							        <label>رزومه</label>
 						        </p>
 						        <p>
 							        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
-							        <label>مطالب خواندنی</label>
+							        <label>مطالب مفید</label>
+						        </p>
+						        <p>
+							        <input type="radio" name="category" class="subject right mar-lef" id="category" value="articles" />
+							        <label>فضای سبز</label>
 						        </p>
 		                    </li>
 		                    <li>
-		                    	<p>
+		                    	<p style="font-size:19px;">
 						        	<label class="mar-bot">قسمت: </label>
 						        </p>
 						        <p>  
@@ -207,12 +214,10 @@ $html=<<<cd
 		                    </li>              
 		                </ul>
 		            </div>
-		            <div class="large-9 columns">
-				        {$result}
-		            </div>
 					<input type="hidden" name="mark" value="find" />
 		        </form>
 	        </div>
+	        <br class="clear" />
 	    </div>
 	</div>
 cd;
