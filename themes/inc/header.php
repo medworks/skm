@@ -4,6 +4,9 @@ header('Content-Type: text/html; charset=UTF-8');
 	include_once("./config.php");
 	include_once("./classes/database.php");
 	include_once("./classes/functions.php");
+	include_once("./classes/seo.php");
+
+	$seo = Seo::GetSeo();
 	$db = database::GetDatabase();
 	
 	$email = GetSettingValue('Contact_Email',0);
@@ -15,7 +18,7 @@ header('Content-Type: text/html; charset=UTF-8');
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>SKM</title>
+<title><?php echo $seo->Site_Title;?></title>
 
 <link rel="stylesheet" type="text/css" media="all" href="themes/css/style.css">
 <link rel="stylesheet" id="galleria-css" href="themes/css/galleria.classic.css?ver=3.6.1" type="text/css" media="all">
