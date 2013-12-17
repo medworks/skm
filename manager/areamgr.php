@@ -48,9 +48,9 @@
 	}	
 	if (!$overall_error && $_POST["mark"]=="savearea")
 	{	    
-		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`catid`","`type`");
+		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`type`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'","'{$_POST[cbtype]}'");
+		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbtype]}'");
 		if (!$db->InsertQuery('area',$fields,$values)) 
 		{
 			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
@@ -76,8 +76,7 @@
 			        "`image`"=>"'{$_POST[selectpic]}'",
 				"`body`"=>"'{$_POST[detail]}'",
 				"`ndate`"=>"'{$ndatetime}'",
-				"`userid`"=>"'{$userid}'",				
-				"`catid`"=>"'{$_POST[cbcat]}'",
+				"`userid`"=>"'{$userid}'",
                                 "`type`"=>"'{$_POST[cbtype]}'");
 			
         $db->UpdateQuery("area",$values,array("id='{$_GET[aid]}'"));
@@ -189,21 +188,6 @@ $msgs = GetMessage($_GET['msg']);
 $sections = $db->SelectAll("section","*",null,"id ASC");
 $cbarr = array(1=>"فضای داخلی",2=>"فضای خارجی");
 $cbtype = SelectOptionTag("cbtype",$cbarr,1,null,"select validate[required]");
-if ($_GET['act']=="edit") 
-{   
-    $category = $db->SelectAll("category","*",null,"id ASC");
-    $secid = $db ->Select("category","secid","ID = '{$row[catid]}'");
-	$secid = $secid[0];
-	$cbsection = DbSelectOptionTag("cbsec",$sections,"secname","{$secid}",null,"select validate[required]");
-	$cbcategory = DbSelectOptionTag("cbcat",$category,"catname","{$row[catid]}",null,"select validate[required]");
-	
-}
-else
-{
-  $cbsection = DbSelectOptionTag("cbsec",$sections,"secname",null,null,"select validate[required]");
-  $cbcategory = null;
-} 
-
 $html=<<<cd
 	<script type='text/javascript'>
 		$(document).ready(function(){	   
@@ -232,16 +216,7 @@ $html=<<<cd
          <span>*</span>
        </p>    
         {$cbtype}
-      	<div class="badboy"></div>
-       <!-- <p>
-         <label for="cbsection">سر گروه </label>
-         <span>*</span>
-       </p>    
-	   {$cbsection}   
-	   <div id="catgory">
-		   {$cbcategory}
-	   </div>
-       <div class="badboy"></div> -->
+      	<div class="badboy"></div>       
        <p>
          <label for="subject">عنوان </label>
          <span>*</span>
@@ -387,8 +362,7 @@ if ($_GET['act']=="mgr")
 				{
 						$rowsClass[] = "datagridoddrow";
 				}
-				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
-				$rows[$i]["catid"] = GetCategoryName($rows[$i]["catid"]);
+				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 				
                                 $rows[$i]["addpic"] = "<a href='?item=areamgr&act=pic&aid={$rows[$i]["id"]}' class='add-pic'" .
 						"style='text-decoration:none;'></a>";
 				$rows[$i]["edit"] = "<a href='?item=areamgr&act=edit&aid={$rows[$i]["id"]}' class='edit-field'" .
@@ -405,8 +379,7 @@ del;
     if (!$_GET["pageNo"] or $_GET["pageNo"]<=0) $_GET["pageNo"] = 0;
             if (Count($rows) > 0)
             {                    
-                    $gridcode .= DataGrid(array( 
-					        "catid"=>"گروه",
+                    $gridcode .= DataGrid(array( 					       
                                                 "subject"=>"عنوان",
                                                 "image"=>"تصویر",
                                                 "body"=>"توضیحات",
