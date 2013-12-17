@@ -5,16 +5,17 @@ include_once("./classes/database.php");
 include_once("./classes/seo.php");	
 $db = Database::GetDatabase();
 $seo = Seo::GetSeo();
-$news = $db->Select('news',NULL,"id={$_GET[wid]}"," ndate DESC");
-$ndate = ToJalali($news["ndate"]," l d F  Y ");
+$area = $db->Select('area',NULL,"id={$_GET[wid]}"," ndate DESC");
+$areapics = $db->SelectAll("areapics","*","nid={$_GET[wid]}");
+$ndate = ToJalali($area["ndate"]," l d F  Y ");
 $day = ToJalali($post["ndate"],"d");
 $month = ToJalali($post["ndate"],"F");
 $year = ToJalali($post["ndate"],"Y");
-$news["userid"] = GetUserName($news["userid"]);
-$news["catid"] = GetCategoryName($post["catid"]);
-$body = $news['body'];
-$seo->Site_Title = $news["subject"];
-$seo->Site_Describtion = strip_tags(mb_substr($news["body"],0,150,"UTF-8"));
+$area["userid"] = GetUserName($area["userid"]);
+$area["type"] = GetTypeName($post["type"]);
+$body = $area['body'];
+$seo->Site_Title = $area["subject"];
+$seo->Site_Describtion = strip_tags(mb_substr($area["body"],0,150,"UTF-8"));
 
 $html=<<<cd
 	<div id="wrapper">
@@ -25,10 +26,10 @@ $html=<<<cd
 				<a>عنوان</a>
 			</div>
 			<div id="intro" class="text-intro">
-				<h1>فضای داخلی/ <strong> عنوان</strong></h1>
+                                <h1>{$area["type"]}/ <strong> {$area["subject"]}</strong></h1>
 			</div>
 			<div id="page-content" class="two_third">
-				<div id="post-174" class="post-174 post type-post status-publish format-standard sticky hentry category-news tag-design tag-works">
+				<div class="">
 					<div class="meta-date">
 						<span class="meta-month">{$month}</span>
 						<span class="meta-day">{$day}</span>
@@ -38,56 +39,41 @@ $html=<<<cd
 						</div> -->
 					</div>
 					<h2 class="blog-header">
-						<a href="#" title="{$news["subject"]}">{$news["subject"]}</a>
+						<a href="#" title="{$area["subject"]}">{$area["subject"]}</a>
 					</h2>
 					<div class="meta posted-meta">
-				 		به وسیله <a title="" rel="author external">{$news["userid"]}</a>
-				 		در گروه <a href="#" title="" rel="category tag">{$news["catid"]}</a>
+				 		به وسیله <a title="" rel="author external">{$area["userid"]}</a>
+				 		در گروه <a href="#" title="" rel="category tag">{$area["type"]}</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
-						<a href="{$news[image]}" rel="prettyPhoto" title="">
-							<img src="{$news[image]}" alt="{$news[subject]}" class="border-img" style="width:600px;height:229px;">
+						<a href="{$area[image]}" rel="prettyPhoto" title="">
+							<img src="{$area[image]}" alt="{$area[subject]}" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
-					<p>{$news["body"]}</p>
+					<p>{$area["body"]}</p>
 					<br class="clear" />
-cd;
-					include_once('themes/inc/share.php');
-$html.=<<<cd
-					<div class="more-pic">
+                                        <div class="more-pic">
 						<ul>
-							<li>
-								<a href="themes/images/demo/slide1.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide1.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide2.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<br class="clear" />
-							<li>
-								<a href="themes/images/demo/slide3.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="themes/images/demo/slide2.jpg" rel="prettyPhoto[g1]" title="">
-									<img src="themes/images/demo/slide3.jpg" alt="">
-								</a>
-							</li>
+cd;
+    include_once('themes/inc/share.php');
+$j = 0;					
+foreach($areapics as $key=>$val)
+{
+   ++$j;
+   $post = $db->Select('news',NULL,"id={$val[nid]}");
+   if ($j%3 == 0)
+    	{$br = "<br class='clear' />";}					
+$html.=<<<cd
+	<li>
+	   <a href="{$val[image]}" rel="prettyPhoto[g1]" title="{$post[subject]}">
+		<img src="{$val[image]}" alt="{$post[subject]}">
+	   </a>
+	</li>
+	{$br}
+cd;
+}
+$html.=<<<cd
 						</ul>
 					</div>
 					<br class="clear" />
@@ -109,7 +95,7 @@ $html.=<<<cd
                                     $("#frmsearch").submit(function(){
                                         $.ajax({                                        
                                             type: "POST",
-                                            url: "manager/ajaxcommand.php?items=search&cat=news",
+                                            url: "manager/ajaxcommand.php?items=search&cat=area",
                                             data: $("#frmsearch").serialize(), 
                                             success: function(msg)
                                             {
@@ -129,8 +115,8 @@ $html.=<<<cd
         		<div class="widgets widget_twitter">
                     <h3>دسته بندی</h3>
                     <ul class="tweets">
-                    	<li><a href="news-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
-                    	<li><a href="news-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
+                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
+                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
                     </ul>
         		</div>
         		<br class="clear">
@@ -138,14 +124,14 @@ $html.=<<<cd
         			<h3>پست های اخیر</h3>
 					<ul class="tweets">
 cd;
-$news = $db->SelectAll("news","*",null,"ndate DESC","0","7");
-foreach ($news as $key=>$val)
+$area = $db->SelectAll("area","*",null,"ndate DESC","0","7");
+foreach ($area as $key=>$val)
 {
   if (!isset($val[id])) break;
 	$ndate = ToJalali($val["ndate"]," l d F  Y");                                        
 $html.=<<<cd
         <li>
-                <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
+                <a href="space-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>
 cd;

@@ -516,5 +516,12 @@ code;
 		 }
 		 return $pageURL;
 	}
+        function GetTypeName($typeid)
+	   {
+              if ($typeid==1) {return "فضای داخلی";}
+              else if ($typeid==2) {return "فضای خارجی";}
+              
+		  
+	   }
 	  
 ?>

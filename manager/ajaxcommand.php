@@ -10,6 +10,7 @@ if ($_GET["items"]=="search")
       $field = "subject";
 	  if ($table =="news") $page = "news";
 	  else if ($table =="articles") $page = "article";
+          else if ($table =="area") $page = "space";
 	  $rownum = 0;
 	  if (!empty($_POST["findtxt"])) $searchtxt = "'%{$_POST[findtxt]}%'";
 	  $rows = $db->SelectAll(

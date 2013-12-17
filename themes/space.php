@@ -7,8 +7,8 @@ include_once("./classes/database.php");
   $from = ($pageNo - 1) * $maxItemsInPage;
   $count = $maxItemsInPage;
   
-  $news = $db->SelectAll("news","*",null,"ndate DESC",$from,$count);  
-  $itemsCount = $db->CountAll("news");
+  $area = $db->SelectAll("area","*",null,"ndate DESC",$from,$count);  
+  $itemsCount = $db->CountAll("area");
 
 $html=<<<cd
 	<div id="wrapper">
@@ -22,18 +22,18 @@ $html=<<<cd
 			</div>
 			<div id="page-content" class="two_third">
 cd;
-foreach($news as $key => $post)
+foreach($area as $key => $post)
 {
     $ndate = ToJalali($post["ndate"]," l d F  Y ساعت H:m");
     $day = ToJalali($post["ndate"],"d");
     $month = ToJalali($post["ndate"],"F");
     $year = ToJalali($post["ndate"],"Y");
     $post["userid"] = GetUserName($post["userid"]);
-    $post["catid"] = GetCategoryName($post["catid"]);
+    $post["type"] = GetTypeName($post["type"]);
     $post["body"]= strip_tags($post["body"]);
     $post["body"] = (mb_strlen($post["body"])>500) ? mb_substr($post["body"],0,500,"UTF-8")."..." : $post["body"];
 $html.=<<<cd
-				<div class="post-174 post type-post status-publish format-standard sticky hentry category-news tag-design tag-works">
+				<div class="">
 					<div class="meta-date">
 						<span class="meta-month">{$month}</span>
 						<span class="meta-day">{$day}</span>
@@ -47,7 +47,7 @@ $html.=<<<cd
 					</h2>
 					<div class="meta posted-meta">
 				 		به وسیله <a title="" rel="author external">{$post["userid"]}</a>
-				 		در گروه <a href="" title="" rel="category tag">فضای داخلی</a>
+				 		در گروه <a href="" title="" rel="category tag">{$post["type"]}</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
@@ -57,12 +57,12 @@ $html.=<<<cd
 					</div>
 					<p>{$post["body"]}</p>
 					<p class="more">
-						<a href="news-fullpage{$post[id]}.html">ادامه خبر</a>
+						<a href="news-fullpage{$post[id]}.html">ادامه مطلب</a>
 					</p>
 				</div>
 cd;
 }
-$linkFormat = 'news-page'.$pid='%PN%'.'.html';
+$linkFormat = 'space-page'.$pid='%PN%'.'.html';
 $maxPageNumberAtTime = GetSettingValue('Max_Page_Number',0);
 $pageNos = Pagination($itemsCount, $maxItemsInPage, $pageNo, $maxPageNumberAtTime, $linkFormat);
 $html .= $pageNos;
@@ -85,7 +85,7 @@ $html.=<<<cd
                                         $("#frmsearch").submit(function(){                                      
                                                 $.ajax({									    
                                                         type: "POST",
-                                                        url: "manager/ajaxcommand.php?items=search&cat=news",
+                                                        url: "manager/ajaxcommand.php?items=search&cat=area",
                                                         data: $("#frmsearch").serialize(), 
                                                         success: function(msg)
                                                         {                                                                                  
@@ -105,8 +105,8 @@ $html.=<<<cd
         		<div class="widgets widget_twitter">
                     <h3>دسته بندی</h3>
                     <ul class="tweets">
-                    	<li><a href="news-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
-                    	<li><a href="news-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
+                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز داخلی</a></li>
+                    	<li><a href="space-fullpage{$val[id]}.html" class="twitter-user">فضای سبز خارجی</a></li>
                     </ul>
         		</div>
         		<br class="clear">
@@ -114,14 +114,14 @@ $html.=<<<cd
                             <h3>پست های اخیر</h3>
 				<ul class="tweets">
 cd;
-$posts = $db->SelectAll("news","*",null,"ndate DESC","0","7");
+$posts = $db->SelectAll("area","*",null,"ndate DESC","0","7");
 foreach($posts as $key=>$val)
 {    
  $ndate = ToJalali($val["ndate"]," l d F  Y");
-$html.=<<<cd
+ $html.=<<<cd
         
         <li>
-				<span class="arro"></span>        
+		<span class="arro"></span>        
                 <a href="news-fullpage{$val[id]}.html" class="twitter-user">{$val["subject"]}</a>
                 <span>{$ndate}</span>
         </li>        
