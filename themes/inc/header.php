@@ -20,6 +20,9 @@ header('Content-Type: text/html; charset=UTF-8');
 <head>
 <meta name="google-site-verification" content="NS6IDeh34wuAfeaAYpjmqpDLzx8F5ws1Cn8Irvkqaz8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="<?php echo $seo->Site_Describtion;?>"/>
+<meta name="keywords" content="<?php echo $seo->Site_KeyWords;?>"/>
+
 <title><?php echo $seo->Site_Title;?></title>
 
 <link rel="stylesheet" type="text/css" media="all" href="themes/css/style.css">
