@@ -16,7 +16,9 @@ header('Content-Type: text/html; charset=UTF-8');
 	$rss = GetSettingValue('Rss_Add',0);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa-IR">
+<head>
+<meta name="google-site-verification" content="NS6IDeh34wuAfeaAYpjmqpDLzx8F5ws1Cn8Irvkqaz8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><?php echo $seo->Site_Title;?></title>
 
