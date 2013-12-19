@@ -154,7 +154,7 @@ $html.=<<<cd
 		<div class="fancy_list">
 			<div class="one_fifth fancy_title">
 				<h3>اخبار</h3>
-				<p><a href="#">مشاهده تمام موارد</a></p>
+				<p><a href="news.html">مشاهده تمام موارد</a></p>
 			</div>
 cd;
 
