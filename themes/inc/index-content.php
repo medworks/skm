@@ -178,7 +178,7 @@ $html.=<<<cd
 					</a>
 				</div>
 				<h4>
-					<a href="news[$i]-fullpage{$news[$i][id]}.html">{$news[$i]["subject"]}</a>
+					<a href="news-fullpage{$news[$i][id]}.html">{$news[$i]["subject"]}</a>
 				</h4>
 			</div>
 cd;

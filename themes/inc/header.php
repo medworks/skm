@@ -119,7 +119,7 @@ header('Content-Type: text/html; charset=UTF-8');
 		font-weight: bold;
 		color: #999;
 		text-transform: uppercase;
-		background: url('http://e404themes.com/cold/wp-content/themes/cold/images/cog.png') 0 50% no-repeat;
+		background: url('../images/cog.png') 0 50% no-repeat;
 	}
 	.stylespanel-toggle a:hover {
 		color: #666;

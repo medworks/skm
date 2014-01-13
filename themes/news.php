@@ -47,7 +47,7 @@ $html.=<<<cd
 					</h2>
 					<div class="meta posted-meta">
 				 		به وسیله <a title="" rel="author external">{$post["userid"]}</a>
-				 		در گروه <a href="" title="" rel="category tag">{$post["catid"]}</a>
+				 		در گروه <a title="" rel="category tag">{$post["catid"]}</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">

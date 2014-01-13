@@ -30,7 +30,7 @@ if ($_GET["items"]=="search")
 		 foreach($rows as $key=>$val)
 		 {
 			 ++$rownum;
-			 $row .= "<p class='srlink'>{$rownum}- <a target='_blank' href='{$page}-fullpage{$val['id']}.html' class='srlink'>
+			 $row .= "<p class='rtl srlink'>{$rownum}- <a target='_blank' href='{$page}-fullpage{$val['id']}.html' class='srlink'>
 					 {$val['subject']}</a></p>";
 		}
 		$result=<<<rt

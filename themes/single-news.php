@@ -43,7 +43,7 @@ $html=<<<cd
 					</h2>
 					<div class="meta posted-meta">
 				 		به وسیله <a title="" rel="author external">{$news["userid"]}</a>
-				 		در گروه <a href="#" title="" rel="category tag">{$news["catid"]}</a>
+				 		در گروه <a title="" rel="category tag">{$news["catid"]}</a>
 				 	</div>
 					<br class="clear">
 					<div class="shadow shadow_huge aligncenter shadow_center">
@@ -88,7 +88,6 @@ $html.=<<<cd
 							<input type="submit" id="searchsubmit" value="جستجو">
 						</div>
 					</form>
-				</div>
                          <div id="srhresult"></div>                    
 				<script type='text/javascript'>
                                // $(document).ready(function(){
@@ -110,7 +109,8 @@ $html.=<<<cd
                                         return false;
                                     });
                                // });
-                            </script>               
+                            </script>  
+				</div>             
         		<br class="clear">
         		<div id="e404_twitter-2" class="widgets widget_twitter">
         			<h3>آخرین اخبار</h3>
