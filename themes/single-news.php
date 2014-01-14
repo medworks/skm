@@ -51,7 +51,7 @@ $html=<<<cd
 							<img src="{$news[image]}" alt="{$news[subject]}" class="border-img" style="width:600px;height:229px;">
 						</a>
 					</div>
-					<p>{$news["body"]}</p>
+					{$news["body"]}
 					<br class="clear" />
                                         <div class="more-pic">
 						<ul>
@@ -70,11 +70,11 @@ $html.=<<<cd
 		<img src="{$val[image]}" alt="{$post[subject]}">
 	   </a>
 	</li>
-	{$br}
 cd;
 }        
 $html.=<<<cd
 						</ul>
+						{$br}
 					</div>
 					<br class="clear" />
 				</div>
