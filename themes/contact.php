@@ -68,11 +68,11 @@ $html=<<<cd
 						<h3>آدرس</h3>
 						<p>{$address}</p>
 						<p class="rtl">تلفن:</p>
-						<p style="text-align:left">{$tel}</p>
-						<p class="rtl">فاکس:</p>
-						<p style="text-align:left">{$fax}</p>
+						<p class="ltr">{$tel}</p>
+						<p class="rtl">موبایل:</p>
+						<p class="ltr">{$fax}</p>
 						<p class="rtl">ایمیل:</p>
-						<p style="text-align:left">
+						<p class="ltr">
 							<script type="text/javascript">
                                 emailE='wskm.ir'
                                 emailE=('info' + '@' + emailE)

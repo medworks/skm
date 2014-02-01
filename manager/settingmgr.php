@@ -212,7 +212,7 @@ ht;
 				</p>    
 				<input type="text" name="tel_number" class="subject ltr" id="tel_number" value='{$Tell_Number}'/>
 				<p>
-					<label for="fax">فاکس شرکت</label>
+					<label for="fax">موبایل</label>
 				</p>    
 				<input type="text" name="fax_number" class="subject ltr" id="fax_number" value='{$Fax_Number}'/>
 				<p>
