@@ -578,7 +578,7 @@ select {
 	background: #fff url("../images/form-bg.png") repeat;
 	line-height: 14px;
 	font-size: 16px;
-	padding: 6px 8px;
+	padding: 6px 0px;
 	border: 1px solid #ddd;
 	box-shadow: 1px 1px 3px rgba(119, 119, 119, 0.2);
 	-moz-box-shadow: 1px 1px 3px rgba(119, 119, 119, 0.2);
@@ -667,7 +667,7 @@ form input[type="submit"]:hover {
 }
 .textarea-box,
 .your-message {
-	padding-right: 20px;
+	/*padding-right: 20px;*/
 }
 
 /* ---------------------------------------- */
@@ -1621,7 +1621,7 @@ ul.portfolio-columns {
 .wpcf7 span {
 	display: block;
 	margin-top: 3px;
-	margin-right: 20px;
+	/*margin-right: 20px;*/
 }
 .wpcf7 span.your-message {
 	margin-right: 0;
