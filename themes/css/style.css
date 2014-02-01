@@ -2712,7 +2712,7 @@ li.current-cat li {
 	padding: 0;
 }
 #footer .widgets li {
-	padding: 0 14px 1px 0;
+	padding: 0 14px 20px 0;
 	background: url('../images/small-arrow.png') 200px 11px no-repeat;
 }
 #footer .widgets .recent-posts li,

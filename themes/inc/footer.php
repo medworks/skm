@@ -17,7 +17,7 @@
 			<h3>گالری تصاویر</h3>
 			<ul class="flickr">
                            <?php
-                                for ($i = 0;$i<=12;$i++)
+                                for ($i = 0;$i<=9;$i++)
                                 {
                                     if (!empty($gallery[$i][image]))
                                     {
@@ -52,10 +52,8 @@
 		<div id="linkcat-2" class="one_fourth widgets widget_links">
 			<h3>لینک های مفید</h3>
 			<ul class="xoxo blogroll">
-				<li><a href="#">لینک یک</a></li>
-				<li><a href="#">لینک دو</a></li>
-				<li><a href="#">لینک سه</a></li>
-				<li><a href="#">لینک چهار</a></li>
+				<li><a href="http://www.koaj.ir/modules/showframework.aspx">سازمان جهاد کشاورزی خراسان رضوی</a></li>
+				<li><a href="http://nargil.ir/plant/plant.aspx">پایگاه اطلاع رسانی گل و گیاه</a></li>
 			</ul>
 		</div>
 		<div id="custom_cf7-3" class="one_fourth widgets widget_custom_cf7">
