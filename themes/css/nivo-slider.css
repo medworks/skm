@@ -91,6 +91,8 @@
 	top:0px;
 	left:0px;
 	display:none;
+	width: 930px;
+	height: 350px;
 }
 .slider a {
 	border:0;

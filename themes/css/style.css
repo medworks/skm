@@ -243,8 +243,8 @@ img {
 
 /* featured */
 #featured {
-	/*margin-bottom: 20px;
-	padding-bottom: 20px;*/
+	margin-bottom: 30px;
+	/*padding-bottom: 20px;*/
 	background-image: url('../images/shadow930.png');
 	background-repeat: no-repeat;
 	background-position: 0 100%;
@@ -2745,7 +2745,7 @@ li.current-cat li {
 }
 #footer .tweets li {
 	padding: 0 0 5px 0;
-	margin-bottom: 5px;
+	margin-bottom: 17px;
 	border: none;
 	background: none;
 	min-height: 48px;
