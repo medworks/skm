@@ -5,6 +5,8 @@
   $works = $db->SelectAll("works","*",null,"fdate DESC");
   foreach($works as $key=>$val) $cats[] = $val["catid"];    
   $uniqcats = array_unique($cats);
+  $body = $val["body"];
+  $body = strip_tags(mb_substr($body,0,150,"UTF-8"));
 
 $html=<<<cd
 	<div id="wrapper">
@@ -36,7 +38,7 @@ $html.=<<<cd
                         <h3>
                                 <a href="work-fullpage{$val[id]}.html" title="{$val[subject]}">{$val[subject]}</a>
                         </h3>
-                        <p>{$val["body"]}</p>
+                        <p>{$body}</p>
                         <p class="more"><a href="work-fullpage{$val[id]}.html">ادامه رزومه</a></p>
                 </div>		
 cd;
