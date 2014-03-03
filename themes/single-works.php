@@ -53,9 +53,9 @@ $html.=<<<cd
 					</ul>
 				</div>
 			</div>
-			<div class="one_third last">
+			<div class="one_third last" style="text-align:justify;">
 				<p>{$work["body"]}</p>
-			</div>	
+			</div>
 			<br class="clear" />
 		</div>
 	</div>

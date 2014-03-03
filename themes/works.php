@@ -5,20 +5,19 @@
   $works = $db->SelectAll("works","*",null,"fdate DESC");
   foreach($works as $key=>$val) $cats[] = $val["catid"];    
   $uniqcats = array_unique($cats);
-  $body = $val["body"];
-  $body = strip_tags(mb_substr($body,0,150,"UTF-8"));
+ 
 
 $html=<<<cd
-	<div id="wrapper">
-		<div id="main_wrapper">
-			<div id="breadcrumb">
-				<a href="./">صفحه اصلی</a> <span>›</span>
-				<a>رزومه</a>
-			</div>
+  <div id="wrapper">
+    <div id="main_wrapper">
+      <div id="breadcrumb">
+        <a href="./">صفحه اصلی</a> <span>›</span>
+        <a>رزومه</a>
+      </div>
       <div id="intro" class="text-intro">
         <h1>رزومه</h1>
       </div>
-			<div class="portfolio portfolio-columns">
+      <div class="portfolio portfolio-columns">
 cd;
 $i = 0;
 foreach($works as $key=>$val)
@@ -27,6 +26,10 @@ foreach($works as $key=>$val)
     if ($i % 3 == 0)
       {$div = "<div class='one_third portfolio-item last' >";}
     else {$div = "<div class='one_third portfolio-item' >";}
+  
+  $detail = $val['body'];
+  $detail = (mb_strlen($detail)>150) ? mb_substr($detail,0,150,"UTF-8")."..." : $detail;
+  $detail = strip_tags($detail);
           
 $html.=<<<cd
                 {$div}
@@ -38,17 +41,17 @@ $html.=<<<cd
                         <h3>
                                 <a href="work-fullpage{$val[id]}.html" title="{$val[subject]}">{$val[subject]}</a>
                         </h3>
-                        <p>{$body}</p>
+                        <p style="text-align:justify;">{$detail}</p>
                         <p class="more"><a href="work-fullpage{$val[id]}.html">ادامه رزومه</a></p>
-                </div>		
+                </div>    
 cd;
 }
                         
 $html.=<<<cd
         <br class="clear">
         </div>
-		</div>
-	</div>
+    </div>
+  </div>
 cd;
 
 return $html;
